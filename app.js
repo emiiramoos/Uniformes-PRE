@@ -1,1 +1,13 @@
-// Interacciones y cotizador se incorporarán tras validar reglas y recursos.\n
+const pages=[...document.querySelectorAll('[data-page]')];
+function navigate(){let id=location.hash.slice(1)||'inicio';if(!pages.some(p=>p.id===id))id='inicio';pages.forEach(p=>p.hidden=p.id!==id);document.querySelectorAll('nav a').forEach(a=>{if(a.hash==='#'+id)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});document.title=({inicio:'Uniformes PRE',catalogo:'Nuestro catálogo | Uniformes PRE',nosotros:'Quiénes somos | Uniformes PRE',contacto:'Contacto | Uniformes PRE'})[id];window.scrollTo(0,0)}
+window.addEventListener('hashchange',navigate);navigate();
+const colorsLong=[['azul-vivo','Azul vivo'],['azul-claro','Azul claro'],['azul-rey','Azul rey'],['rojo','Rojo'],['fucsia','Fucsia'],['coral','Coral']];
+const colorsShort=[['blanco','Blanco'],['negro','Negro'],['azul-claro','Azul claro'],['azul-marino','Azul marino']];
+const host=document.querySelector('#shirt-catalog');
+for(const [sleeve,label,colors] of [['larga','Playera cuello redondo manga larga',colorsLong],['corta','Playera cuello redondo manga corta',colorsShort]]){
+const section=document.createElement('section');section.className='shirt-group';const heading=document.createElement('h2');heading.textContent=label;section.append(heading);
+const article=document.createElement('article');article.className='shirt-card';article.style.maxWidth='360px';const button=document.createElement('button');const img=document.createElement('img');
+function setColor(slug,color){img.src='assets/products/cuello-redondo-'+sleeve+'-'+slug+'.png';img.alt=label+' '+color+', vista frontal'}setColor(...colors[0]);img.loading='lazy';button.append(img);button.setAttribute('aria-label','Ampliar '+label);article.append(button);
+button.addEventListener('click',()=>{const dialog=document.createElement('dialog');dialog.className='image-dialog';dialog.setAttribute('aria-label',label);const close=document.createElement('button');close.textContent='Cerrar';close.addEventListener('click',()=>dialog.close());const full=img.cloneNode();dialog.append(close,full);dialog.addEventListener('close',()=>dialog.remove());document.body.append(dialog);dialog.showModal()});
+const select=document.createElement('select');select.setAttribute('aria-label','Color de '+label);select.style.cssText='margin:14px;padding:10px;max-width:90%;font:inherit';for(const [slug,color] of colors){const option=document.createElement('option');option.value=slug;option.textContent=color;select.append(option)}select.addEventListener('change',()=>setColor(select.value,select.selectedOptions[0].textContent));article.append(select);section.append(article);host?.append(section)
+}
