@@ -1,0 +1,1 @@
+// Interacciones y cotizador se incorporarán tras validar reglas y recursos.\n
