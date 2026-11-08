@@ -1,0 +1,1086 @@
+{
+  "source_url": "https://fjcastalv-dot.github.io/OficialPre/",
+  "source_file": "https://github.com/fjcastalv-dot/OficialPre/blob/main/src/data.ts",
+  "extracted_date": "2026-11-08",
+  "status": "Referencia extraída; no integrada al catálogo ni al cotizador.",
+  "currency": "MXN",
+  "prices_include_iva": true,
+  "iva_rate": 0.16,
+  "embroidery_unit_prices": {
+    "chest": {
+      "1-12": 45,
+      "13-50": 38,
+      "51+": 33
+    },
+    "back": {
+      "1-12": 80,
+      "13-50": 72,
+      "51+": 65
+    }
+  },
+  "source_minimum_order": {
+    "footwear": 1,
+    "other_products": 12
+  },
+  "products": [
+    {
+      "code": "PL001",
+      "id": "polo-dryfit-caballero-dama",
+      "name": "Playera Polo Dry-Fit Dama / Caballero",
+      "category": "hoteleria",
+      "base_price_mxn": 240,
+      "price_tiers_mxn": {
+        "1-12": 240,
+        "13-50": 230,
+        "51+": 220
+      },
+      "composition": "Dry-Fit, 100% Poliéster, 150g.",
+      "description": "Elaboradas en Dry-Fit, frescas, cómodas, transpirables y de larga duración. Cómodas, ligeras y resistentes para una transpiración eficiente.",
+      "features": [
+        "Botones transparentes, tela fresca y ligera",
+        "Costuras reforzadas",
+        "Tecnología Dry-Fit (secado ultra rápido)",
+        "Corte caballero y corte dama"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Marino",
+        "Blanco",
+        "Negro",
+        "Gris"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "PL002MC",
+      "id": "playera-cuello-redondo-m-c",
+      "name": "Playera Cuello Redondo Manga Corta Dry-Fit",
+      "category": "hoteleria",
+      "base_price_mxn": 190,
+      "price_tiers_mxn": {
+        "1-12": 190,
+        "13-50": 180,
+        "51+": 170
+      },
+      "composition": "100% Poliéster Dryfit",
+      "description": "Playera clásica de cuello redondo manga corta confeccionada en microfibra 100% poliéster Dryfit de alto rendimiento. Tejido ultra fresco, ligero y de secado rápido para staff, eventos y hotelería.",
+      "features": [
+        "Cuello redondo con cárdigan acanalado reforzado antidealargamiento",
+        "Tecnología Dry-Fit de secado ultra rápido y control de humedad",
+        "Costura doble reforzada en sisas, mangas y bastilla inferior",
+        "Superficie óptima para bordado o serigrafía de alta definición"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Blanco",
+        "Marino",
+        "Oxford"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "PL001ML",
+      "id": "polo-manga-larga-dry-fit",
+      "name": "Playera Manga Larga Dry Fit",
+      "category": "hoteleria",
+      "base_price_mxn": 210,
+      "price_tiers_mxn": {
+        "1-12": 210,
+        "13-50": 203,
+        "51+": 195
+      },
+      "composition": "DRY-FIT 100% Poliéster (150 g/m2)",
+      "description": "Playera de alto rendimiento con mangas largas confeccionada en tecnología Dry-Fit micro-perforada. Máxima protección solar UV, ligereza y frescura en climas tropicales y exteriores.",
+      "features": [
+        "Protección solar UPF y confort térmico en exteriores",
+        "Manga larga con puño anatómico cómodo",
+        "Tela fresca y ligera de secado ultra rápido",
+        "Costuras reforzadas de alta resistencia para uso continuo",
+        "Excelente retención de forma y color"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Blanco",
+        "Canario",
+        "Gris",
+        "Marino",
+        "Oxford",
+        "Rey",
+        "Rojo",
+        "Verde Agua"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "CZ001MC",
+      "id": "cazadora-manga-corta",
+      "name": "Cazadora Manga Corta Dama y Caballero",
+      "category": "restaurante",
+      "base_price_mxn": 650,
+      "price_tiers_mxn": {
+        "1-12": 650,
+        "13-50": 585,
+        "51+": 535
+      },
+      "composition": "98% Poliéster y 2% Elastano.",
+      "description": "Una camisa con un corte elegante y moderno, con respiradero, para lucir fresco y casual.",
+      "features": [
+        "Cuello camisero",
+        "Con respiradero en espalda",
+        "Manga corta",
+        "Fresca y transpirable",
+        "Corte elegante y moderno"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Blanco",
+        "Azul Marino",
+        "Negro"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "CZ001ML",
+      "id": "cazadora-manga-larga",
+      "name": "Cazadora Manga Larga Dama y Caballero",
+      "category": "restaurante",
+      "base_price_mxn": 750,
+      "price_tiers_mxn": {
+        "1-12": 750,
+        "13-50": 675,
+        "51+": 620
+      },
+      "composition": "98% Poliéster y 2% Elastano.",
+      "description": "Una camisa con un corte elegante y moderno, con respiradero, para lucir fresco y casual.",
+      "features": [
+        "Cuello camisero",
+        "Con respiradero en espalda",
+        "Manga larga",
+        "Fresca y transpirable",
+        "Corte elegante y moderno"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Blanco",
+        "Azul Marino",
+        "Negro"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "B004D",
+      "id": "blusa-manga-corta-oxford",
+      "name": "Blusa Manga Corta Oxford",
+      "category": "ejecutivo",
+      "base_price_mxn": 350,
+      "price_tiers_mxn": {
+        "1-12": 350,
+        "13-50": 330,
+        "51+": 320
+      },
+      "composition": "65% Poliéster y 35% Algodón.",
+      "description": "Blusa cuello en V, manga corta con un corte elegante y moderno, fresca, colores duraderos y una apariencia casual.",
+      "features": [
+        "Cuello camisero en V",
+        "Pinzas en busto",
+        "Pinzas al frente y en espalda",
+        "Manga corta"
+      ],
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42"
+      ],
+      "colors": [
+        "Blanco",
+        "Azul Cielo"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "B001D-13",
+      "id": "blusa-manga-3-4-oxford",
+      "name": "Blusa Manga 3/4 Oxford",
+      "category": "ejecutivo",
+      "base_price_mxn": 370,
+      "price_tiers_mxn": {
+        "1-12": 370,
+        "13-50": 350,
+        "51+": 345
+      },
+      "composition": "65% Poliéster y 35% Algodón.",
+      "description": "Blusa cuello en V, manga 3/4 con un corte elegante y moderno, fresca, colores duraderos y una apariencia casual.",
+      "features": [
+        "Cuello camisero en V",
+        "Pinzas en busto",
+        "Pinzas al frente y en espalda",
+        "Manga 3/4"
+      ],
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42"
+      ],
+      "colors": [
+        "Azul Cielo",
+        "Blanco"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "B001D",
+      "id": "blusa-manga-larga-oxford",
+      "name": "Blusa Manga Larga Oxford",
+      "category": "ejecutivo",
+      "base_price_mxn": 370,
+      "price_tiers_mxn": {
+        "1-12": 370,
+        "13-50": 350,
+        "51+": 330
+      },
+      "composition": "65% Poliéster y 35% Algodón.",
+      "description": "Blusa cuello en V, manga larga, pinzas en busto, frente y espalda, fresca y casual.",
+      "features": [
+        "Cuello camisero en V",
+        "Pinzas en busto",
+        "Pinzas al frente y en espalda",
+        "Manga larga"
+      ],
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42"
+      ],
+      "colors": [
+        "Azul Cielo",
+        "Blanco"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "C006C",
+      "id": "camisa-manga-corta-oxford",
+      "name": "Camisa Manga Corta",
+      "category": "ejecutivo",
+      "base_price_mxn": 350,
+      "price_tiers_mxn": {
+        "1-12": 350,
+        "13-50": 330,
+        "51+": 310
+      },
+      "composition": "65% Poliéster y 35% Algodón.",
+      "description": "Camisa cuello camisero, manga corta, con pinzas en espalda, fresca y casual.",
+      "features": [
+        "Cuello camisero",
+        "Canesú y pinzas en la espalda",
+        "Manga corta"
+      ],
+      "sizes": [
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "colors": [
+        "Blanco",
+        "Azul Cielo"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "C007C",
+      "id": "camisa-manga-larga-oxford",
+      "name": "Camisa Manga Larga",
+      "category": "ejecutivo",
+      "base_price_mxn": 390,
+      "price_tiers_mxn": {
+        "1-12": 390,
+        "13-50": 370,
+        "51+": 360
+      },
+      "composition": "65% Poliéster y 35% Algodón.",
+      "description": "Camisa cuello camisero, manga larga, con pinzas en espalda, fresca y casual.",
+      "features": [
+        "Cuello camisero",
+        "Pinzas en busto",
+        "Pinzas al frente y en espalda",
+        "Manga larga"
+      ],
+      "sizes": [
+        "34",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "colors": [
+        "Blanco",
+        "Azul Cielo"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "FI003-AF",
+      "id": "filipina-gabardina-antifluido",
+      "name": "FILIPINA REPELENTE AL AGUA MANGA 3/4",
+      "category": "restaurante",
+      "base_price_mxn": 580,
+      "price_tiers_mxn": {
+        "1-12": 580,
+        "13-50": 550,
+        "51+": 520
+      },
+      "composition": "65% Poliéster y 35% Algodón.",
+      "description": "Filipina manga 3/4, con doble abotonadura, respiradero en espalda, ligera y fresca.",
+      "features": [
+        "Tecnología repelente al agua y al aceite",
+        "Mantiene tu uniforme limpio por más tiempo",
+        "Fresco y transpirable",
+        "Permite la circulación del aire para mayor confort"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Blanco",
+        "Negro"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "FI001MC-G",
+      "id": "filipina-cocina-mc-gab",
+      "name": "FILIPINA REPELENTE AL AGUA MANGA CORTO",
+      "category": "restaurante",
+      "base_price_mxn": 560,
+      "price_tiers_mxn": {
+        "1-12": 560,
+        "13-50": 540,
+        "51+": 510
+      },
+      "composition": "65% Poliéster y 35% Algodón.",
+      "description": "Filipina manga corta, con doble abotonadura, respiradero en espalda, ligera y fresca.",
+      "features": [
+        "Tecnología repelente al agua y al aceite",
+        "Mantiene tu uniforme limpio por más tiempo",
+        "Fresco y transpirable",
+        "Permite la circulación del aire para mayor confort"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Blanco",
+        "Negro"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "FI001ML-G",
+      "id": "filipina-cocina-ml-gab",
+      "name": "FILIPINA DRYFIT Y GABARDINA MANGA 3/4",
+      "category": "restaurante",
+      "base_price_mxn": 410,
+      "price_tiers_mxn": {
+        "1-12": 410,
+        "13-50": 405,
+        "51+": 395
+      },
+      "composition": "65% Poliéster y 35% Algodón. Dry-Fit 100% poliéster, transpirable.",
+      "description": "Filipina manga 3/4 con doble abotonadura y 2 bolsillos, pecho y manga, Dryfit en espalda alta y gabardina en espalda baja.",
+      "features": [
+        "Corte clásico",
+        "Cuello mao",
+        "Doble abotonadura",
+        "1 bolsillo en el pecho",
+        "1 bolsillo en la manga"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Negro",
+        "Blanco"
+      ],
+      "catalog_integration_note": "La descripción de origen menciona bolsillos/Dry-Fit; la confección lisa aprobada por Emilio debe conservarse."
+    },
+    {
+      "code": "FI002MC-DG",
+      "id": "filipina-dryfit-gabardina-mc",
+      "name": "FILIPINA DRYFIT Y GABARDINA MANGA CORTA",
+      "category": "restaurante",
+      "base_price_mxn": 390,
+      "price_tiers_mxn": {
+        "1-12": 390,
+        "13-50": 380,
+        "51+": 370
+      },
+      "composition": "65% Poliéster y 35% Algodón.",
+      "description": "Filipina manga corta, con doble abotonadura y 2 bolsillos, pecho y manga, Dryfit en espalda alta y gabardina en espalda baja.",
+      "features": [
+        "Corte clásico",
+        "Cuello mao",
+        "Doble abotonadura",
+        "1 bolsillo en el pecho",
+        "1 bolsillo en la manga"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Blanco",
+        "Negro"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "PB001",
+      "id": "pantalon-basico",
+      "name": "Pantalón Básico",
+      "category": "ejecutivo",
+      "base_price_mxn": 390,
+      "price_tiers_mxn": {
+        "1-12": 390,
+        "13-50": 370,
+        "51+": 350
+      },
+      "composition": "65% Poliéster y 35% Algodón.",
+      "description": "Pantalón básico para caballero, corte recto, bolsas a los costados y bolsa trasera.",
+      "features": [
+        "Corte recto",
+        "Bolsillos laterales",
+        "Costuras reforzadas"
+      ],
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42"
+      ],
+      "colors": [
+        "Azul Marino",
+        "Negro",
+        "Kaki",
+        "Gris Perla"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "PC001G",
+      "id": "pantalon-cargo-gabardina",
+      "name": "Pantalón Cargo",
+      "category": "industrial",
+      "base_price_mxn": 450,
+      "price_tiers_mxn": {
+        "1-12": 450,
+        "13-50": 430,
+        "51+": 420
+      },
+      "composition": "65% Poliéster y 35% Algodón.",
+      "description": "Pantalón cargo, costuras reforzadas, bolsas laterales con tapa, bolsa a los costados y bolsa trasera.",
+      "features": [
+        "Bolsa con tapa",
+        "Bolsillos laterales y bolsas cargo",
+        "Costuras reforzadas"
+      ],
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "42"
+      ],
+      "colors": [
+        "Gris Oxford",
+        "Azul Marino",
+        "Negro",
+        "Kaki"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "CM001G",
+      "id": "camisola-mantenimiento-gabardina",
+      "name": "Camisola Mantenimiento en Gabardina",
+      "category": "industrial",
+      "base_price_mxn": 450,
+      "price_tiers_mxn": {
+        "1-12": 450,
+        "13-50": 430,
+        "51+": 420
+      },
+      "composition": "Gabardina 100% Algodón / Poliéster Reforzado",
+      "description": "Camisola industrial para mantenimiento y servicios generales en gabardina de alta resistencia. Confeccionada para proteger contra fricción, polvo y suciedad con solapa frontal y bolsas con fuelle.",
+      "features": [
+        "Dos bolsas superiores con tapa y botón",
+        "Ranura portalápiz en bolsa izquierda",
+        "Espalda con fuelles de acción para libertad motriz",
+        "Costuras triples reforzadas en hombros y sisas"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Azul Marino",
+        "Gris Rata",
+        "Kaki"
+      ],
+      "catalog_integration_note": "Excluido del catálogo por indicación de Emilio. Solo referencia."
+    },
+    {
+      "code": "MP001",
+      "id": "mandiles-de-peto",
+      "name": "Mandiles de Peto",
+      "category": "restaurante",
+      "base_price_mxn": 290,
+      "price_tiers_mxn": {
+        "1-12": 290,
+        "13-50": 270,
+        "51+": 250
+      },
+      "composition": "65% Poliéster y 35% Viscosa.",
+      "description": "Mandil de cocina, la correa del cuello se ajusta para mayor comodidad. Los lazos en la cintura le permiten un ajuste perfecto. Dos bolsillos frontales. Estilo cómodo y resistente.",
+      "features": [
+        "Estilo con pechera protectora",
+        "Correa ajustable en el cuello",
+        "Se ata a la cintura",
+        "Bolsillo frontal dividido"
+      ],
+      "sizes": [
+        "Unitalla"
+      ],
+      "colors": [
+        "Negro",
+        "Azul",
+        "Blanco"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "MC001",
+      "id": "mandil-corto",
+      "name": "Mandil Corto",
+      "category": "restaurante",
+      "base_price_mxn": 150,
+      "price_tiers_mxn": {
+        "1-12": 150,
+        "13-50": 140,
+        "51+": 132
+      },
+      "composition": "65% Poliéster y 35% Viscosa.",
+      "description": "Mandil corto, cómodo, práctico, estilo hotelero, tiras largas en la cintura y bolsas al frente, con división para guardar sus notas o comandas.",
+      "features": [
+        "Estilo bistró a la cintura",
+        "Lazos largos",
+        "Bolsillo frontal dividido"
+      ],
+      "sizes": [
+        "Unitalla"
+      ],
+      "colors": [
+        "Kaki",
+        "Negro",
+        "Blanco"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "GC001",
+      "id": "gorros-de-cocina",
+      "name": "Gorros de Cocina",
+      "category": "restaurante",
+      "base_price_mxn": 110,
+      "price_tiers_mxn": {
+        "1-12": 110,
+        "13-50": 103,
+        "51+": 95
+      },
+      "composition": "65% Poliéster y 35% Viscosa.",
+      "description": "Gorro de cocina clásico. Cómodo y resistente, únicamente en color negro.",
+      "features": [
+        "Gorro de cocina tradicional",
+        "Únicamente en color negro",
+        "Ajuste cómodo y resistente"
+      ],
+      "sizes": [
+        "Unitalla"
+      ],
+      "colors": [
+        "Blanco",
+        "Negro"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "ALINA",
+      "id": "zapatos-alina",
+      "name": "Zapatos de Cocina Alina",
+      "category": "restaurante",
+      "base_price_mxn": 840,
+      "price_tiers_mxn": {
+        "1-12": 840,
+        "13-50": 756,
+        "51+": 690
+      },
+      "composition": "Tipo de material: 100% Poliuretano. Base de material: Poliéster. Dureza: 38-43° Shore A. Densidad talla central: 0.45 gr/cm³.",
+      "description": "Calzado de cocina ergonómico tipo zueco para dama. Tipo de uso: Rudo. Transpirable, dieléctrico y antiderrapante. Resistencia a hidrocarburos (Tolueno y Gasolina) y aceites. Abrasión de 0 a 130 mg máx 150 mg, flexión de 0 a 100% tolerancia hasta 200%. NOM 113 STPS 2009.",
+      "features": [
+        "Tipo de uso: Rudo",
+        "Resistente a Hidrocarburos como Tolueno y Gasolina",
+        "Resistencia a Aceites",
+        "Abrasión: De 0 a 130 mg máx 150 mg"
+      ],
+      "sizes": [
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27"
+      ],
+      "colors": [
+        "Negro"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "PEGASO",
+      "id": "zapatos-pegaso",
+      "name": "Zapatos de Cocina Pegaso",
+      "category": "restaurante",
+      "base_price_mxn": 940,
+      "price_tiers_mxn": {
+        "1-12": 940,
+        "13-50": 846,
+        "51+": 790
+      },
+      "composition": "Tipo de material: 100% Poliuretano. Base de material: Poliéster. Dureza: 38-43° Shore A. Densidad talla central: 0.45 gr/cm³.",
+      "description": "Calzado de cocina ergonómico, transpirable, dieléctrico y antiderrapante. Resistencia a aceites, solventes, abrasión y a la flexión (incremento de abertura a 35,000 ciclos). Ajuste: Horma EEE. NOM 113 STPS 2009.",
+      "features": [
+        "Ajuste: Horma EEE",
+        "Resistencia a los aceites (incremento de volumen)",
+        "Resistencia a los solventes y a la abrasión",
+        "Resistencia a la flexión (incremento de abertura a 35,000 ciclos)"
+      ],
+      "sizes": [
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30"
+      ],
+      "colors": [
+        "Negro"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "PING-BA",
+      "id": "zapatos-cocina-big-apple",
+      "name": "Zapatos de Cocina Big Apple",
+      "category": "restaurante",
+      "base_price_mxn": 1200,
+      "price_tiers_mxn": {
+        "1-12": 1200,
+        "13-50": 1100,
+        "51+": 1020
+      },
+      "composition": "Poliuretano / Hule antiderrapante / Certificado ante COFEPRIS",
+      "description": "Big Apple Calzado para Chef Modelo Ping Big Apple.\n\nDiseñado para brindar máximo confort, seguridad y desempeño durante largas jornadas de trabajo.",
+      "features": [
+        "Plantilla: Poliuretano/Textil removible antimicrobiana, diseñada para brindar mayor comodidad e higiene.",
+        "Suela: Poliuretano/Hule antiderrapante, resistente y segura para entornos de trabajo exigentes.",
+        "Certificación: Producto con certificado ante COFEPRIS.",
+        "Estilo: Profesional y funcional, ideal para chefs, cocineros y personal de cocina que buscan comodidad y seguridad durante todo el día."
+      ],
+      "sizes": [
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30"
+      ],
+      "colors": [
+        "Blanco",
+        "Negro"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "PM001-S",
+      "id": "pijama-medica-con-strech",
+      "name": "Pijama Médica con Strech",
+      "category": "medico",
+      "base_price_mxn": 820,
+      "price_tiers_mxn": {
+        "1-12": 820,
+        "13-50": 790,
+        "51+": 750
+      },
+      "composition": null,
+      "description": "Conjunto quirúrgico de filipina y pantalón clínico con elasticidad, otorga completa libertad de movimiento para médicos, enfermeros y odontólogos.",
+      "features": [
+        "Elasticidad en 4 direcciones que acompaña cada movimiento",
+        "Tecnología antifluidos y repelencia a microgotas",
+        "Pantalón jogger o recto con cintura elástica y múltiples bolsas",
+        "Filipina con cuello en V ergonómico y bolsa de pecho con portacredencial"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Azul Rey",
+        "Verde Jade",
+        "Negro",
+        "Azul Marino"
+      ],
+      "catalog_integration_note": "Sin composición explícita en origen. No aplicar automáticamente este precio a nuevos diseños de pijama."
+    },
+    {
+      "code": "BM001-ML",
+      "id": "batas-medicas-m-l",
+      "name": "Batas Médicas M/L",
+      "category": "medico",
+      "base_price_mxn": 390,
+      "price_tiers_mxn": {
+        "1-12": 390,
+        "13-50": 370,
+        "51+": 350
+      },
+      "composition": "Gabardina Médica 65% Poliéster / 35% Algodón",
+      "description": "Bata clínica y de laboratorio manga larga para médicos, farmacéuticos y estudiantes. Corte profesional de longitud óptima, solapa clásica, botonadura frontal y tres bolsas de carga reforzadas.",
+      "features": [
+        "Corte Dama o Caballero",
+        "Manga larga con dobladillo amplio",
+        "Tres bolsillos exteriores (uno de pecho, dos laterales amplios)",
+        "Aberturas laterales para acceso a bolsas del pantalón",
+        "Tratamiento antimanchas y blanqueado durable"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Blanco Médico"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "PPU001",
+      "id": "pantalon-pijama-unisex",
+      "name": "Pantalón Pijama Unisex",
+      "category": "restaurante",
+      "base_price_mxn": 360,
+      "price_tiers_mxn": {
+        "1-12": 360,
+        "13-50": 350,
+        "51+": 340
+      },
+      "composition": "65% Poliéster y 35% Viscosa.",
+      "description": "Corte recto, bolsas a los costados, resorte en la cintura.",
+      "features": [
+        "Corte recto",
+        "Bolsas a los costados",
+        "Elástico en cintura",
+        "Jareta",
+        "Unisex"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Azul Marino"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "MOD-363",
+      "id": "calzado-clinico-mod-363-blanco",
+      "name": "Calzado Clínico Mod. 363 Dama",
+      "category": "medico",
+      "base_price_mxn": 882,
+      "price_tiers_mxn": {
+        "1-12": 882,
+        "13-50": 832,
+        "51+": 790
+      },
+      "composition": "Piel: Napa Flor Entera. Suela: Antiderrapante Poliuretano. Plantilla: Calzado de cerdo y forro textil antimicrobiano.",
+      "description": "Calzado clínico profesional, línea Marian's. Confeccionado en piel napa flor entera, plantilla de cerdo y forro textil antimicrobiano con acojinado de látex. Suela antiderrapante de poliuretano, casco y contrafuerte de poliuretano.",
+      "features": [
+        "Piel: Napa Flor Entera",
+        "Forro textil antimicrobiano",
+        "Suela antiderrapante de poliuretano",
+        "Plantilla con acojinado de látex"
+      ],
+      "sizes": [
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27"
+      ],
+      "colors": [
+        "Blanco Clínico"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "MOD-920-B",
+      "id": "calzado-clinico-mod-920-blanco",
+      "name": "Calzado Clínico Mod. 920 Caballero",
+      "category": "medico",
+      "base_price_mxn": 1025,
+      "price_tiers_mxn": {
+        "1-12": 1025,
+        "13-50": 975,
+        "51+": 925
+      },
+      "composition": "Piel: Napa Flor Entera. Suela: Antiderrapante Poliuretano. Plantilla: Calzado de cerdo y forro textil antimicrobiano.",
+      "description": "Calzado clínico profesional, línea Marian's. Confeccionado en piel napa flor entera, plantilla de cerdo y forro textil antimicrobiano con acojinado de látex. Suela antiderrapante de poliuretano, casco y contrafuerte de poliuretano.",
+      "features": [
+        "Piel: Napa Flor Entera",
+        "Forro textil antimicrobiano",
+        "Suela antiderrapante de poliuretano",
+        "Plantilla con acojinado de látex"
+      ],
+      "sizes": [
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27"
+      ],
+      "colors": [
+        "Blanco Clínico"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "MOD-1042-B",
+      "id": "calzado-clinico-mod-1042-blanco",
+      "name": "Calzado Clínico Mod. 1042 Dama",
+      "category": "medico",
+      "base_price_mxn": 1025,
+      "price_tiers_mxn": {
+        "1-12": 1025,
+        "13-50": 975,
+        "51+": 925
+      },
+      "composition": "Piel: Napa Flor Entera. Suela: Antiderrapante Poliuretano. Plantilla: Calzado de cerdo y forro textil antimicrobiano.",
+      "description": "Calzado clínico profesional, línea Marian's. Confeccionado en piel napa flor entera, plantilla de cerdo y forro textil antimicrobiano con acojinado de látex. Suela antiderrapante de poliuretano, casco y contrafuerte de poliuretano.",
+      "features": [
+        "Piel: Napa Flor Entera",
+        "Forro textil antimicrobiano",
+        "Suela antiderrapante de poliuretano",
+        "Plantilla con acojinado de látex"
+      ],
+      "sizes": [
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27"
+      ],
+      "colors": [
+        "Blanco Hospitalario"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "RS001L",
+      "id": "rash-guardavidas",
+      "name": "Rash Manga Larga en Licra",
+      "category": "hoteleria",
+      "base_price_mxn": 490,
+      "price_tiers_mxn": {
+        "1-12": 490,
+        "13-50": 470,
+        "51+": 460
+      },
+      "composition": "87% Poliéster y 13% Elastano.",
+      "description": "Rash manga larga, cuello redondo, sublimado en pecho y espalda. Licra con protección solar.",
+      "features": [
+        "Manga larga",
+        "Cuello redondo",
+        "Logo en pecho y espalda",
+        "Licra con protección solar"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Rojo Guardavidas"
+      ],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "SG001",
+      "id": "short-guardavidas",
+      "name": "Short Guardavidas",
+      "category": "hoteleria",
+      "base_price_mxn": 390,
+      "price_tiers_mxn": {
+        "1-12": 390,
+        "13-50": 370,
+        "51+": 350
+      },
+      "composition": "97% Poliéster y 3% Elastano. Rápido secado.",
+      "description": "Short de rápido secado, bolsas a los costados, bolsa tipo parche, elástico en cintura.",
+      "features": [
+        "Rápido secado",
+        "Bolsas laterales",
+        "Bolsa trasera",
+        "Elástico en cintura"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [],
+      "catalog_integration_note": ""
+    },
+    {
+      "code": "GG001",
+      "id": "gorra-gabardina",
+      "name": "Gorra de Gabardina",
+      "category": "industrial",
+      "base_price_mxn": 130,
+      "price_tiers_mxn": {
+        "1-12": 130,
+        "13-50": 120,
+        "51+": 110
+      },
+      "composition": "Gabardina 100% Algodón",
+      "description": "Gorra clásica de 6 gajos confeccionada en gabardina 100% algodón. Visera de 6 cm de largo por 16 cm de ancho, alto de corona de 16 cm, circunferencia de 53 cm y ajustador con broche de hebilla.",
+      "features": [
+        "Composición 100% algodón",
+        "Circunferencia: 53 cm",
+        "Visera: Largo 6 cm - Ancho 16 cm",
+        "Alto de corona 16 cm, 6 gajos",
+        "Ajustador con broche de hebilla"
+      ],
+      "sizes": [
+        "Unitalla Ajustable"
+      ],
+      "colors": [],
+      "catalog_integration_note": ""
+    }
+  ],
+  "live_bundle": "https://fjcastalv-dot.github.io/OficialPre/assets/index-v45.js",
+  "live_verification": {
+    "product_count": 32,
+    "differences": [
+      "PING-BA"
+    ],
+    "differences_note": "PING-BA: mismos precios; el material difiere entre fuente y sitio publicado. Se conservó el texto publicado, sin verificar independientemente certificaciones."
+  },
+  "source_price_scope": "Precios del catálogo original por código; no se asignan automáticamente a diseños nuevos."
+}

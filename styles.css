@@ -18,3 +18,5 @@
 /* Catálogo: estudio blanco y vistas por color. */
 .catalog-visual,.detail-image,.featured-visual{background:#fff;padding:0}.catalog-visual img,.detail-image img,.featured-visual img{mix-blend-mode:normal;object-fit:contain;border-radius:0}.detail-image{aspect-ratio:3/4;max-height:72vh}.view-buttons button{width:76px;padding:4px;display:grid;gap:4px;background:#fff}.view-buttons button img{width:100%;height:80px;object-fit:contain}.view-buttons button span{font-size:10px}.view-buttons [aria-pressed=true]{outline:2px solid var(--navy);background:#fff}.product-options label[hidden]{display:none}.category-grid a[href*=hoteleria] svg,.catalog-categories button[data-filter=hoteleria] svg{stroke:#183f73;stroke-width:.8}.color-buttons button[aria-label*=Cuadritos] span{background:repeating-conic-gradient(#222 0 25%,#fff 0 50%) 0/6px 6px}.color-buttons button span{background:var(--swatch)}
 @media(max-width:720px){.detail-image{max-height:none;width:100%;aspect-ratio:3/4}.view-buttons button{width:68px}.view-buttons button img{height:72px}}
+
+.announcement .icon[hidden]{display:none}
