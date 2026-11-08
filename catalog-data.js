@@ -29,7 +29,13 @@ window.PRE_PRODUCTS = [
       "Mantiene tu uniforme limpio por más tiempo",
       "Fresco y transpirable",
       "Permite la circulación del aire para mayor confort"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 580,
+      "13-50": 550,
+      "51+": 520
+    },
+    "priceSource": "FI003-AF"
   },
   {
     "code": "FI001MC-G",
@@ -61,7 +67,13 @@ window.PRE_PRODUCTS = [
       "Mantiene tu uniforme limpio por más tiempo",
       "Fresco y transpirable",
       "Permite la circulación del aire para mayor confort"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 560,
+      "13-50": 540,
+      "51+": 510
+    },
+    "priceSource": "FI001MC-G"
   },
   {
     "code": "FI001ML-G",
@@ -93,7 +105,13 @@ window.PRE_PRODUCTS = [
       "Cuello mao",
       "Doble abotonadura",
       "Diseño liso sin bolsillos ni respiradero"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 410,
+      "13-50": 405,
+      "51+": 395
+    },
+    "priceSource": "FI001ML-G"
   },
   {
     "code": "FI002MC-DG",
@@ -125,7 +143,13 @@ window.PRE_PRODUCTS = [
       "Cuello mao",
       "Doble abotonadura",
       "Diseño liso sin bolsillos ni respiradero"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 390,
+      "13-50": 380,
+      "51+": 370
+    },
+    "priceSource": "FI002MC-DG"
   },
   {
     "code": "CZ001MC",
@@ -158,7 +182,13 @@ window.PRE_PRODUCTS = [
       "Manga corta",
       "Fresca y transpirable",
       "Corte elegante y moderno"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 650,
+      "13-50": 585,
+      "51+": 535
+    },
+    "priceSource": "CZ001MC"
   },
   {
     "code": "CZ001ML",
@@ -191,7 +221,13 @@ window.PRE_PRODUCTS = [
       "Manga larga",
       "Fresca y transpirable",
       "Corte elegante y moderno"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 750,
+      "13-50": 675,
+      "51+": 620
+    },
+    "priceSource": "CZ001ML"
   },
   {
     "code": "PL001",
@@ -224,7 +260,13 @@ window.PRE_PRODUCTS = [
       "Costuras reforzadas",
       "Tecnología Dry-Fit (secado ultra rápido)",
       "Corte caballero y corte dama"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 240,
+      "13-50": 230,
+      "51+": 220
+    },
+    "priceSource": "PL001"
   },
   {
     "code": "PL002MC",
@@ -256,7 +298,13 @@ window.PRE_PRODUCTS = [
       "Tela de textura fina y microperforada",
       "Corte recto, sin bolsillos, botones ni logotipos",
       "Bastilla sencilla en mangas y cuerpo"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 190,
+      "13-50": 180,
+      "51+": 170
+    },
+    "priceSource": "PL002MC"
   },
   {
     "code": "PL001ML",
@@ -290,7 +338,13 @@ window.PRE_PRODUCTS = [
       "Tela de textura fina y microperforada",
       "Corte recto, sin bolsillos, botones ni logotipos",
       "Bastilla sencilla en mangas y cuerpo"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 210,
+      "13-50": 203,
+      "51+": 195
+    },
+    "priceSource": "PL001ML"
   },
   {
     "code": "B004D",
@@ -321,7 +375,13 @@ window.PRE_PRODUCTS = [
       "Pinzas en busto",
       "Pinzas al frente y en espalda",
       "Manga corta"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 350,
+      "13-50": 330,
+      "51+": 320
+    },
+    "priceSource": "B004D"
   },
   {
     "code": "B001D-13",
@@ -352,7 +412,13 @@ window.PRE_PRODUCTS = [
       "Pinzas en busto",
       "Pinzas al frente y en espalda",
       "Manga 3/4"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 370,
+      "13-50": 350,
+      "51+": 345
+    },
+    "priceSource": "B001D-13"
   },
   {
     "code": "B001D",
@@ -383,7 +449,13 @@ window.PRE_PRODUCTS = [
       "Pinzas en busto",
       "Pinzas al frente y en espalda",
       "Manga larga"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 370,
+      "13-50": 350,
+      "51+": 330
+    },
+    "priceSource": "B001D"
   },
   {
     "code": "C006C",
@@ -412,7 +484,13 @@ window.PRE_PRODUCTS = [
       "Cuello camisero",
       "Canesú y pinzas en la espalda",
       "Manga corta"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 350,
+      "13-50": 330,
+      "51+": 310
+    },
+    "priceSource": "C006C"
   },
   {
     "code": "C007C",
@@ -442,7 +520,13 @@ window.PRE_PRODUCTS = [
       "Pinzas en busto",
       "Pinzas al frente y en espalda",
       "Manga larga"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 390,
+      "13-50": 370,
+      "51+": 360
+    },
+    "priceSource": "C007C"
   },
   {
     "code": "PB001",
@@ -476,7 +560,13 @@ window.PRE_PRODUCTS = [
       "Corte recto",
       "Bolsillos laterales",
       "Costuras reforzadas"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 390,
+      "13-50": 370,
+      "51+": 350
+    },
+    "priceSource": "PB001"
   },
   {
     "code": "PC001G",
@@ -510,7 +600,13 @@ window.PRE_PRODUCTS = [
       "Bolsa con tapa",
       "Bolsillos laterales y bolsas cargo",
       "Costuras reforzadas"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 450,
+      "13-50": 430,
+      "51+": 420
+    },
+    "priceSource": "PC001G"
   },
   {
     "code": "MP001",
@@ -536,7 +632,13 @@ window.PRE_PRODUCTS = [
       "Correa ajustable en el cuello",
       "Se ata a la cintura",
       "Bolsillo frontal dividido"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 290,
+      "13-50": 270,
+      "51+": 250
+    },
+    "priceSource": "MP001"
   },
   {
     "code": "MC001",
@@ -560,7 +662,13 @@ window.PRE_PRODUCTS = [
       "Estilo bistró a la cintura",
       "Lazos largos",
       "Bolsillo frontal dividido"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 150,
+      "13-50": 140,
+      "51+": 132
+    },
+    "priceSource": "MC001"
   },
   {
     "code": "GC001",
@@ -585,7 +693,13 @@ window.PRE_PRODUCTS = [
       "Gorro de cocina tradicional",
       "Únicamente en color negro",
       "Ajuste cómodo y resistente"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 110,
+      "13-50": 103,
+      "51+": 95
+    },
+    "priceSource": "GC001"
   },
   {
     "code": "ALINA",
@@ -616,7 +730,13 @@ window.PRE_PRODUCTS = [
       "Resistente a Hidrocarburos como Tolueno y Gasolina",
       "Resistencia a Aceites",
       "Abrasión: De 0 a 130 mg máx 150 mg"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 840,
+      "13-50": 756,
+      "51+": 690
+    },
+    "priceSource": "ALINA"
   },
   {
     "code": "PEGASO",
@@ -647,7 +767,13 @@ window.PRE_PRODUCTS = [
       "Resistencia a los aceites (incremento de volumen)",
       "Resistencia a los solventes y a la abrasión",
       "Resistencia a la flexión (incremento de abertura a 35,000 ciclos)"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 940,
+      "13-50": 846,
+      "51+": 790
+    },
+    "priceSource": "PEGASO"
   },
   {
     "code": "PING-BA",
@@ -682,7 +808,13 @@ window.PRE_PRODUCTS = [
       "Suela: Poliuretano/Hule antiderrapante, resistente y segura para entornos de trabajo exigentes.",
       "Certificación: Producto con certificado ante COFEPRIS.",
       "Estilo: Profesional y funcional, ideal para chefs, cocineros y personal de cocina que buscan comodidad y seguridad durante todo el día."
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 1200,
+      "13-50": 1100,
+      "51+": 1020
+    },
+    "priceSource": "PING-BA"
   },
   {
     "code": "PM001-S",
@@ -713,7 +845,13 @@ window.PRE_PRODUCTS = [
       "Tecnología antifluidos y repelencia a microgotas",
       "Pantalón jogger o recto con cintura elástica y múltiples bolsas",
       "Filipina con cuello en V ergonómico y bolsa de pecho con portacredencial"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 820,
+      "13-50": 790,
+      "51+": 750
+    },
+    "priceSource": "PM001-S"
   },
   {
     "code": "BM001-ML",
@@ -743,7 +881,13 @@ window.PRE_PRODUCTS = [
       "Tres bolsillos exteriores (uno de pecho, dos laterales amplios)",
       "Aberturas laterales para acceso a bolsas del pantalón",
       "Tratamiento antimanchas y blanqueado durable"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 390,
+      "13-50": 370,
+      "51+": 350
+    },
+    "priceSource": "BM001-ML"
   },
   {
     "code": "PPU001",
@@ -775,7 +919,13 @@ window.PRE_PRODUCTS = [
       "Elástico en cintura",
       "Jareta",
       "Unisex"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 360,
+      "13-50": 350,
+      "51+": 340
+    },
+    "priceSource": "PPU001"
   },
   {
     "code": "MOD-363",
@@ -806,7 +956,13 @@ window.PRE_PRODUCTS = [
       "Forro textil antimicrobiano",
       "Suela antiderrapante de poliuretano",
       "Plantilla con acojinado de látex"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 882,
+      "13-50": 832,
+      "51+": 790
+    },
+    "priceSource": "MOD-363"
   },
   {
     "code": "MOD-920-B",
@@ -837,7 +993,13 @@ window.PRE_PRODUCTS = [
       "Forro textil antimicrobiano",
       "Suela antiderrapante de poliuretano",
       "Plantilla con acojinado de látex"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 1025,
+      "13-50": 975,
+      "51+": 925
+    },
+    "priceSource": "MOD-920-B"
   },
   {
     "code": "MOD-1042-B",
@@ -868,7 +1030,13 @@ window.PRE_PRODUCTS = [
       "Forro textil antimicrobiano",
       "Suela antiderrapante de poliuretano",
       "Plantilla con acojinado de látex"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 1025,
+      "13-50": 975,
+      "51+": 925
+    },
+    "priceSource": "MOD-1042-B"
   },
   {
     "code": "RS001L",
@@ -898,7 +1066,13 @@ window.PRE_PRODUCTS = [
       "Cuello redondo",
       "Logo en pecho y espalda",
       "Licra con protección solar"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 490,
+      "13-50": 470,
+      "51+": 460
+    },
+    "priceSource": "RS001L"
   },
   {
     "code": "SG001",
@@ -927,7 +1101,13 @@ window.PRE_PRODUCTS = [
       "Bolsas laterales",
       "Bolsa trasera",
       "Elástico en cintura"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 390,
+      "13-50": 370,
+      "51+": 350
+    },
+    "priceSource": "SG001"
   },
   {
     "code": "GG001",
@@ -952,7 +1132,13 @@ window.PRE_PRODUCTS = [
       "Visera: Largo 6 cm - Ancho 16 cm",
       "Alto de corona 16 cm, 6 gajos",
       "Ajustador con broche de hebilla"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 130,
+      "13-50": 120,
+      "51+": 110
+    },
+    "priceSource": "GG001"
   },
   {
     "code": "MANTELERIA",
@@ -1020,7 +1206,13 @@ window.PRE_PRODUCTS = [
       "Tecnología antifluidos y repelencia a microgotas",
       "Pantalón jogger o recto con cintura elástica y múltiples bolsas",
       "Filipina con cuello en V ergonómico y bolsa de pecho con portacredencial"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 820,
+      "13-50": 790,
+      "51+": 750
+    },
+    "priceSource": "PM001-S"
   },
   {
     "code": "PM-VIVOS",
@@ -1050,6 +1242,12 @@ window.PRE_PRODUCTS = [
       "Tecnología antifluidos y repelencia a microgotas",
       "Pantalón jogger o recto con cintura elástica y múltiples bolsas",
       "Filipina con cuello en V ergonómico y bolsa de pecho con portacredencial"
-    ]
+    ],
+    "priceTiers": {
+      "1-12": 820,
+      "13-50": 790,
+      "51+": 750
+    },
+    "priceSource": "PM001-S"
   }
 ];

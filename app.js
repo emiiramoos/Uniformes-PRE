@@ -71,7 +71,8 @@ function openProduct(code,requestedColor){
  $$('[data-view]',host).forEach(b=>b.addEventListener('click',()=>{currentView=b.dataset.view;$$('[data-view]',host).forEach(t=>t.setAttribute('aria-pressed',String(t===b)));updatePhoto();}));
  colorSelect.addEventListener('change',()=>chooseColor(colorSelect.value));
  $$('[data-product-color]',host).forEach(b=>b.addEventListener('click',()=>chooseColor(b.dataset.productColor)));
- $('#product-options').addEventListener('submit',ev=>{ev.preventDefault();const f=new FormData(ev.currentTarget);const params=new URLSearchParams({producto:code,cantidad:f.get('cantidad'),talla:f.get('talla'),color:f.get('color')});location.href=`contacto.html?${params}`;});
+ const addToQuote=window.PRE_CART.mount(p,()=>selectedColor);
+ $('#product-options').addEventListener('submit',addToQuote);
  updatePhoto();$('#product-dialog').setAttribute('aria-labelledby','product-title');openDialog($('#product-dialog'));
 }
 if(grid){
