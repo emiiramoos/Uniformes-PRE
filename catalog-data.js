@@ -55,7 +55,7 @@ window.PRE_PRODUCTS = [
       "Lateral",
       "Espalda"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Tecnología repelente al agua y al aceite",
       "Mantiene tu uniforme limpio por más tiempo",
@@ -68,7 +68,7 @@ window.PRE_PRODUCTS = [
     "name": "Filipina Dry-Fit Y Gabardina Manga 3/4",
     "category": "restaurante",
     "material": "65% Poliéster y 35% Algodón. Dry-Fit 100% poliéster, transpirable.",
-    "description": "Filipina manga 3/4 con doble abotonadura y 2 bolsillos, pecho y manga, Dryfit en espalda alta y gabardina en espalda baja.",
+    "description": "Filipina lisa de gabardina, manga 3/4, con cuello mao y doble abotonadura, sin bolsillos ni respiradero posterior.",
     "sizes": [
       "XS",
       "S",
@@ -87,13 +87,12 @@ window.PRE_PRODUCTS = [
       "Lateral",
       "Espalda"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Corte clásico",
       "Cuello mao",
       "Doble abotonadura",
-      "1 bolsillo en el pecho",
-      "1 bolsillo en la manga"
+      "Diseño liso sin bolsillos ni respiradero"
     ]
   },
   {
@@ -101,7 +100,7 @@ window.PRE_PRODUCTS = [
     "name": "Filipina Dry-Fit Y Gabardina Manga Corta",
     "category": "restaurante",
     "material": "65% Poliéster y 35% Algodón.",
-    "description": "Filipina manga corta, con doble abotonadura y 2 bolsillos, pecho y manga, Dryfit en espalda alta y gabardina en espalda baja.",
+    "description": "Filipina lisa de gabardina, manga corta, con cuello mao y doble abotonadura, sin bolsillos ni respiradero posterior.",
     "sizes": [
       "XS",
       "S",
@@ -120,19 +119,18 @@ window.PRE_PRODUCTS = [
       "Lateral",
       "Espalda"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Corte clásico",
       "Cuello mao",
       "Doble abotonadura",
-      "1 bolsillo en el pecho",
-      "1 bolsillo en la manga"
+      "Diseño liso sin bolsillos ni respiradero"
     ]
   },
   {
     "code": "CZ001MC",
     "name": "Cazadora Manga Corta Dama Y Caballero",
-    "category": "restaurante",
+    "category": "hoteleria",
     "material": "98% Poliéster y 2% Elastano.",
     "description": "Una camisa con un corte elegante y moderno, con respiradero, para lucir fresco y casual.",
     "sizes": [
@@ -153,7 +151,7 @@ window.PRE_PRODUCTS = [
       "Lateral",
       "Espalda"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Cuello camisero",
       "Con respiradero en espalda",
@@ -165,7 +163,7 @@ window.PRE_PRODUCTS = [
   {
     "code": "CZ001ML",
     "name": "Cazadora Manga Larga Dama Y Caballero",
-    "category": "restaurante",
+    "category": "hoteleria",
     "material": "98% Poliéster y 2% Elastano.",
     "description": "Una camisa con un corte elegante y moderno, con respiradero, para lucir fresco y casual.",
     "sizes": [
@@ -186,7 +184,7 @@ window.PRE_PRODUCTS = [
       "Lateral",
       "Espalda"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Cuello camisero",
       "Con respiradero en espalda",
@@ -210,18 +208,17 @@ window.PRE_PRODUCTS = [
       "XXL"
     ],
     "colors": [
-      "Marino",
       "Blanco",
+      "Azul marino",
       "Negro",
-      "Gris"
+      "Gris",
+      "Rojo vino"
     ],
     "kind": "shirt",
     "views": [
-      "Frente",
-      "Lateral",
-      "Espalda"
+      "Frente"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Botones transparentes, tela fresca y ligera",
       "Costuras reforzadas",
@@ -253,13 +250,12 @@ window.PRE_PRODUCTS = [
     "views": [
       "Frente"
     ],
-    "imageStatus": "adapted-from-real-photos",
+    "imageStatus": "ready",
     "features": [
       "Cuello redondo con banda y costuras según la referencia real",
       "Tela de textura fina y microperforada",
       "Corte recto, sin bolsillos, botones ni logotipos",
-      "Bastilla sencilla en mangas y cuerpo",
-
+      "Bastilla sencilla en mangas y cuerpo"
     ]
   },
   {
@@ -288,13 +284,12 @@ window.PRE_PRODUCTS = [
     "views": [
       "Frente"
     ],
-    "imageStatus": "adapted-from-real-photos",
+    "imageStatus": "ready",
     "features": [
       "Cuello redondo con banda y costuras según la referencia real",
       "Tela de textura fina y microperforada",
       "Corte recto, sin bolsillos, botones ni logotipos",
-      "Bastilla sencilla en mangas y cuerpo",
-
+      "Bastilla sencilla en mangas y cuerpo"
     ]
   },
   {
@@ -318,11 +313,9 @@ window.PRE_PRODUCTS = [
     ],
     "kind": "shirt",
     "views": [
-      "Frente",
-      "Lateral",
-      "Espalda"
+      "Frente"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Cuello camisero en V",
       "Pinzas en busto",
@@ -351,11 +344,9 @@ window.PRE_PRODUCTS = [
     ],
     "kind": "shirt",
     "views": [
-      "Frente",
-      "Lateral",
-      "Espalda"
+      "Frente"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Cuello camisero en V",
       "Pinzas en busto",
@@ -384,11 +375,9 @@ window.PRE_PRODUCTS = [
     ],
     "kind": "shirt",
     "views": [
-      "Frente",
-      "Lateral",
-      "Espalda"
+      "Frente"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Cuello camisero en V",
       "Pinzas en busto",
@@ -416,11 +405,9 @@ window.PRE_PRODUCTS = [
     ],
     "kind": "shirt",
     "views": [
-      "Frente",
-      "Lateral",
-      "Espalda"
+      "Frente"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Cuello camisero",
       "Canesú y pinzas en la espalda",
@@ -447,11 +434,9 @@ window.PRE_PRODUCTS = [
     ],
     "kind": "shirt",
     "views": [
-      "Frente",
-      "Lateral",
-      "Espalda"
+      "Frente"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Cuello camisero",
       "Pinzas en busto",
@@ -486,7 +471,7 @@ window.PRE_PRODUCTS = [
       "Lateral",
       "Espalda"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Corte recto",
       "Bolsillos laterales",
@@ -520,7 +505,7 @@ window.PRE_PRODUCTS = [
       "Lateral",
       "Espalda"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Bolsa con tapa",
       "Bolsillos laterales y bolsas cargo",
@@ -543,11 +528,9 @@ window.PRE_PRODUCTS = [
     ],
     "kind": "apron",
     "views": [
-      "Frente",
-      "Lateral",
-      "Espalda"
+      "Frente"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Estilo con pechera protectora",
       "Correa ajustable en el cuello",
@@ -565,15 +548,14 @@ window.PRE_PRODUCTS = [
       "Unitalla"
     ],
     "colors": [
-      "Kaki",
       "Negro",
-      "Blanco"
+      "Azul Marino"
     ],
     "kind": "apron",
     "views": [
       "Frente"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Estilo bistró a la cintura",
       "Lazos largos",
@@ -590,16 +572,15 @@ window.PRE_PRODUCTS = [
       "Unitalla"
     ],
     "colors": [
+      "Negro",
       "Blanco",
-      "Negro"
+      "Cuadritos"
     ],
     "kind": "cap",
     "views": [
-      "Frente",
-      "Lateral",
-      "Espalda"
+      "Frente"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Gorro de cocina tradicional",
       "Únicamente en color negro",
@@ -705,10 +686,10 @@ window.PRE_PRODUCTS = [
   },
   {
     "code": "PM001-S",
-    "name": "Pijama Médica Con Strech",
+    "name": "Pijama unisex lisa",
     "category": "salud",
     "material": "No especificada",
-    "description": "Conjunto quirúrgico de filipina y pantalón clínico con elasticidad, otorga completa libertad de movimiento para médicos, enfermeros y odontólogos.",
+    "description": "Pijama unisex de cuello en V con pantalón de color sólido.",
     "sizes": [
       "XS",
       "S",
@@ -718,18 +699,15 @@ window.PRE_PRODUCTS = [
       "XXL"
     ],
     "colors": [
-      "Azul Rey",
-      "Verde Jade",
+      "Blanco",
       "Negro",
       "Azul Marino"
     ],
     "kind": "shirt",
     "views": [
-      "Frente",
-      "Lateral",
-      "Espalda"
+      "Frente"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Elasticidad en 4 direcciones que acompaña cada movimiento",
       "Tecnología antifluidos y repelencia a microgotas",
@@ -756,11 +734,9 @@ window.PRE_PRODUCTS = [
     ],
     "kind": "shirt",
     "views": [
-      "Frente",
-      "Lateral",
-      "Espalda"
+      "Frente"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Corte Dama o Caballero",
       "Manga larga con dobladillo amplio",
@@ -792,7 +768,7 @@ window.PRE_PRODUCTS = [
       "Lateral",
       "Espalda"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Corte recto",
       "Bolsas a los costados",
@@ -909,15 +885,14 @@ window.PRE_PRODUCTS = [
       "XXL"
     ],
     "colors": [
-      "Rojo Guardavidas"
+      "Blanco"
     ],
     "kind": "shirt",
     "views": [
       "Frente",
-      "Lateral",
       "Espalda"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Manga larga",
       "Cuello redondo",
@@ -940,15 +915,13 @@ window.PRE_PRODUCTS = [
       "XXL"
     ],
     "colors": [
-      "No especificados"
+      "Rojo"
     ],
     "kind": "pants",
     "views": [
-      "Frente",
-      "Lateral",
-      "Espalda"
+      "Frente"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Rápido secado",
       "Bolsas laterales",
@@ -966,15 +939,13 @@ window.PRE_PRODUCTS = [
       "Unitalla Ajustable"
     ],
     "colors": [
-      "No especificados"
+      "Marfil"
     ],
     "kind": "cap",
     "views": [
-      "Frente",
-      "Lateral",
-      "Espalda"
+      "Frente"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "ready",
     "features": [
       "Composición 100% algodón",
       "Circunferencia: 53 cm",
@@ -1020,5 +991,65 @@ window.PRE_PRODUCTS = [
     ],
     "imageStatus": "pending",
     "features": []
+  },
+  {
+    "code": "PM-FRANJAS",
+    "name": "Pijama unisex con franjas",
+    "category": "salud",
+    "material": "No especificada",
+    "description": "Pijama unisex con franjas con pantalón liso de color sólido.",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Azul Rey",
+      "Verde Jade"
+    ],
+    "kind": "shirt",
+    "views": [
+      "Frente"
+    ],
+    "imageStatus": "ready",
+    "features": [
+      "Elasticidad en 4 direcciones que acompaña cada movimiento",
+      "Tecnología antifluidos y repelencia a microgotas",
+      "Pantalón jogger o recto con cintura elástica y múltiples bolsas",
+      "Filipina con cuello en V ergonómico y bolsa de pecho con portacredencial"
+    ]
+  },
+  {
+    "code": "PM-VIVOS",
+    "name": "Pijama unisex con vivos",
+    "category": "salud",
+    "material": "No especificada",
+    "description": "Pijama unisex con vivos con pantalón liso de color sólido.",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Rojo",
+      "Azul Rey"
+    ],
+    "kind": "shirt",
+    "views": [
+      "Frente"
+    ],
+    "imageStatus": "ready",
+    "features": [
+      "Elasticidad en 4 direcciones que acompaña cada movimiento",
+      "Tecnología antifluidos y repelencia a microgotas",
+      "Pantalón jogger o recto con cintura elástica y múltiples bolsas",
+      "Filipina con cuello en V ergonómico y bolsa de pecho con portacredencial"
+    ]
   }
 ];
