@@ -48,3 +48,6 @@ Rotar un anuncio a la vez con aparición/desaparición: Envíos a todo México; 
 
 ### Aclaración expresa de Emilio sobre playeras cuello redondo
 Las fotos que envió son prendas reales, referencia de cuello, tela, corte y confección. La corta debe replicar la larga con la única diferencia física del largo de manga. El 8 de noviembre se generaron e integraron diez frontales con esa base, cuatro corta y seis larga, con selector de color real. Esperar revisión visual de Emilio; no confundir integración con aprobación.
+
+### Continuación de catálogo del 8 de noviembre
+Se recuperaron las instrucciones y recursos del respaldo, contrastados con este documento y el repositorio actual. Las 33 fichas tienen imagen principal. Mantener los frontales nuevos en `assets/products/studio/` y la variante negra reparada de cuello redondo; no reactivar los recortes CSS de fotos de cuerpo completo. Las fotos originales de textiles tienen galerías independientes. No cambiar la disponibilidad comercial a partir del color de una foto: cuando difiere de la selección, mostrar una nota de referencia en la ficha. Las recreaciones siguen sujetas a revisión de Emilio.

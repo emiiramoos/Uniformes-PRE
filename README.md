@@ -65,3 +65,15 @@ Al integrar `src` en `site-config.js`, los videos se reproducen dentro de su sec
 - Las recreaciones están integradas para revisión visual de Emilio; no se presentan como aprobación final ni como fotografías originales de producto.
 
 Validación de la corrección: prueba DOM con las dos fichas, los diez colores, cambio desde círculos y selector, sincronía con FormData de cotización, filtro Fucsia y limpieza. Archivos de imagen y sintaxis verificados. La comprobación visual de la página actualizada en navegador quedó bloqueada por falta de respuesta de esa sesión; las imágenes nuevas sí fueron inspeccionadas antes de integrarlas.
+
+## Continuación del catálogo — 8 noviembre
+
+El catálogo cuenta con imagen principal en sus 33 fichas (31 productos y dos categorías textiles). Se homogeneizaron las prendas de referencia sobre torso invisible, se recuperó el frontal del cargo y se integraron once fotografías originales a las galerías de textiles. Se reparó la variante negra de playera manga corta que estaba vacía. La procedencia, excepciones y diferencias de color frente al inventario heredado están documentadas en `ASSETS.md`.
+
+La ficha conserva el color del filtro al abrir, sincroniza selector/círculos/imagen y pasa color, talla y cantidad a Contacto. Cuando solo existe una foto de referencia en otro color, la ficha lo indica y conserva la selección de cotización. Las imágenes fallidas tienen un respaldo visual controlado. Tarjetas con nombre y Ver detalles, sin códigos o materiales; el código queda únicamente en la consulta preparada para PRE.
+
+Validación: decodificación de todas las imágenes configuradas, ausencia de archivos vacíos o faltantes, sintaxis JS y flujo en navegador de búsqueda cuello redondo → filtro Negro → ficha Negro → 12 unidades/M → Contacto. Comprobación móvil en marco de 390 px, sin desbordamiento horizontal. Es una revisión en navegador de escritorio a ancho móvil, no una prueba en iPhone físico.
+
+Pendientes generales: revisión visual de las recreaciones y variantes restantes; videos reales de bordado/redes, animación de portada aplazada; fotografía definitiva de banner; historia y legales finales; validación comercial de fichas/precios y diferencias de color. El flujo actual prepara la consulta; no calcula un precio final ni envía mensajes automáticamente.
+
+Las cazadoras marino corta/larga y el cargo gris tienen Frente/Lateral/Espalda individuales; la gorra suma su ángulo trasero recuperado. No se usaron trípticos como imagen de tarjeta ni se agregaron vistas a las playeras.

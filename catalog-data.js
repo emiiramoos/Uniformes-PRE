@@ -259,7 +259,7 @@ window.PRE_PRODUCTS = [
       "Tela de textura fina y microperforada",
       "Corte recto, sin bolsillos, botones ni logotipos",
       "Bastilla sencilla en mangas y cuerpo",
-      "Una imagen frontal por color"
+
     ]
   },
   {
@@ -294,7 +294,7 @@ window.PRE_PRODUCTS = [
       "Tela de textura fina y microperforada",
       "Corte recto, sin bolsillos, botones ni logotipos",
       "Bastilla sencilla en mangas y cuerpo",
-      "Una imagen frontal por color"
+
     ]
   },
   {

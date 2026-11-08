@@ -1,0 +1,68 @@
+[
+  {
+    "code": "MANTELERIA",
+    "view": "Referencia",
+    "path": "assets/products/textiles/manteleria-1.webp",
+    "source": "https://res.cloudinary.com/boofzznx/image/upload/v1788720647/0048CCCE-EF54-406B-AD2B-162BE105F7A9.webp"
+  },
+  {
+    "code": "MANTELERIA",
+    "view": "Referencia 2",
+    "path": "assets/products/textiles/manteleria-2.webp",
+    "source": "https://res.cloudinary.com/boofzznx/image/upload/v1788720646/9088CA42-2C82-4179-B6DC-355DA269424C.webp"
+  },
+  {
+    "code": "MANTELERIA",
+    "view": "Referencia 3",
+    "path": "assets/products/textiles/manteleria-3.webp",
+    "source": "https://res.cloudinary.com/boofzznx/image/upload/v1788720644/1B5FB400-D0E5-4502-A55A-63FEDD690564.webp"
+  },
+  {
+    "code": "MANTELERIA",
+    "view": "Referencia 4",
+    "path": "assets/products/textiles/manteleria-4.webp",
+    "source": "https://res.cloudinary.com/boofzznx/image/upload/v1788720644/60A36711-A9D7-4BA0-A0B9-169A28D125A7.jpg"
+  },
+  {
+    "code": "MANTELERIA",
+    "view": "Referencia 5",
+    "path": "assets/products/textiles/manteleria-5.webp",
+    "source": "https://res.cloudinary.com/boofzznx/image/upload/v1788720644/4138040D-7CDF-4936-BA5D-7143191084AA.jpg"
+  },
+  {
+    "code": "TAPICERIA",
+    "view": "Referencia",
+    "path": "assets/products/textiles/tapiceria-1.webp",
+    "source": "https://res.cloudinary.com/boofzznx/image/upload/v1788721011/7f2b53bf-df3c-46b3-b034-bea9e9a5f203_2.jpg"
+  },
+  {
+    "code": "TAPICERIA",
+    "view": "Referencia 2",
+    "path": "assets/products/textiles/tapiceria-2.webp",
+    "source": "https://res.cloudinary.com/boofzznx/image/upload/v1788721010/d70f50c6-0f90-4e97-9f4a-ccc7ada8ef1a.jpg"
+  },
+  {
+    "code": "TAPICERIA",
+    "view": "Referencia 3",
+    "path": "assets/products/textiles/tapiceria-3.webp",
+    "source": "https://res.cloudinary.com/boofzznx/image/upload/v1788721008/7779532a-bcfd-4a3f-bdd0-1e546e12b58e_2.jpg"
+  },
+  {
+    "code": "TAPICERIA",
+    "view": "Referencia 4",
+    "path": "assets/products/textiles/tapiceria-4.webp",
+    "source": "https://res.cloudinary.com/boofzznx/image/upload/v1788721007/49fc6694-83dd-4995-b2e2-9cd3a97832c3_2.jpg"
+  },
+  {
+    "code": "TAPICERIA",
+    "view": "Referencia 5",
+    "path": "assets/products/textiles/tapiceria-5.webp",
+    "source": "https://res.cloudinary.com/boofzznx/image/upload/v1788721005/8be50ee2-b3f0-4f0f-848f-2f4755c93f10_2.jpg"
+  },
+  {
+    "code": "TAPICERIA",
+    "view": "Referencia 6",
+    "path": "assets/products/textiles/tapiceria-6.webp",
+    "source": "https://res.cloudinary.com/boofzznx/image/upload/v1788721003/1d8b51eb-050b-4b00-9d14-2266bda1018d.jpg"
+  }
+]
