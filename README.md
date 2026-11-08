@@ -33,3 +33,24 @@ Validación realizada: sintaxis JS, referencias locales, navegación y búsqueda
 
 ## Pendientes
 Fotos/videos definitivos, selección final de orden del catálogo, revisión comercial de fichas, legales, cotizador con tarifas, despliegue público y QA en dispositivos físicos. El asistente de ayuda actual es un aviso de contacto, no un chatbot IA.
+
+## Revisión de diseño — 8 noviembre 2026
+Las indicaciones de esta fecha sustituyen las descripciones visuales del avance anterior. El contrato actualizado está en `DESIGN.md`.
+- Se quitaron todas las sobrelíneas y el texto secundario de portada.
+- Logo oficial con transparencia alfa, sin el rectángulo negro.
+- Tres destacados con imágenes adaptadas de referencias, volumen realista, cinta Best seller y luz lateral naranja.
+- Bordado pasa de tarjeta vertical a franja completa, preparada para video horizontal.
+- Cinco etapas, sin números ni pausa visible; ciclo de 2 segundos. Respeta la preferencia de movimiento reducido del dispositivo.
+- Sin carrito ni guardado de selección: la ficha lleva a Contacto con producto, cantidad, talla y color preparados.
+- Catálogo con portada centrada, filtros de categoría/color/talla y orden alfabético, transiciones y tarjetas solo con nombre y Ver detalles sin flechas.
+- Quiénes somos y Contacto siguen las referencias recibidas; las fotografías de taller/rack/telas son referencias visuales generadas, sustituibles por material real.
+- Se recuperaron fotos del sitio original; las no adaptadas son referencias temporales, no aprobación de acabado final. No se inventan vistas laterales o traseras ausentes.
+- Videos sociales preparados para autoplay inline, loop, silencio inicial y botón para activar sonido. No hay videos reales cargados todavía. Las referencias estáticas dicen Video próximamente.
+- Cabecera alterna tres anuncios, incluido el envío gratis por arriba de $1,000 MXN indicado por Emilio.
+- Verificación: sintaxis JS, rutas/archivos, revisión de escritorio y marco móvil de 390 px, búsqueda de polo y flujo ficha→contacto con 12 unidades/M/Marino.
+
+### Videos tras esta revisión
+Bordado: MP4 horizontal, ideal 1920×1080 o mayor, 8–15 segundos, dejar el lado derecho con poco detalle para texto. La banda recorta sin deformar.
+Redes: tres MP4 verticales, ideal 1080×1920, 8–20 segundos cada uno, material real de prendas, confección y marca. Tienen loop y audio opcional.
+Portada: conserva los campos para video horizontal y vertical. Higgsfield y compra de créditos siguen aplazados; no se ha comprado nada.
+Al integrar `src` en `site-config.js`, los videos se reproducen dentro de su sección; la explicación anterior sobre abrirlos en un diálogo ya no aplica.
