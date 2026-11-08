@@ -35,7 +35,7 @@ $('.menu-toggle')?.addEventListener('click',()=>{const b=$('.menu-toggle'),on=b.
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){$('#site-nav').classList.remove('is-open');$('.menu-toggle')?.setAttribute('aria-expanded','false');}});
 // Un solo mensaje de cabecera a la vez.
 const messages=['Envíos a todo México','Uniformes para tu equipo','Envío gratis en pedidos arriba de $1,000 MXN'];let messageIndex=0;
-if(!reduce.matches)setInterval(()=>{if(document.hidden)return;const el=$('[data-announcement]');el.classList.add('is-fading');setTimeout(()=>{messageIndex=(messageIndex+1)%messages.length;el.textContent=messages[messageIndex];$('.announcement .icon').hidden=messageIndex!==0;el.classList.remove('is-fading');},350);},3800);
+if(!reduce.matches)setInterval(()=>{if(document.hidden)return;const el=$('[data-announcement]');el.classList.add('is-fading');setTimeout(()=>{messageIndex=(messageIndex+1)%messages.length;el.textContent=messages[messageIndex];$('.announcement .icon').toggleAttribute('hidden',messageIndex!==0);el.classList.remove('is-fading');},350);},3800);
 // Catálogo: información breve en tarjetas; ficha completa al abrir.
 const grid=$('#catalog-grid');let activeFilter='todos';
 function matchesCategory(p,c){if(c==='todos')return true;if(c==='corporativo')return p.category==='ejecutivo';if(c==='restaurante'&&p.code==='PL001')return true;if(c==='servicios')return ['GG001','MP001','MC001','PL001','PL002MC','PL001ML'].includes(p.code);return p.category===c;}
