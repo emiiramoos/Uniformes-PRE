@@ -233,8 +233,8 @@ window.PRE_PRODUCTS = [
     "code": "PL002MC",
     "name": "Playera Cuello Redondo Manga Corta Dry-Fit",
     "category": "hoteleria",
-    "material": "100% Poliéster Dryfit",
-    "description": "Playera clásica de cuello redondo manga corta confeccionada en microfibra 100% poliéster Dryfit de alto rendimiento. Tejido ultra fresco, ligero y de secado rápido para staff, eventos y hotelería.",
+    "material": "Dry-Fit. Misma tela en manga corta y manga larga.",
+    "description": "Playera de cuello redondo manga corta, con el mismo corte, tela y confección que su versión de manga larga.",
     "sizes": [
       "XS",
       "S",
@@ -245,28 +245,29 @@ window.PRE_PRODUCTS = [
     ],
     "colors": [
       "Azul claro",
+      "Azul marino",
       "Blanco",
-      "Negro",
-      "Azul marino"
+      "Negro"
     ],
     "kind": "shirt",
     "views": [
       "Frente"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "adapted-from-real-photos",
     "features": [
-      "Cuello redondo con cárdigan acanalado reforzado antidealargamiento",
-      "Tecnología Dry-Fit de secado ultra rápido y control de humedad",
-      "Costura doble reforzada en sisas, mangas y bastilla inferior",
-      "Superficie óptima para bordado o serigrafía de alta definición"
+      "Cuello redondo con banda y costuras según la referencia real",
+      "Tela de textura fina y microperforada",
+      "Corte recto, sin bolsillos, botones ni logotipos",
+      "Bastilla sencilla en mangas y cuerpo",
+      "Una imagen frontal por color"
     ]
   },
   {
     "code": "PL001ML",
     "name": "Playera cuello redondo manga larga Dry-Fit",
     "category": "hoteleria",
-    "material": "DRY-FIT 100% Poliéster (150 g/m2)",
-    "description": "Playera de alto rendimiento con mangas largas confeccionada en tecnología Dry-Fit micro-perforada. Máxima protección solar UV, ligereza y frescura en climas tropicales y exteriores.",
+    "material": "Dry-Fit. Misma tela en manga corta y manga larga.",
+    "description": "Playera de cuello redondo manga larga, con el mismo corte, tela y confección que su versión de manga corta.",
     "sizes": [
       "XS",
       "S",
@@ -287,13 +288,13 @@ window.PRE_PRODUCTS = [
     "views": [
       "Frente"
     ],
-    "imageStatus": "pending",
+    "imageStatus": "adapted-from-real-photos",
     "features": [
-      "Protección solar UPF y confort térmico en exteriores",
-      "Manga larga con puño anatómico cómodo",
-      "Tela fresca y ligera de secado ultra rápido",
-      "Costuras reforzadas de alta resistencia para uso continuo",
-      "Excelente retención de forma y color"
+      "Cuello redondo con banda y costuras según la referencia real",
+      "Tela de textura fina y microperforada",
+      "Corte recto, sin bolsillos, botones ni logotipos",
+      "Bastilla sencilla en mangas y cuerpo",
+      "Una imagen frontal por color"
     ]
   },
   {

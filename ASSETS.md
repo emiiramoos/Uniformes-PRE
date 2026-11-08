@@ -24,3 +24,9 @@ Las imágenes de referencia no acreditan que exista un video final ni sustituyen
 `asset-sources.json` conserva URLs del catálogo anterior. Son fotos temporales mientras se homogeneizan las prendas y se completan las vistas aprobadas. La lista publicada de rutas se controla con `site-config.js`; referencias ambiguas se dejan sin imagen en lugar de asociar otra prenda. El cargo frontal usa la recreación recuperada del proyecto.
 
 No se han adquirido créditos ni suscripciones de video en esta revisión.
+
+## Playeras cuello redondo: corrección con fotos reales
+Base de reconstrucción: IMG_9996.jpeg (azul vivo) y IMG_9989.jpeg (detalle de banda, tejido y confección); tonos de referencia IMG_9994.jpeg (azul claro), IMG_9993.jpeg (azul rey), IMG_9991.jpeg (rojo), IMG_9990.jpeg (fucsia) e IMG_9989.jpeg (coral).
+Prompt base: reproducir fielmente la playera real de manga larga, cuello redondo de banda plana de la misma tela, micro-malla fina, hombro ligeramente caído, cuerpo recto, bastillas simples y mangas sin puño elástico. Frente completo sobre torso invisible, fondo gris claro, relieve natural, sin logos, botones, bolsillos, personas ni interfaz de la foto.
+Prompt de variantes: conservar geometría, cuello, textura, iluminación, composición y confección de la base; cambiar solo color según cada fotografía real, y para manga corta reducir solo el largo de las mangas manteniendo su bastilla. Blanco, negro y marino se aplican únicamente a manga corta según indicación expresa.
+Diez archivos web en `assets/products/cuello-redondo/`: seis `ml-*` y cuatro `mc-*`. Herramienta integrada de generación/edición de imágenes; no video ni créditos de Higgsfield. Pendientes de revisión visual de Emilio.

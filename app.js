@@ -9,10 +9,15 @@ const whatsapp=message=>`https://wa.me/${config.whatsapp}?text=${encodeURICompon
 const iconPath={shirt:'m8 3-6 4 3 5 3-2v11h8V10l3 2 3-5-6-4c-1 3-7 3-8 0z',cap:'M3 14a9 9 0 0 1 18 0M3 14h18l2 4H9l-6-4',shoe:'M3 12V5h5l2 7 7 2 4 2v4H3z',pants:'M7 3h10l2 18h-6l-1-12-1 12H5zM7 6h10',apron:'M8 3h8v6l5 12H3L8 9zM9 13h6v4H9z',layers:'m12 2 10 5-10 5L2 7zm-10 10 10 5 10-5M2 17l10 5 10-5'};
 function icon(n){return `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${iconPath[n]||iconPath.shirt}"/></svg>`;}
 function placeholder(p){return `<div class="product-placeholder">${icon(p.kind)}<span>Imagen próximamente</span></div>`;}
-function productVisual(p,view='Frente'){
- const src=config.productImages?.[p.code]?.[view];
- return safeMedia(src)?`<img src="${esc(src)}" alt="${esc(p.name)}, vista ${esc(view.toLowerCase())}" loading="lazy">`:placeholder(p);
+function productVisual(p,view='Frente',color){
+ const variants=config.productColorImages?.[p.code];
+ const chosen=color||p.colors[0];
+ const src=variants&&view==='Frente'?variants[chosen]:config.productImages?.[p.code]?.[view];
+ return safeMedia(src)?`<img src="${esc(src)}" alt="${esc(p.name)}${variants?', color '+esc(chosen):''}, vista ${esc(view.toLowerCase())}" loading="lazy">`:placeholder(p);
 }
+const colorHex={'Azul vivo':'#078dc7','Azul claro':'#bccbdd','Azul rey':'#162aab','Azul marino':'#111d39','Blanco':'#fff','Negro':'#151515','Rojo':'#c91d32','Fucsia':'#ce0658','Coral':'#f05b60'};
+function colorButtons(p){if(!config.productColorImages?.[p.code])return '';return `<div class="color-preview"><p>Color: <strong data-preview-color>${esc(p.colors[0])}</strong></p><div class="color-buttons" aria-label="Colores de ${esc(p.name)}">${p.colors.map((c,i)=>`<button type="button" data-product-color="${esc(c)}" aria-label="Ver color ${esc(c)}" aria-pressed="${i===0}" style="--swatch:${colorHex[c]||'#aaa'}"><span></span></button>`).join('')}</div></div>`;}
+
 function openDialog(d){if(!d.open)d.showModal();document.body.style.overflow='hidden';}
 $$('dialog').forEach(d=>{
  $('.dialog-close',d)?.addEventListener('click',()=>d.close());
@@ -33,14 +38,19 @@ function sourceClass(p){if(p.code==='GG001')return 'source-cap';if(p.code==='SG0
 function renderCatalog(){if(!grid)return;const q=norm($('#catalog-search').value.trim()),color=$('#color-filter').value,size=$('#size-filter').value;
  let visible=products.filter(p=>matchesCategory(p,activeFilter)&&norm([p.name,p.code,p.material,p.description].join(' ')).includes(q)&&(color==='todos'||p.colors.some(c=>norm(c)===norm(color)))&&(size==='todos'||p.sizes.includes(size)));
  if($('#catalog-sort').value==='nombre')visible.sort((a,b)=>a.name.localeCompare(b.name,'es'));
- grid.innerHTML=visible.map((p,i)=>`<article class="catalog-card" style="--delay:${Math.min(i,8)*30}ms"><button class="catalog-visual ${sourceClass(p)}" data-product="${esc(p.code)}" aria-label="Ver detalles de ${esc(p.name)}">${productVisual(p)}</button><div class="catalog-info"><h2>${esc(p.name)}</h2><button class="inline-link" data-product="${esc(p.code)}">Ver detalles</button></div></article>`).join('');
+ grid.innerHTML=visible.map((p,i)=>`<article class="catalog-card" style="--delay:${Math.min(i,8)*30}ms"><button class="catalog-visual ${sourceClass(p)}" data-product="${esc(p.code)}" aria-label="Ver detalles de ${esc(p.name)}">${productVisual(p,'Frente',color==='todos'?undefined:p.colors.find(c=>norm(c)===norm(color)))}</button><div class="catalog-info"><h2>${esc(p.name)}</h2><button class="inline-link" data-product="${esc(p.code)}">Ver detalles</button></div></article>`).join('');
  $('#catalog-count').textContent=`${visible.length} ${visible.length===1?'producto':'productos'}`;$('.empty-state').hidden=!!visible.length;
  $$('[data-product]',grid).forEach(b=>b.addEventListener('click',()=>openProduct(b.dataset.product)));
 }
 function setFilter(c){activeFilter=c;$('#category-filter').value=c;$$('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===c)));renderCatalog();}
 function openProduct(code){const p=products.find(p=>p.code===code);if(!p)return;const host=$('[data-product-content]');const views=p.views.filter(v=>safeMedia(config.productImages?.[code]?.[v]));if(!views.length)views.push('Frente');
- host.innerHTML=`<div class="product-detail-grid"><div><div class="detail-image ${sourceClass(p)}">${productVisual(p)}</div><div class="view-buttons" aria-label="Vistas del producto">${views.length>1?views.map((v,i)=>`<button data-view="${esc(v)}" aria-pressed="${i===0}">${esc(v)}</button>`).join(''):''}</div></div><form id="product-options"><small>${esc(p.code)}</small><h2>${esc(p.name)}</h2><p>${esc(p.description)}</p><p><strong>Material:</strong> ${esc(p.material)}</p><ul class="detail-features">${p.features.filter(Boolean).map(f=>`<li>${esc(f)}</li>`).join('')}</ul><div class="product-options"><label>Talla<select name="talla">${p.sizes.map(s=>`<option>${esc(s)}</option>`).join('')}</select></label><label>Cantidad<input name="cantidad" type="number" min="1" max="100000" step="1" value="1" required></label><label>Color<select name="color">${p.colors.map(c=>`<option>${esc(c)}</option>`).join('')}</select></label></div><button class="button detail-add" type="submit">Solicitar cotización</button><p class="form-hint">Confirmamos contigo disponibilidad, bordado y envío.</p></form></div>`;
+ host.innerHTML=`<div class="product-detail-grid"><div><div class="detail-image ${sourceClass(p)}">${productVisual(p)}</div>${colorButtons(p)}<div class="view-buttons" aria-label="Vistas del producto">${views.length>1?views.map((v,i)=>`<button data-view="${esc(v)}" aria-pressed="${i===0}">${esc(v)}</button>`).join(''):''}</div></div><form id="product-options"><small>${esc(p.code)}</small><h2>${esc(p.name)}</h2><p>${esc(p.description)}</p><p><strong>Material:</strong> ${esc(p.material)}</p><ul class="detail-features">${p.features.filter(Boolean).map(f=>`<li>${esc(f)}</li>`).join('')}</ul><div class="product-options"><label>Talla<select name="talla">${p.sizes.map(s=>`<option>${esc(s)}</option>`).join('')}</select></label><label>Cantidad<input name="cantidad" type="number" min="1" max="100000" step="1" value="1" required></label><label>Color<select name="color">${p.colors.map(c=>`<option>${esc(c)}</option>`).join('')}</select></label></div><button class="button detail-add" type="submit">Solicitar cotización</button><p class="form-hint">Confirmamos contigo disponibilidad, bordado y envío.</p></form></div>`;
  $$('[data-view]',host).forEach(b=>b.addEventListener('click',()=>{$$('.view-buttons button',host).forEach(t=>t.setAttribute('aria-pressed',String(t===b)));$('.detail-image',host).innerHTML=productVisual(p,b.dataset.view);}));
+ const colorSelect=$('#product-options select[name="color"]');
+ if(config.productColorImages?.[code]){
+  function chooseColor(color){if(!p.colors.includes(color))return;colorSelect.value=color;$('.detail-image',host).innerHTML=productVisual(p,'Frente',color);$('[data-preview-color]',host).textContent=color;$$('[data-product-color]',host).forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.productColor===color)));}
+  colorSelect.addEventListener('change',()=>chooseColor(colorSelect.value));$$('[data-product-color]',host).forEach(b=>b.addEventListener('click',()=>chooseColor(b.dataset.productColor)));
+ }
  $('#product-options').addEventListener('submit',ev=>{ev.preventDefault();const f=new FormData(ev.currentTarget);const params=new URLSearchParams({producto:code,cantidad:f.get('cantidad'),talla:f.get('talla'),color:f.get('color')});location.href=`contacto.html?${params}`;});openDialog($('#product-dialog'));
 }
 if(grid){

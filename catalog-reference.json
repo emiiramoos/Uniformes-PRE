@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "source": "Referencias y autorización directa de Emilio",
   "logo": {
     "path": "assets/brand/pre-logo-transparent.png",
@@ -13,13 +13,20 @@
         "frente"
       ],
       "colors": [
-        "Blanco",
-        "Negro",
         "Azul claro",
-        "Azul marino"
+        "Azul marino",
+        "Blanco",
+        "Negro"
       ],
       "sameMaterialAs": "cuello-redondo-larga",
-      "status": "recreaciones pendientes de aprobación visual"
+      "status": "recreaciones basadas en fotos reales integradas; pendientes de revisión visual de Emilio",
+      "code": "PL002MC",
+      "images": {
+        "Azul claro": "assets/products/cuello-redondo/mc-azul-claro.webp",
+        "Azul marino": "assets/products/cuello-redondo/mc-azul-marino.webp",
+        "Blanco": "assets/products/cuello-redondo/mc-blanco.webp",
+        "Negro": "assets/products/cuello-redondo/mc-negro.webp"
+      }
     },
     {
       "id": "cuello-redondo-larga",
@@ -43,7 +50,16 @@
         "IMG_9990.jpeg",
         "IMG_9989.jpeg"
       ],
-      "status": "recreaciones pendientes de aprobación visual"
+      "status": "recreaciones basadas en fotos reales integradas; pendientes de revisión visual de Emilio",
+      "code": "PL001ML",
+      "images": {
+        "Azul vivo": "assets/products/cuello-redondo/ml-azul-vivo.webp",
+        "Azul claro": "assets/products/cuello-redondo/ml-azul-claro.webp",
+        "Azul rey": "assets/products/cuello-redondo/ml-azul-rey.webp",
+        "Rojo": "assets/products/cuello-redondo/ml-rojo.webp",
+        "Fucsia": "assets/products/cuello-redondo/ml-fucsia.webp",
+        "Coral": "assets/products/cuello-redondo/ml-coral.webp"
+      }
     }
   ],
   "notes": [
@@ -52,6 +68,8 @@
     "Cuello redondo, sin logos, botones ni bolsillos.",
     "Mismo modelo y estudio de cazadora aprobada.",
     "Nombres de los colores son descriptivos y deben confirmarse con PRE.",
-    "No deducir composición exacta de la fotografía; revisar ficha existente con PRE."
+    "No deducir composición exacta de la fotografía; revisar ficha existente con PRE.",
+    "Banda de cuello y tejido fino según fotos reales; no añadir cárdigan acanalado ni puño elástico.",
+    "No trasladar afirmaciones UPF/protección solar sin validación."
   ]
 }

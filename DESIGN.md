@@ -45,3 +45,6 @@ Rotar un anuncio a la vez con aparición/desaparición: Envíos a todo México; 
 - Homogeneizar el resto de fotos de referencia y completar vistas/colores fieles, sin tratar imágenes recuperadas como aprobaciones nuevas.
 - Historia de PRE y textos legales definitivos.
 - No comprar suscripciones/créditos ni generar video de pago sin la siguiente instrucción de Emilio.
+
+### Aclaración expresa de Emilio sobre playeras cuello redondo
+Las fotos que envió son prendas reales, referencia de cuello, tela, corte y confección. La corta debe replicar la larga con la única diferencia física del largo de manga. El 8 de noviembre se generaron e integraron diez frontales con esa base, cuatro corta y seis larga, con selector de color real. Esperar revisión visual de Emilio; no confundir integración con aprobación.

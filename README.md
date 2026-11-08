@@ -54,3 +54,14 @@ Bordado: MP4 horizontal, ideal 1920×1080 o mayor, 8–15 segundos, dejar el lad
 Redes: tres MP4 verticales, ideal 1080×1920, 8–20 segundos cada uno, material real de prendas, confección y marca. Tienen loop y audio opcional.
 Portada: conserva los campos para video horizontal y vertical. Higgsfield y compra de créditos siguen aplazados; no se ha comprado nada.
 Al integrar `src` en `site-config.js`, los videos se reproducen dentro de su sección; la explicación anterior sobre abrirlos en un diálogo ya no aplica.
+
+## Corrección de playeras cuello redondo — 8 noviembre
+- Se sustituyen las fotos de referencia anteriores por diez recreaciones hechas desde las seis fotos reales de Emilio: cuatro de manga corta y seis de manga larga.
+- Misma base de prenda, banda de cuello, tejido microperforado, corte recto y bastillas; únicamente cambian largo de manga y color.
+- Manga corta: azul claro, azul marino, blanco y negro. Manga larga: azul vivo, azul claro, azul rey, rojo, fucsia y coral. Azul primero en ambos productos. Nombres de tonos de manga larga son descriptivos.
+- Una sola frontal por color, sin vistas laterales ni traseras. Selector de color y círculos cambian la imagen; el color escogido también llega a la consulta en Contacto.
+- `site-config.js` contiene `productColorImages` por código y color, con archivos en `assets/products/cuello-redondo/`.
+- Se retiran de estas dos fichas las afirmaciones heredadas de protección solar UPF, puño anatómico y cárdigan acanalado; no constan en la referencia real. La composición/gramaje exactos siguen sin deducirse de fotografías. El inventario histórico se conserva como fuente aparte.
+- Las recreaciones están integradas para revisión visual de Emilio; no se presentan como aprobación final ni como fotografías originales de producto.
+
+Validación de la corrección: prueba DOM con las dos fichas, los diez colores, cambio desde círculos y selector, sincronía con FormData de cotización, filtro Fucsia y limpieza. Archivos de imagen y sintaxis verificados. La comprobación visual de la página actualizada en navegador quedó bloqueada por falta de respuesta de esa sesión; las imágenes nuevas sí fueron inspeccionadas antes de integrarlas.
