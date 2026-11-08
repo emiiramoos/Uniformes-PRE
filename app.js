@@ -6,7 +6,7 @@ const norm=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerC
 const reduce=matchMedia('(prefers-reduced-motion:reduce)');
 const safeMedia=s=>typeof s==='string'&&s&&!s.startsWith('//')&&(/^https:\/\//.test(s)||/^(assets\/|\.\/assets\/)/.test(s));
 const whatsapp=message=>`https://wa.me/${config.whatsapp}?text=${encodeURIComponent(message)}`;
-const iconPath={shirt:'m8 3-6 4 3 5 3-2v11h8V10l3 2 3-5-6-4c-1 3-7 3-8 0z',cap:'M3 14a9 9 0 0 1 18 0M3 14h18l2 4H9l-6-4',shoe:'M3 12V5h5l2 7 7 2 4 2v4H3z',pants:'M7 3h10l2 18h-6l-1-12-1 12H5zM7 6h10',apron:'M8 3h8v6l5 12H3L8 9zM9 13h6v4H9z',layers:'m12 2 10 5-10 5L2 7zm-10 10 10 5 10-5M2 17l10 5 10-5'};
+const iconPath={shirt:'M8 3 3 6l3 5 2-1v11h8V10l2 1 3-5-5-3M8 3a4 4 0 0 0 8 0M8 18h8',cap:'M3 14a9 9 0 0 1 18 0M3 14h18l2 4H9l-6-4',shoe:'M3 12V5h5l2 7 7 2 4 2v4H3z',pants:'M7 3h10l2 18h-6l-1-12-1 12H5zM7 6h10',apron:'M8 3h8v6l5 12H3L8 9zM9 13h6v4H9z',layers:'m12 2 10 5-10 5L2 7zm-10 10 10 5 10-5M2 17l10 5 10-5'};
 function icon(n){return `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${iconPath[n]||iconPath.shirt}"/></svg>`;}
 function placeholder(p){return `<div class="product-placeholder">${icon(p.kind)}<span>Imagen próximamente</span></div>`;}
 function defaultView(p){return Object.keys(config.productImages?.[p.code]||{})[0]||'Frente';}
