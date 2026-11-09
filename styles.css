@@ -30,15 +30,23 @@
 .reviews-section{background:#f5f7fa;overflow:hidden}.reviews-section h2{text-align:center}.reviews-section .accent-line{margin:18px auto 30px}.review-window{overflow-x:auto;scrollbar-width:thin;padding:7px 0 12px}.review-track{display:flex;width:max-content;animation:review-loop 38s linear infinite}.review-group{display:flex;gap:22px;padding-right:22px}.review-card{width:340px;min-height:250px;background:white;border:1px solid #e1e6ef;border-radius:15px;padding:25px;display:flex;flex-direction:column;box-shadow:0 5px 16px #08133f06}.review-top{display:flex;align-items:center;justify-content:space-between;gap:15px}.review-google{font-size:14px;font-weight:600;color:#3c4043}.review-stars{color:#f3ac18;font-size:20px;letter-spacing:2px}.review-card blockquote{font-size:15px;line-height:1.8;margin:23px 0;flex:1;color:var(--text)}.review-bottom{display:grid;gap:7px}.review-bottom strong{font-size:13px;color:var(--navy)}.review-bottom a{font-size:11px;color:#566176;text-decoration:underline;min-height:28px;display:inline-flex;align-items:center;width:fit-content}.review-window:hover .review-track,.review-window:focus-within .review-track{animation-play-state:paused}@keyframes review-loop{to{transform:translateX(-50%)}}@media(max-width:720px){.review-card{width:290px;padding:22px;min-height:245px}.review-group{gap:16px;padding-right:16px}.review-card blockquote{font-size:14px}.reviews-section h2{font-size:26px}.review-track{animation-duration:32s}}@media(prefers-reduced-motion:reduce){.review-track{animation:none}.review-group[aria-hidden]{display:none}}
 .review-group{min-width:100vw;justify-content:space-around}
 
-/* PRE embroidery: full-width, silent film with centered editorial typography. */
-.embroidery{min-height:660px;min-height:clamp(600px,78svh,880px);background:#081322}
-.embroidery .embroidery-background{object-position:center 52%;pointer-events:none;user-select:none}
-.embroidery .embroidery-shade{background:linear-gradient(180deg,rgba(5,14,30,.48),rgba(5,14,30,.6)),linear-gradient(90deg,rgba(5,14,30,.16),transparent 50%,rgba(5,14,30,.16))}
+/* PRE embroidery: left-aligned copy blends into the film on the right. */
+.embroidery{min-height:660px;min-height:clamp(600px,76svh,820px);background:#081322}
+.embroidery .embroidery-background{left:auto;right:0;width:66%;mask-image:linear-gradient(90deg,transparent,#000 25%);object-position:center 52%;pointer-events:none;user-select:none}
+.embroidery .embroidery-shade{background:linear-gradient(90deg,#081322 0%,#081322 28%,rgba(8,19,34,.96) 36%,rgba(8,19,34,.68) 48%,rgba(8,19,34,.2) 68%,rgba(8,19,34,.18) 100%)}
 .embroidery .embroidery-shade:before{display:none}
-.embroidery .embroidery-inner{min-height:inherit;justify-content:center;align-items:center;text-align:center}
-.embroidery .embroidery-inner>div{width:100%;max-width:880px;padding:80px 0}
-.embroidery h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(56px,6.8vw,104px);font-weight:400;line-height:1.04;letter-spacing:-.045em;color:#fffaf1;text-shadow:0 3px 25px #0005}
+.embroidery .embroidery-inner{min-height:inherit;justify-content:flex-start;align-items:center;text-align:left}
+.embroidery .embroidery-inner>div{width:51%;max-width:640px;padding:80px 0}
+.embroidery h2{font-family:Poppins,Arial,sans-serif;font-size:clamp(42px,4.7vw,72px);font-weight:600;line-height:1.15;letter-spacing:-.045em;color:#fffaf1;text-shadow:0 3px 25px #0003}
 .embroidery h2 br{display:block}
-.embroidery h2 span{color:#ffb366;font-style:italic}
-.embroidery p{font-family:Poppins,Arial,sans-serif;font-size:clamp(17px,1.6vw,23px);font-weight:400;line-height:1.6;letter-spacing:.035em;color:#fffaf1;margin:30px 0 0;text-shadow:0 2px 15px #0008}
-@media(max-width:720px){.embroidery{min-height:620px;min-height:clamp(560px,78svh,740px)}.embroidery .embroidery-inner>div{padding:64px 0}.embroidery h2{font-size:clamp(48px,11.8vw,78px)}.embroidery p{margin-top:26px;font-size:17px}.embroidery .embroidery-background{object-position:center center}}
+.embroidery h2 span{color:#ffb366;font-style:normal;font-weight:600}
+.embroidery p{font-family:Poppins,Arial,sans-serif;font-size:clamp(17px,1.45vw,21px);font-weight:400;line-height:1.65;letter-spacing:0;color:#f2f3f5;margin:26px 0 0;text-shadow:0 2px 15px #0005}
+@media(max-width:720px){
+ .embroidery{min-height:700px;min-height:clamp(660px,88svh,800px)}
+ .embroidery .embroidery-background{width:100%;mask-image:none;object-position:62% center}
+ .embroidery .embroidery-shade{background:linear-gradient(180deg,#081322 0%,rgba(8,19,34,.95) 13%,rgba(8,19,34,.75) 34%,rgba(8,19,34,.18) 58%,rgba(8,19,34,.14) 100%),linear-gradient(90deg,rgba(8,19,34,.3),transparent 85%)}
+ .embroidery .embroidery-inner{align-items:flex-start}
+ .embroidery .embroidery-inner>div{width:100%;max-width:440px;padding:54px 0 330px}
+ .embroidery h2{font-size:clamp(35px,8.8vw,56px)}
+ .embroidery p{margin-top:20px;font-size:16px}
+}
