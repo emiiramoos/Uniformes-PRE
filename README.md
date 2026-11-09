@@ -84,3 +84,6 @@ Cuatro clips reales integrados con Full HD vertical, bucle y silencio inicial. C
 ## Portada del catálogo con video
 Integra el clip real de prendas enviado por Emilio, con sombra suave y título centrado. Altura de 400–460 px en escritorio y 340 px en celular. Bucle automático, sin controles ni pista de audio. Reescalado a 1080×1920 desde 576×1024, con limpieza y nitidez moderadas; no es detalle Full HD nativo. Poster del propio clip como respaldo si no puede reproducirse.
 Validación: reproducción y reinicio real del bucle en Chromium, silencio y ausencia de controles, escritorio/celular sin desbordamiento, búsqueda de polo y respaldo visual al fallar el video.
+
+## Portada de Quiénes somos con video
+Reutiliza el video de prendas reescalado a 1080×1920, sin nueva compresión. Título Quiénes somos, sin la bajada anterior. Portada alta y encuadre vertical completo mediante contain, con fondo marino a los lados y sombra suave. Bucle silencioso sin controles. La portada de Catálogo se conserva por indicación del usuario.

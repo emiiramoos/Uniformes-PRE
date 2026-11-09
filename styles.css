@@ -87,3 +87,11 @@
 .catalog-hero>.catalog-hero-shade{backdrop-filter:none;background:linear-gradient(180deg,rgba(5,14,30,.36),rgba(5,14,30,.53) 55%,rgba(5,14,30,.42));pointer-events:none}
 .catalog-hero h1{padding:0 5%;text-shadow:0 2px 24px #0005}
 @media(max-width:720px){.catalog-hero{height:340px}.catalog-hero>.catalog-hero-video,.catalog-hero>.catalog-hero-poster{object-position:center 40%}}
+
+/* Preserve the vertical film's full frame in the taller about introduction. */
+.about-video-hero{position:relative;isolation:isolate;overflow:hidden;height:clamp(640px,82svh,820px);display:grid;place-items:center;background:radial-gradient(ellipse at center,#243248 0%,#111e30 48%,#081322 85%)}
+.about-video-hero>.about-background-video,.about-video-hero>.about-video-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;pointer-events:none;user-select:none}
+.about-video-shade{position:absolute;inset:0;background:linear-gradient(180deg,#08132224,#08132242 45%,#08132255),linear-gradient(90deg,#081322b3,transparent 42%,transparent 58%,#081322b3);pointer-events:none}
+.about-video-hero>.container{position:relative;text-align:center}
+.about-video-hero h1{color:#fff;font-size:clamp(44px,5.5vw,78px);line-height:1.15;text-shadow:0 3px 26px #0009;letter-spacing:-.04em}
+@media(max-width:720px){.about-video-hero{height:clamp(580px,80svh,760px)}.about-video-shade{background:linear-gradient(180deg,#08132214,#08132250 48%,#08132233)}.about-video-hero h1{font-size:clamp(38px,9.5vw,58px)}}

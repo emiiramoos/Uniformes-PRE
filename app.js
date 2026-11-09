@@ -176,12 +176,11 @@ const help=$('.help-widget');let dismissed=false;try{dismissed=sessionStorage.ge
 function helpScroll(){if(!help||dismissed)return;const boundary=hero?hero.offsetTop+hero.offsetHeight:420;help.hidden=scrollY<boundary;}
 window.addEventListener('scroll',helpScroll,{passive:true});$('.help-dismiss')?.addEventListener('click',()=>{dismissed=true;help.hidden=true;try{sessionStorage.setItem('pre_help_dismissed','yes');}catch{}});
 
-// The catalog film is purely decorative. Audio is removed from the media itself.
-const catalogFilm=$('.catalog-hero-video');
-if(catalogFilm){
+// Decorative catalog/about films share a silent media file and have no controls.
+$$('.catalog-hero-video,.about-background-video').forEach(catalogFilm=>{
  catalogFilm.muted=true;catalogFilm.defaultMuted=true;catalogFilm.controls=false;
  catalogFilm.disablePictureInPicture=true;catalogFilm.disableRemotePlayback=true;
  catalogFilm.addEventListener('error',()=>{catalogFilm.hidden=true;});
  document.addEventListener('visibilitychange',()=>{if(!document.hidden)catalogFilm.play().catch(()=>{});});
  catalogFilm.play().catch(()=>{});
-}
+});

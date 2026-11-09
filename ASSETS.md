@@ -62,3 +62,5 @@ Pendientes de transferencia: PRE.30sep.R.mp4 y PRE.6Oct.R.mp4 superaron el lími
 
 ## Video de portada del catálogo — 8 noviembre 2026
 WhatsApp Video 2026-11-08 at 10.21.21 PM.mp4, adjuntado por el usuario: camisas, prendas y detalles textiles. Original vertical 576×1024, duración aproximada 9.23 s. Se conserva el clip completo y se reescala con Lanczos a 1080×1920, reducción de ruido leve y nitidez moderada. El reescalado no recupera detalle nativo Full HD. H.264 a 30 fps, faststart y sin pista de audio. Poster extraído del clip. Archivos pre-catalogo.mp4 y pre-catalogo-poster.webp en assets/videos/. Sin generación de contenido sintético.
+
+La misma versión pre-catalogo.mp4 se reutiliza en Quiénes somos: encuadre vertical íntegro (contain) sobre fondo marino en una portada alta, para evitar ampliación y recorte excesivos. No se vuelve a recomprimir ni se atribuye detalle Full HD nativo al reescalado.

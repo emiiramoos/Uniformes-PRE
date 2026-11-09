@@ -31,7 +31,7 @@ Actualizadas el 8 de noviembre de 2026. Esta especificación preserva las correc
 - No carrito. Cotizar conduce a Contacto y la ficha prepara la consulta de la prenda.
 
 ## Quiénes somos y Contacto
-- Quiénes somos: banner de telas, Nuestra historia con foto de costura, Nuestro compromiso con foto de bordado, Nuestros servicios con rack. Historia definitiva por recibir; no inventar cifras o trayectoria.
+- Quiénes somos: portada alta con video real de prendas, título Quiénes somos y sin bajada. Video completo, sin recorte, mediante object-fit:contain sobre fondo marino, con sombra suave; bucle automático sin audio ni controles. Usa la versión reescalada a 1080×1920. Catálogo conserva su portada de video por ahora. Historia definitiva por recibir; no inventar cifras o trayectoria.
 - Contacto: banner con prendas en perchas y Estamos para ayudarte. Formulario neutro a la izquierda, tarjeta marino de WhatsApp a la derecha, ubicación/mapa y tres beneficios. Sin sobrelínea CONTACTO.
 - Conservar contactos reales recuperados: ventas@uniformespre.com, WhatsApp 998 937 0850, MEGA Soriana López Portillo Local 7, SM92, Cancún. Los teléfonos/direcciones de los mockups son ejemplos y no deben copiarse.
 - El formulario prepara WhatsApp para revisión/envío del visitante; no simular un correo enviado.
