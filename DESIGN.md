@@ -70,3 +70,6 @@ En las cuatro páginas, bloques y tarjetas aparecen con un cambio breve de opaci
 - Versiones MP4 con metadatos al inicio (faststart); originales preservados para futuras ediciones.
 - Miniaturas y tamaños de catálogo según el espacio real; originales grandes en la ficha. Versionar los recursos CSS/JS en las cuatro páginas y conservar build.py como fuente de HTML.
 - Conoce más y bordados: anticipar carga a 650 px y conservar reproductor/controles ante errores temporales, con reintentos limitados y copia original de respaldo. Conoce PRE mantiene 60 fps para la máquina de bordado. No optimizar ni sustituir el video de Inicio en esta revisión.
+
+### Fondo de servicios — 9 de noviembre
+Por petición de Emilio, la fotografía adjunta de telas apiladas es el fondo exclusivo de “Tu proyecto, acompañado de principio a fin”, en Conoce PRE. Copia WebP en assets/images/telas-servicios-pre.webp, con una capa clara suave mediante CSS para conservar la legibilidad; tarjetas blancas y distribución existentes. Sin generación ni retoque del contenido de la foto. Revisado visualmente en 1440 px y 390 px.
