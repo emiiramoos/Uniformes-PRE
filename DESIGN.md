@@ -18,7 +18,7 @@ Actualizadas el 8 de noviembre de 2026. Esta especificación preserva las correc
 7. Conservar CTA El próximo uniforme de tu empresa empieza aquí.
 
 ## Catálogo
-- Banner con el video real de prendas enviado por Emilio, Nuestro catálogo centrado y sombreado suave. Altura moderada (400–460 px en escritorio, 340 px en celular). Autoplay, bucle, sin controles ni pista de audio. Poster del propio clip como respaldo.
+- Banner provisional con la fotografía de cinco uniformes en perchero enviada por Emilio. Nuestro catálogo centrado, difuminado suave y capa oscura. Recuperar tamaño anterior al video: 340 px en escritorio y 260 px en celular. Sin video en esta portada.
 - Filtros con diseño y movimiento sutil, categorías con íconos.
 - Tarjeta: únicamente nombre de producto y Ver detalles, sin flechas, códigos ni materiales en listado.
 - Materiales, tallas, colores y características dentro de la ficha.
@@ -31,7 +31,7 @@ Actualizadas el 8 de noviembre de 2026. Esta especificación preserva las correc
 - No carrito. Cotizar conduce a Contacto y la ficha prepara la consulta de la prenda.
 
 ## Quiénes somos y Contacto
-- Quiénes somos: portada alta con video real de prendas, título Quiénes somos y sin bajada. Video completo, sin recorte, mediante object-fit:contain sobre fondo marino, con sombra suave; bucle automático sin audio ni controles. Usa la versión reescalada a 1080×1920. Catálogo conserva su portada de video por ahora. Historia definitiva por recibir; no inventar cifras o trayectoria.
+- Quiénes somos: portada alta con video real de prendas, título Quiénes somos y sin bajada. Video completo, sin recorte, mediante object-fit:contain sobre fondo marino, con sombra suave; bucle automático sin audio ni controles. Usa la versión reescalada a 1080×1920. Catálogo usa la nueva fotografía provisional de prendas. Historia definitiva por recibir; no inventar cifras o trayectoria.
 - Contacto: banner con prendas en perchas y Estamos para ayudarte. Formulario neutro a la izquierda, tarjeta marino de WhatsApp a la derecha, ubicación/mapa y tres beneficios. Sin sobrelínea CONTACTO.
 - Conservar contactos reales recuperados: ventas@uniformespre.com, WhatsApp 998 937 0850, MEGA Soriana López Portillo Local 7, SM92, Cancún. Los teléfonos/direcciones de los mockups son ejemplos y no deben copiarse.
 - El formulario prepara WhatsApp para revisión/envío del visitante; no simular un correo enviado.

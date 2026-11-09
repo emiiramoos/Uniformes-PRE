@@ -67,3 +67,6 @@ La misma versión pre-catalogo.mp4 se reutiliza en Quiénes somos: encuadre vert
 
 ## Foto real de bordado de gorra — 8 noviembre 2026
 Imagen 1-Foto-1.jpg adjuntada por el usuario, 1280×776. Copiada sin edición ni recompresión como assets/images/bordado-gorra-pre.jpg. Reemplaza la foto anterior del bloque de proceso en Quiénes somos. Se retira la foto de costura del bloque de historia para conservar únicamente el video y esta fotografía en el contenido de la página, según indicación del usuario. La fotografía muestra su encuadre completo.
+
+## Foto provisional del catálogo — 8 noviembre 2026
+1-Foto-1.jpg enviada por el usuario, 1280×640, cinco prendas en un perchero. Copiada sin recompresión a assets/images/catalogo-prendas-pre.jpg. Sustituye el video en la portada de Catálogo, a su tamaño original de 340/260 px (escritorio/celular). Difuminado de 2 px y sombreado mediante CSS, sin alterar el original. El video de Quiénes somos permanece.

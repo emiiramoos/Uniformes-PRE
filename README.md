@@ -87,3 +87,6 @@ Validación: reproducción y reinicio real del bucle en Chromium, silencio y aus
 
 ## Portada de Quiénes somos con video
 Reutiliza el video de prendas reescalado a 1080×1920, sin nueva compresión. Título Quiénes somos, sin la bajada anterior. Portada alta y encuadre vertical completo mediante contain, con fondo marino a los lados y sombra suave. Bucle silencioso sin controles. La portada de Catálogo se conserva por indicación del usuario.
+
+## Foto provisional de portada del catálogo
+La última indicación sustituye el video del catálogo por catalogo-prendas-pre.jpg, enviado por el usuario. Altura original de 340 px en escritorio y 260 px en celular, difuminado suave y sombreado. El video permanece exclusivamente en Quiénes somos.
