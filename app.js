@@ -163,7 +163,26 @@ if(embroidery&&safeMedia(config.videos?.bordado?.src)){
  document.addEventListener('visibilitychange',()=>{if(!document.hidden)v.play().catch(()=>{});});
  v.play().catch(()=>{});
 }
-const hero=$('.hero');if(hero){const mobile=matchMedia('(max-width:720px)');let v;function syncHero(){const src=mobile.matches?config.hero?.mobileVideo:config.hero?.desktopVideo;if(reduce.matches||!safeMedia(src)){v?.remove();v=null;return;}if(!v){v=document.createElement('video');v.className='hero-image';v.muted=true;v.autoplay=true;v.loop=true;v.playsInline=true;v.setAttribute('aria-hidden','true');hero.insertBefore(v,$('.hero-shade'));v.addEventListener('error',()=>{v.remove();v=null;});}if(v.getAttribute('src')!==src)v.src=src;v.play().catch(()=>{});}syncHero();mobile.addEventListener('change',syncHero);reduce.addEventListener('change',syncHero);}
+const hero=$('.hero');
+if(hero){
+ const mobile=matchMedia('(max-width:720px)');let v;
+ function syncHero(){
+  const src=mobile.matches?config.hero?.mobileVideo:config.hero?.desktopVideo;
+  if(!safeMedia(src)){v?.remove();v=null;return;}
+  if(!v){
+   v=document.createElement('video');v.className='hero-image';v.muted=true;v.defaultMuted=true;
+   v.autoplay=true;v.loop=true;v.playsInline=true;v.controls=false;v.preload='auto';
+   v.disablePictureInPicture=true;v.disableRemotePlayback=true;v.poster=config.hero.poster;
+   v.setAttribute('muted','');v.setAttribute('playsinline','');v.setAttribute('aria-hidden','true');v.tabIndex=-1;
+   hero.insertBefore(v,$('.hero-shade'));
+   v.addEventListener('error',()=>{v.remove();v=null;});
+  }
+  if(v.getAttribute('src')!==src)v.src=src;
+  v.play().catch(()=>{});
+ }
+ syncHero();mobile.addEventListener('change',syncHero);
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden)v?.play().catch(()=>{});});
+}
 const contactForm=$('#contact-form');
 if(contactForm){const params=new URLSearchParams(location.search),p=products.find(p=>p.code===params.get('producto'));
  if(p){const qty=Number(params.get('cantidad'));const lines=[`Me gustaría cotizar: ${p.name} (${p.code}).`];if(Number.isSafeInteger(qty)&&qty>0&&qty<=100000)lines.push(`Cantidad: ${qty}`);for(const [key,values,label] of [['talla',p.sizes,'Talla'],['color',p.colors,'Color']])if(values.includes(params.get(key)))lines.push(`${label}: ${params.get(key)}`);contactForm.mensaje.value=lines.join('\n');}
@@ -171,17 +190,8 @@ if(contactForm){const params=new URLSearchParams(location.search),p=products.fin
  contactForm.addEventListener('submit',ev=>{ev.preventDefault();const f=new FormData(ev.currentTarget);const message=`Hola Uniformes PRE.\nNombre: ${String(f.get('nombre')).trim()}\nCorreo: ${String(f.get('correo')).trim()||'No indicado'}\nTeléfono: ${String(f.get('telefono')).trim()||'No indicado'}\n\n${String(f.get('mensaje')).trim()}`;const a=$('#contact-whatsapp');a.href=whatsapp(message);a.hidden=false;$('#contact-status').textContent='Tu mensaje está preparado. Revísalo y envíalo desde WhatsApp.';a.click();});
 }
 $$('[data-legal]').forEach(b=>b.addEventListener('click',()=>{const host=$('[data-legal-content]');host.replaceChildren();const h=document.createElement('h2');h.textContent=b.textContent;const p=document.createElement('p');p.textContent=config.legal?.[b.dataset.legal]||'El texto definitivo de esta sección está pendiente de revisión. Para consultar condiciones de tu pedido, comunícate con Uniformes PRE.';host.append(h,p);openDialog($('#legal-dialog'));}));
-// The about film has no audio track or playback controls.
-$$('.about-background-video').forEach(catalogFilm=>{
- catalogFilm.muted=true;catalogFilm.defaultMuted=true;catalogFilm.controls=false;
- catalogFilm.disablePictureInPicture=true;catalogFilm.disableRemotePlayback=true;
- catalogFilm.addEventListener('error',()=>{catalogFilm.hidden=true;});
- document.addEventListener('visibilitychange',()=>{if(!document.hidden)catalogFilm.play().catch(()=>{});});
- catalogFilm.play().catch(()=>{});
-});
-
 // Keep the complete about banner inside the small viewport, below the site chrome.
-const aboutBanner=$('.about-video-hero');
+const aboutBanner=$('.home-video-hero,.about-video-hero');
 if(aboutBanner){
  const topBars=[$('.site-header'),$('.announcement')].filter(Boolean);
  const sizeAboutBanner=()=>aboutBanner.style.setProperty('--about-top-space',`${Math.ceil(topBars.reduce((sum,el)=>sum+el.getBoundingClientRect().height,0))}px`);

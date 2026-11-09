@@ -3,9 +3,9 @@ window.PRE_CONFIG = {
   "instagram": "https://www.instagram.com/uniformespre/",
   "facebook": "https://www.facebook.com/uniformespree",
   "hero": {
-    "desktopVideo": "",
-    "mobileVideo": "",
-    "poster": "assets/images/filipina-hero.webp"
+    "desktopVideo": "assets/videos/pre-inicio-4k.mp4",
+    "mobileVideo": "assets/videos/pre-catalogo.mp4",
+    "poster": "assets/videos/pre-catalogo-poster.webp"
   },
   "videos": {
     "bordado": {

@@ -9,7 +9,7 @@ Actualizadas el 8 de noviembre de 2026. Esta especificación preserva las correc
 - Quitar todas las pequeñas sobrelíneas encima de encabezados. Ejemplos rechazados: Diseñados para tu día a día, Encuentra tu uniforme, La identidad de tu equipo, De tu idea al uniforme.
 
 ## Inicio
-1. Portada: solo Filipina con repelencia al agua, imagen aprobada y Conocer más. Sin bajada ni sobrelínea. Filipina completamente blanca, dos filas de botones blancos, cuello fiel, ángulo oblicuo, fondo oscuro, gotas y pequeño chorro.
+1. Portada: video real de prendas antes usado en Quiénes somos, en bucle, sin audio ni controles, con sombra y altura ajustada a pantalla. Frase propuesta: Tu equipo. Tu identidad. en Manrope sin serifas, blanco/naranja, y acceso Ver catálogo. Versión reescalada 2160×3840 en escritorio y 1080×1920 en celular. No afirmar detalle 4K nativo. La imagen de filipina pasa al catálogo.
 2. Categorías: Gastronomía, Hotelería, Salud, Industrial, Corporativo y Servicios. Íconos según referencia: gorro de chef, hotel, cruz, fábrica, corbata y personas. Preservar hover.
 3. Destacados: únicamente Filipina repelente, Cazadora y Polo Dry-Fit. Tres imágenes grandes, luz lateral naranja neón y cinta Best seller en cada tarjeta.
 4. Bordado: franja amplia con video real PRE de fondo, capa oscura translúcida y texto alineado a la izquierda y video visible a la derecha, unidos mediante un degradado. Tipografía Poppins blanca y naranja, consistente con la página; bajada: Lleva tu identidad bordada a todas partes. Sin botones ni etiquetas. Video Full HD vertical, bucle automático sin controles ni pista de audio; cierre recortado antes de desaparecer.
@@ -18,7 +18,7 @@ Actualizadas el 8 de noviembre de 2026. Esta especificación preserva las correc
 7. Conservar CTA El próximo uniforme de tu empresa empieza aquí.
 
 ## Catálogo
-- Banner provisional con la fotografía de cinco uniformes en perchero enviada por Emilio. Nuestro catálogo centrado, difuminado suave y capa oscura. Recuperar tamaño anterior al video: 340 px en escritorio y 260 px en celular. Sin video en esta portada.
+- Banner con la imagen de la filipina antes usada en Inicio. Nuestro catálogo centrado, difuminado suave y capa oscura. Mantener 340 px en escritorio y 260 px en celular. La fotografía de cinco prendas pasa a Contacto.
 - Filtros con diseño y movimiento sutil, categorías con íconos.
 - Tarjeta: únicamente nombre de producto y Ver detalles, sin flechas, códigos ni materiales en listado.
 - Materiales, tallas, colores y características dentro de la ficha.
@@ -32,7 +32,7 @@ Actualizadas el 8 de noviembre de 2026. Esta especificación preserva las correc
 
 ## Quiénes somos y Contacto
 - Quiénes somos: portada alta con video real de prendas, título Quiénes somos y sin bajada. Video de borde a borde mediante object-fit:cover, sin franjas laterales, permitiendo recorte vertical. La portada se ajusta al alto visible menos cabecera y anuncios, con sombra suave; bucle automático sin audio ni controles. Usa la versión reescalada a 1080×1920. Catálogo usa la nueva fotografía provisional de prendas. Historia definitiva por recibir; no inventar cifras o trayectoria.
-- Contacto: banner con prendas en perchas y Estamos para ayudarte. Formulario neutro a la izquierda, tarjeta marino de WhatsApp a la derecha, ubicación/mapa y tres beneficios. Sin sobrelínea CONTACTO.
+- Contacto: fotografía de cinco prendas antes usada en Catálogo, difuminada y oscurecida. Único texto centrado: Cuéntanos lo que necesitas y nuestro equipo te brindará la mejor atención. Sin Estamos para ayudarte ni bajada separada. Mantener formulario, tarjeta de WhatsApp, mapa y beneficios.
 - Conservar contactos reales recuperados: ventas@uniformespre.com, WhatsApp 998 937 0850, MEGA Soriana López Portillo Local 7, SM92, Cancún. Los teléfonos/direcciones de los mockups son ejemplos y no deben copiarse.
 - El formulario prepara WhatsApp para revisión/envío del visitante; no simular un correo enviado.
 
@@ -57,3 +57,6 @@ Debajo del video queda únicamente la foto real de la gorra azul bordándose env
 
 ### Carrito y asistente
 Las condiciones comerciales y el comportamiento confirmados por el propietario se documentan en SUPPORT.md. Mantener iconos SVG, marino/blanco/naranja y respuestas breves. Emojis solo dentro de mensajes de chat o WhatsApp. No añadir subtítulos ni precios/plazos no confirmados.
+
+### Última redistribución de portadas
+El video de prendas se mueve de Quiénes somos a Inicio. Quiénes somos queda provisionalmente con el fotograma estático existente, hasta elegir su fondo definitivo. En el asistente abierto, robot 3D blanco/marino/naranja y encabezado Uniformes Express por indicación expresa; conservar el icono exterior del lanzador. Ubicación visible entre las primeras preguntas, con dirección completa de Cancún y aclaración de envíos a todo México.

@@ -124,3 +124,22 @@
 .assistant-form{flex-shrink:0;display:flex;align-items:center;gap:8px;margin:0;padding:12px;border-top:1px solid #edf0f4;background:white}.assistant-form input{min-width:0;flex:1;border:1px solid #e0e5ee;border-radius:12px;background:#f8f9fb;padding:11px 12px;font-size:13px;color:var(--navy)}.assistant-form button{display:grid;place-items:center;flex-shrink:0;width:42px;height:42px;border:0;border-radius:12px;background:var(--navy);color:white}.assistant-form button svg{width:20px;height:20px}
 @media(max-width:720px){.header-cart{width:43px;height:43px}.pre-assistant{right:16px;bottom:max(16px,env(safe-area-inset-bottom))}.assistant-panel{position:fixed;left:12px;right:12px;bottom:calc(86px + env(safe-area-inset-bottom));width:auto;height:min(600px,calc(100svh - 115px));max-height:calc(100dvh - 115px);border-radius:18px}.assistant-launch{width:54px;height:54px}.assistant-hint{width:264px;bottom:70px}.assistant-form input{font-size:16px}.cart-notice{top:115px;font-size:12px;gap:12px}}
 @media(prefers-reduced-motion:reduce){.assistant-launch{animation:none}}
+
+/* Reassigned page introductions: brand film, product catalog, contact photograph. */
+.home-video-hero{min-height:0;height:min(820px,calc(100svh - var(--about-top-space,129px)));background:#081322}
+.home-video-hero .hero-image{pointer-events:none;user-select:none;object-position:center 43%}
+.home-video-hero .hero-shade{background:linear-gradient(180deg,#08132225,#08132270 55%,#08132244)}
+.home-video-hero .hero-inner{height:100%;min-height:0;justify-content:center;align-items:center;text-align:center}
+.home-video-hero .hero-copy{max-width:900px;padding:36px 0}
+.home-video-hero h1{max-width:none;font-family:Manrope,Poppins,Arial,sans-serif;font-size:clamp(46px,6.8vw,96px);line-height:1.1;font-weight:500;letter-spacing:-.055em;margin-bottom:28px;text-shadow:0 3px 24px #0005}
+.home-video-hero h1 span{color:#ffb366;font-weight:600}
+.contact-banner{position:relative;isolation:isolate;overflow:hidden;display:grid;place-items:center;min-height:340px;background:#081322;text-align:center}
+.contact-banner>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;filter:blur(2px);transform:scale(1.02);z-index:-2}
+.contact-banner-shade{position:absolute;inset:0;background:linear-gradient(180deg,#08132270,#081322a0);z-index:-1}
+.contact-banner h1{max-width:940px;margin:0 auto;padding:42px 0;color:#fff;font-family:Poppins,Arial,sans-serif;font-size:clamp(28px,3.2vw,45px);font-weight:500;line-height:1.3;letter-spacing:-.03em;text-shadow:0 2px 22px #0005}
+.assistant-header .assistant-mark{width:52px;height:52px;border:0;border-radius:0;background:none;flex-shrink:0}
+.assistant-mark img{width:52px;height:52px;object-fit:contain}
+.assistant-header h2{font-size:16px}
+@media(max-width:720px){.home-video-hero{height:min(760px,calc(100svh - var(--about-top-space,104px)))}.home-video-hero h1{font-size:clamp(42px,11vw,68px)}.contact-banner{min-height:300px}.contact-banner h1{font-size:clamp(26px,6.4vw,34px);padding:36px 0}.assistant-header{padding:14px 16px;gap:10px}.assistant-header .assistant-mark,.assistant-mark img{width:46px;height:46px}.assistant-header h2{font-size:15px}}
+
+.home-video-hero h1 br{display:block}

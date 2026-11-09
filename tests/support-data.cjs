@@ -8,3 +8,5 @@ for(const [q,id] of [['¿Cuántos días tardan mis prendas?','delivery'],['¿Me 
 console.log('PASS: variantes de lenguaje para plazos, fabricación, horarios y facturación.');
 
 assert.equal(S.answer('Quiero un pedido personalizado con bordado').id,'embroidery');assert.equal(S.answer('Quiero un pedido personalizado confeccionado desde cero').id,'custom');console.log('PASS: bordado personalizado sin mínimo y confección desde cero se distinguen.');
+
+for(const q of ['¿Dónde se encuentran?','¿Dónde está su sucursal?','¿Cuál es su punto de venta?']){const r=S.answer(q);assert.equal(r.id,'pickup');for(const text of ['Cancún','Local 7','SM 92','todo México'])assert(r.answer.includes(text));}console.log('PASS: ubicación, dirección de la sucursal y envíos nacionales.');

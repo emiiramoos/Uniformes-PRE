@@ -70,3 +70,10 @@ Imagen 1-Foto-1.jpg adjuntada por el usuario, 1280×776. Copiada sin edición ni
 
 ## Foto provisional del catálogo — 8 noviembre 2026
 1-Foto-1.jpg enviada por el usuario, 1280×640, cinco prendas en un perchero. Copiada sin recompresión a assets/images/catalogo-prendas-pre.jpg. Sustituye el video en la portada de Catálogo, a su tamaño original de 340/260 px (escritorio/celular). Difuminado de 2 px y sombreado mediante CSS, sin alterar el original. El video de Quiénes somos permanece.
+
+## Redistribución de portadas y robot del asistente — 8 noviembre 2026
+- Inicio usa el clip real de WhatsApp ya recibido, con la versión móvil pre-catalogo.mp4 (1080×1920) y pre-inicio-4k.mp4 (2160×3840), derivada directamente del original 576×1024 mediante reducción de ruido leve, Lanczos y nitidez moderada. H.264 a 30 fps, sin pista de audio, faststart. Este reescalado no crea detalle 4K nativo. Se evita una segunda recompresión de la versión 1080p.
+- La filipina aprobada assets/images/filipina-hero.webp pasa a la portada del catálogo.
+- La foto real assets/images/catalogo-prendas-pre.jpg pasa a Contacto con difuminado y sombreado CSS.
+- Quiénes somos conserva temporalmente el poster estático del clip; su fondo definitivo queda pendiente del usuario.
+- Robot 3D genérico generado con image_gen, pedido expresamente por el usuario: materiales blanco cálido, pantalla marino, ojos azul claro y detalles naranja, fondo transparente, sin texto. Original conservado en /workspace/generated_images/exec-9d8ad381-b120-4577-9e4a-93c461564731.png. Derivado web optimizado de 512×512 en assets/brand/asistente-robot-3d.webp, para el encabezado del chat. No se cambiaron logotipos de la empresa.

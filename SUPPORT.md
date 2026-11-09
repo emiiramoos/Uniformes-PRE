@@ -32,3 +32,6 @@ Implementación autorizada por el propietario el 8 de noviembre de 2026.
 Proceso de cinco etapas cada 1.2 segundos, solo visible y con respeto a movimiento reducido, como antes.
 
 Pruebas: `node tests/quote-engine.cjs` y `node tests/support-data.cjs`. Revisión en Chromium del flujo catálogo→varios productos→carrito→URL WhatsApp interceptada (sin envío real), edición y persistencia, bordados en ambas posiciones, envío y datos del cliente. Chat: preguntas, texto libre, enlace de consulta desconocida, texto HTML tratado como texto, avisos, descarte, movimiento reducido y pantallas de 320/390 px. No equivale a una prueba en iPhone físico.
+
+## Encabezado y ubicación
+El usuario pidió un robot 3D en el encabezado del chat abierto y el título Uniformes Express; el icono exterior sigue igual. La pregunta de ubicación aparece en las primeras opciones e incluye Cancún, dirección MEGA Soriana López Portillo Local 7 SM 92, horario local y envíos a todo México por Estafeta y DHL.

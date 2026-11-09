@@ -96,3 +96,6 @@ El último ajuste sustituye contain por cover para llenar todo el ancho sin fran
 
 ## Carrito en cabecera y asistente de preguntas frecuentes
 El carrito acumula varias prendas y bordados y abre WhatsApp con una solicitud estructurada al terminar. Contador en la cabecera; se retira el flotante de cotización. Envío $150, gratis desde $1,000; el total es estimado y el ponchado se confirma aparte si se requiere. Asistente local con preguntas frecuentes confirmadas, texto libre por palabras clave, avisos discretos y derivación a WhatsApp. Condiciones y validación en SUPPORT.md. El proceso avanza cada 1.2 segundos.
+
+## Redistribución de Inicio, Catálogo y Contacto
+Inicio muestra el video de prendas en bucle sin audio ni controles, con la frase propuesta Tu equipo. Tu identidad. y tipografía Manrope. Se ofrece reescalado a 4K vertical en escritorio y 1080p en celular; no se recupera detalle inexistente en el original. La filipina pasa al catálogo; el perchero pasa a Contacto con el texto centrado solicitado. Quiénes somos usa provisionalmente un fotograma estático. El asistente tiene un avatar 3D en el encabezado Uniformes Express y una respuesta de ubicación ampliada con envíos nacionales.
