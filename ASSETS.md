@@ -47,3 +47,6 @@ Método de adaptación: herramienta integrada de edición de imágenes. Instrucc
 Todas las recreaciones de esta continuación quedan integradas para revisión visual de Emilio. La integración no acredita aprobación comercial final. No se generaron videos ni se adquirieron créditos/suscripciones.
 
 Vistas adicionales de esta continuación: `CZ001MC-Lateral/Espalda.webp`, `CZ001ML-Lateral/Espalda.webp`, `PC001G-Lateral/Espalda.webp` y `GG001-Espalda.webp`, todas en `assets/products/studio/`. Se extrajeron individualmente de paneles/vistas presentes en el respaldo; sin personas ni prendas ajenas. La cazadora conserva respiradero posterior y el cargo sus bolsillos. El perfil largo se corrigió para mantener la misma dirección de la referencia. No se añadieron vistas a playeras ni mandil corto. La gorra solo muestra los dos ángulos que se pudieron recuperar con referencia suficiente.
+
+## Video real de bordado PRE
+Archivo PRE.mp4 adjuntado por el usuario. Se conserva Full HD vertical 1080×1920, convertido de HEVC a H.264 para compatibilidad web. Fragmento 00:01–00:09 (8 segundos), sin audio y con faststart; elimina el cierre del original. Poster extraído del mismo clip. Archivos en assets/videos/pre-bordado*. No se generó material sintético.

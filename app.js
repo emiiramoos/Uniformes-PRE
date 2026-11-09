@@ -95,7 +95,22 @@ function attachLoop(parent,item,cls=''){if(!safeMedia(item?.src))return;const v=
  if(!reduce.matches)new IntersectionObserver(entries=>{if(entries[0].isIntersecting)v.play().catch(()=>{v.controls=true;});else v.pause();},{threshold:.15}).observe(parent);
 }
 $$('[data-video]').forEach(el=>attachLoop(el,config.videos?.[el.dataset.video]));
-const embroidery=$('[data-embroidery]');if(embroidery)attachLoop(embroidery,config.videos?.bordado,'embroidery-background');
+// Decorative background: the delivered clip has no audio track or closing fade.
+const embroidery=$('[data-embroidery]');
+if(embroidery&&safeMedia(config.videos?.bordado?.src)){
+ const v=document.createElement('video');
+ v.className='embroidery-background';v.src=config.videos.bordado.src;
+ v.autoplay=true;v.loop=true;v.muted=true;v.defaultMuted=true;v.playsInline=true;
+ v.preload='auto';v.controls=false;v.disablePictureInPicture=true;v.disableRemotePlayback=true;
+ v.setAttribute('muted','');v.setAttribute('playsinline','');v.setAttribute('aria-hidden','true');v.tabIndex=-1;
+ v.poster=config.videos.bordado.poster;
+ embroidery.prepend(v);
+ v.addEventListener('playing',()=>embroidery.classList.add('has-video'));
+ v.addEventListener('error',()=>{v.remove();embroidery.classList.remove('has-video');});
+ // Retry autoplay when returning to the tab; browser power-saving may suspend it.
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden)v.play().catch(()=>{});});
+ v.play().catch(()=>{});
+}
 const hero=$('.hero');if(hero){const mobile=matchMedia('(max-width:720px)');let v;function syncHero(){const src=mobile.matches?config.hero?.mobileVideo:config.hero?.desktopVideo;if(reduce.matches||!safeMedia(src)){v?.remove();v=null;return;}if(!v){v=document.createElement('video');v.className='hero-image';v.muted=true;v.autoplay=true;v.loop=true;v.playsInline=true;v.setAttribute('aria-hidden','true');hero.insertBefore(v,$('.hero-shade'));v.addEventListener('error',()=>{v.remove();v=null;});}if(v.getAttribute('src')!==src)v.src=src;v.play().catch(()=>{});}syncHero();mobile.addEventListener('change',syncHero);reduce.addEventListener('change',syncHero);}
 const contactForm=$('#contact-form');
 if(contactForm){const params=new URLSearchParams(location.search),p=products.find(p=>p.code===params.get('producto'));
