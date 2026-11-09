@@ -24,8 +24,8 @@ Implementación autorizada por el propietario el 8 de noviembre de 2026.
 - Guías de talla, existencias, colores y políticas de cambio: consultar por WhatsApp. No se garantiza stock; cuello redondo corto/largo puede variar.
 - Hora de Cancún: local lunes–sábado 10:00–18:00; atención lunes–viernes 8:00–17:00. Se pueden dejar mensajes fuera de horario. Recogida en el local disponible.
 - Consultas desconocidas: respuesta de incertidumbre y botón a WhatsApp. No se inventan políticas ni plazos.
-- Avisos: cuatro textos, primer aviso a los 20 segundos y los siguientes a intervalos de un minuto; duran 10 segundos, no abren el chat solos y se detienen cuando el visitante abre el chat o los descarta. El descarte persiste en la sesión. Se aplazan mientras haya un diálogo modal o pestaña oculta.
-- Palpitación sutil; respeta movimiento reducido. Emojis solo dentro de los mensajes de chat, no en los avisos ni en el resto de la interfaz.
+- Avisos: cuatro textos en ciclo infinito, primer aviso a los 20 segundos y los siguientes cada minuto; duran 10 segundos y no abren el chat solos. Cerrarlos descarta únicamente el aviso actual y programa el siguiente un minuto después. Se pausan mientras el chat esté abierto y se reanudan 20 segundos después de cerrarlo. Se aplazan con un diálogo modal o pestaña oculta. El antiguo descarte de sesión ya no bloquea los avisos.
+- Onda naranja doble más visible, con ciclo de 3.4 segundos; se detiene al abrir el chat y respeta movimiento reducido. Emojis solo dentro de los mensajes de chat, no en los avisos ni en el resto de la interfaz.
 
 ## Proceso y validación
 

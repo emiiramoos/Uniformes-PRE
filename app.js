@@ -33,6 +33,44 @@ function productVisual(p,view=defaultView(p),color,thumbnail=false,card=false){
 }
 // A failed file gets a deliberate fallback, never a broken-image icon.
 document.addEventListener('error',event=>{const img=event.target;if(img instanceof HTMLImageElement&&img.hasAttribute('data-catalog-image'))img.outerHTML=placeholder({kind:img.dataset.kind});},true);
+// Mouse-only inspection: one active image and one update per animation frame.
+// Delegation covers detail photos replaced when changing color or view.
+const zoomPointer=matchMedia('(min-width:721px) and (hover:hover) and (pointer:fine)');
+const zoomTargets='#product-dialog[open] .detail-image';
+let productZoom=null,zoomFrame=0;
+function clearProductZoom(){
+ cancelAnimationFrame(zoomFrame);zoomFrame=0;
+ if(!productZoom)return;
+ const {host,img,sizes}=productZoom;host.classList.remove('is-zooming');
+ host.style.removeProperty('--zoom-x');host.style.removeProperty('--zoom-y');
+ if(sizes===null)img.removeAttribute('sizes');else img.setAttribute('sizes',sizes);
+ productZoom=null;
+}
+function moveProductZoom(event){
+ if(!zoomPointer.matches||event.pointerType!=='mouse')return;
+ const host=event.target.closest(zoomTargets),img=host?.querySelector('img');
+ if(!img||!img.complete||!img.naturalWidth)return;
+ if(productZoom?.host!==host||productZoom.img!==img){
+  clearProductZoom();productZoom={host,img,sizes:img.getAttribute('sizes')};
+  // Ask srcset for enough pixels to inspect the fabric rather than a thumbnail.
+  if(img.hasAttribute('srcset'))img.sizes=Math.ceil(host.clientWidth*2.3)+'px';
+  host.classList.add('is-zooming');
+ }
+ productZoom.x=event.clientX;productZoom.y=event.clientY;
+ if(!zoomFrame)zoomFrame=requestAnimationFrame(()=>{
+  zoomFrame=0;if(!productZoom)return;
+  const {host,x,y}=productZoom,rect=host.getBoundingClientRect();
+  host.style.setProperty('--zoom-x',Math.max(0,Math.min(100,(x-rect.left)/rect.width*100))+'%');
+  host.style.setProperty('--zoom-y',Math.max(0,Math.min(100,(y-rect.top)/rect.height*100))+'%');
+ });
+}
+document.addEventListener('pointerover',moveProductZoom);
+document.addEventListener('pointermove',moveProductZoom,{passive:true});
+document.addEventListener('pointerout',event=>{if(productZoom&&!productZoom.host.contains(event.relatedTarget))clearProductZoom();});
+document.addEventListener('close',clearProductZoom,true);
+window.addEventListener('blur',clearProductZoom);
+document.addEventListener('scroll',clearProductZoom,{capture:true,passive:true});
+zoomPointer.addEventListener('change',()=>{if(!zoomPointer.matches)clearProductZoom();});
 const colorHex={'Kaki':'#b7a58b','Gris Oxford':'#62656b','Gris Perla':'#d1d1ce','Blanco Médico':'#fff','Blanco Clínico':'#fff','Blanco Hospitalario':'#fff','Azul Cielo':'#b9d6eb','Azul Marino':'#111d39','Marino':'#111d39','Gris':'#80858b','Rojo vino':'#722434','Azul':'#3f648b','Verde Jade':'#087e79','Azul Rey':'#162aab','Cuadritos':'#ddd','Azul vivo':'#078dc7','Azul claro':'#bccbdd','Azul rey':'#162aab','Azul marino':'#111d39','Blanco':'#fff','Negro':'#151515','Rojo':'#c91d32','Fucsia':'#ce0658','Coral':'#f05b60'};
 function colorButtons(p,chosen=defaultColor(p)){return `<div class="color-preview"><p>Color: <strong data-preview-color>${esc(chosen)}</strong></p><div class="color-buttons" aria-label="Colores de ${esc(p.name)}">${p.colors.map((c,i)=>`<button type="button" data-product-color="${esc(c)}" aria-label="Ver color ${esc(c)}" aria-pressed="${c===chosen}" style="--swatch:${colorHex[c]||'#aaa'}"><span></span></button>`).join('')}</div></div>`;}
 
