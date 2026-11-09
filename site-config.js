@@ -10,9 +10,9 @@ window.PRE_CONFIG = {
   "videos": {
     "bordado": {
       "title": "Así bordamos tus uniformes",
-      "src": "",
-      "poster": "assets/images/embroidery.webp",
-      "orientation": "horizontal"
+      "src": "assets/videos/pre-bordado.mp4",
+      "poster": "assets/videos/pre-bordado-poster.webp",
+      "orientation": "vertical"
     },
     "prendas": {
       "title": "Los detalles hacen la diferencia",
