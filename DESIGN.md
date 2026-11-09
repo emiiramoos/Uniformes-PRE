@@ -65,7 +65,8 @@ El video de prendas se mueve de Quiénes somos a Inicio. Quiénes somos usa el n
 En las cuatro páginas, bloques y tarjetas aparecen con un cambio breve de opacidad al entrar en pantalla, sin desplazamiento ni cambio de posición. Incluye tarjetas nuevas del filtro de catálogo y el pie. Con JavaScript desactivado o preferencia de movimiento reducido, el contenido permanece visible. El catálogo conserva un difuminado mínimo en escritorio para mostrar la textura de la filipina.
 
 ## Rendimiento y aparición — 9 de noviembre
-- Aparición única de 550 ms: opacidad y elevación de 12 px, sin escalas ni blur. IntersectionObserver, sin seguimiento continuo del scroll. No esconder contenido sin JavaScript o con movimiento reducido.
+- Aparición única de 650 ms: opacidad y elevación de 10 px, sin escalas ni blur. IntersectionObserver, sin seguimiento continuo del scroll. Carrusel como bloque completo; el foco del teclado revela el contenido. No esconder contenido sin JavaScript o con movimiento reducido.
 - Fondos y carrusel comparten carga diferida y pausa por visibilidad. Ahorro de datos y movimiento reducido usan poster; reproducción manual disponible en las tarjetas.
 - Versiones MP4 con metadatos al inicio (faststart); originales preservados para futuras ediciones.
 - Miniaturas y tamaños de catálogo según el espacio real; originales grandes en la ficha. Versionar los recursos CSS/JS en las cuatro páginas y conservar build.py como fuente de HTML.
+- Conoce más y bordados: anticipar carga a 650 px y conservar reproductor/controles ante errores temporales, con reintentos limitados y copia original de respaldo. Conoce PRE mantiene 60 fps para la máquina de bordado. No optimizar ni sustituir el video de Inicio en esta revisión.

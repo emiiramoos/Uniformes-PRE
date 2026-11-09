@@ -10,31 +10,31 @@ window.PRE_CONFIG = {
   "videos": {
     "bordado": {
       "title": "Así bordamos tus uniformes",
-      "src": "assets/videos/pre-bordado-web.mp4",
+      "src": "assets/videos/pre-bordado-web.mp4?v=20261109-smooth",
       "poster": "assets/videos/pre-bordado-poster.webp",
       "orientation": "vertical"
     },
     "corporativo": {
       "title": "Uniformes que hablan de tu empresa",
-      "src": "assets/videos/pre-corporativo-web.mp4",
+      "src": "assets/videos/pre-corporativo-web.mp4?v=20261109-smooth",
       "poster": "assets/videos/pre-corporativo-poster.webp",
       "orientation": "vertical"
     },
     "calzado": {
       "title": "Comodidad en cada paso",
-      "src": "assets/videos/pre-calzado-web.mp4",
+      "src": "assets/videos/pre-calzado-web.mp4?v=20261109-smooth",
       "poster": "assets/videos/pre-calzado-poster.webp",
       "orientation": "vertical"
     },
     "cocina": {
       "title": "Tu equipo de cocina, de pies a cabeza",
-      "src": "assets/videos/pre-cocina-web.mp4",
+      "src": "assets/videos/pre-cocina-web.mp4?v=20261109-smooth",
       "poster": "assets/videos/pre-cocina-poster.webp",
       "orientation": "vertical"
     },
     "salud": {
       "title": "Uniformes para quienes cuidan de todos",
-      "src": "assets/videos/pre-salud-web.mp4",
+      "src": "assets/videos/pre-salud-web.mp4?v=20261109-smooth",
       "poster": "assets/videos/pre-salud-poster.webp",
       "orientation": "vertical"
     }

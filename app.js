@@ -5,7 +5,7 @@ const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const norm=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 const reduce=matchMedia('(prefers-reduced-motion:reduce)');
 // Reveal each block once; no scroll handlers or animation framework.
-const revealTargets='.section-heading,.categories h2,.category-grid a,.featured-card,.embroidery-inner>div,.process-heading,.process-head,.process-step,.video-slot,.review-window,.reviews-section h2,.cta-band .container,.catalog-tools,.catalog-categories,.catalog-meta,.catalog-card,.about-history-copy,.about-grid,.pre-service-grid article,.pre-preparation,.contact-form,.express-card,.location-card,.benefit-row';
+const revealTargets='.section-heading,.categories h2,.category-grid a,.featured-card,.embroidery-inner>div,.process-heading,.process-head,.process-step,.video-carousel,.review-window,.reviews-section h2,.cta-band .container,.catalog-tools,.catalog-categories,.catalog-meta,.catalog-card,.about-history-copy,.about-grid,.pre-service-grid article,.pre-preparation,.contact-form,.express-card,.location-card,.benefit-row';
 const revealObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('is-revealed');revealObserver.unobserve(entry.target);}},{threshold:0,rootMargin:'0px 0px -16px 0px'}):null;
 function observeReveals(nodes=document.querySelectorAll('main '+revealTargets.split(',').join(',main ')+',.site-footer .footer-grid,.site-footer .footer-bottom')){
  if(reduce.matches||!revealObserver)return;
@@ -15,6 +15,8 @@ function observeReveals(nodes=document.querySelectorAll('main '+revealTargets.sp
  }
 }
 reduce.addEventListener('change',()=>{if(reduce.matches){revealObserver?.disconnect();$$('.reveal-ready').forEach(el=>el.classList.add('is-revealed'));}});
+// Keyboard navigation must never land on an invisible control.
+document.addEventListener('focusin',event=>{const block=event.target.closest('.reveal-ready');if(block){block.classList.add('is-revealed');revealObserver?.unobserve(block);}});
 const safeMedia=s=>typeof s==='string'&&s&&!s.startsWith('//')&&(/^https:\/\//.test(s)||/^(assets\/|\.\/assets\/)/.test(s));
 const whatsapp=message=>`https://wa.me/${config.whatsapp}?text=${encodeURIComponent(message)}`;
 const iconPath={shirt:'M8 3 3 6l3 5 2-1v11h8V10l2 1 3-5-5-3M8 3a4 4 0 0 0 8 0M8 18h8',cap:'M3 14a9 9 0 0 1 18 0M3 14h18l2 4H9l-6-4',shoe:'M3 12V5h5l2 7 7 2 4 2v4H3z',pants:'M7 3h10l2 18h-6l-1-12-1 12H5zM7 6h10',apron:'M8 3h8v6l5 12H3L8 9zM9 13h6v4H9z',layers:'m12 2 10 5-10 5L2 7zm-10 10 10 5 10-5M2 17l10 5 10-5'};
@@ -107,7 +109,9 @@ const saveData=!!navigator.connection?.saveData;
 function syncMedia(state){
  const shouldPlay=state.inView&&!document.hidden&&!state.userPaused&&
   (state.manual||(!reduce.matches&&!saveData));
- if(!shouldPlay){state.video.pause();return;}
+ if(!shouldPlay){state.video.pause();state.lastProgress=performance.now();return;}
+ if(state.failed||state.retryTimer)return;
+ if(state.resilient&&state.video.error){recoverMedia(state);return;}
  loadMedia(state);
  state.video.play().then(()=>{
   if(!state.inView||document.hidden||state.userPaused)state.video.pause();
@@ -115,28 +119,53 @@ function syncMedia(state){
 }
 function loadMedia(state){
  if(state.loaded)return;
- state.loaded=true;state.video.preload='metadata';state.video.src=state.src;state.video.load();
+ state.loaded=true;state.lastProgress=performance.now();
+ state.video.preload=state.resilient?'auto':'metadata';state.video.src=state.src;state.video.load();
+}
+// Keep the player mounted on transient failures. Retry twice, then use the
+// preserved compatible copy. All attempts are bounded, including stall recovery.
+function recoverMedia(state){
+ if(!state.resilient||state.retryTimer||state.failed||!state.inView||document.hidden||state.userPaused||navigator.onLine===false)return;
+ if(!(state.manual||(!reduce.matches&&!saveData)))return;
+ if(state.retries>=3){state.failed=true;state.video.pause();state.parent.classList.remove('has-video');state.video.dispatchEvent(new Event('pause'));return;}
+ const delay=1000*2**state.retries++;
+ state.retryTimer=setTimeout(()=>{
+  state.retryTimer=null;
+  if(!state.inView||document.hidden||state.userPaused)return;
+  if(state.retries===3&&state.fallback)state.src=state.fallback;
+  state.loaded=false;loadMedia(state);syncMedia(state);
+ },delay);
 }
 const mediaLoader='IntersectionObserver' in window?new IntersectionObserver(entries=>{
  for(const entry of entries){const state=mediaStates.get(entry.target);
   if(entry.isIntersecting&&state&&!reduce.matches&&!saveData){loadMedia(state);mediaLoader.unobserve(entry.target);}
  }
-},{rootMargin:'200px 0px',threshold:0}):null;
+},{rootMargin:'650px 0px',threshold:0}):null;
 const mediaVisibility='IntersectionObserver' in window?new IntersectionObserver(entries=>{
  for(const entry of entries){const state=mediaStates.get(entry.target);if(!state)continue;
-  state.inView=entry.isIntersecting&&entry.intersectionRatio>=.1;syncMedia(state);
+  state.inView=entry.isIntersecting&&entry.intersectionRatio>0;syncMedia(state);
  }
-},{threshold:[0,.1]}):null;
-function registerMedia(parent,video,src){
- const state={video,src,loaded:false,inView:false,userPaused:false,manual:false};
+},{threshold:[0,.01]}):null;
+function registerMedia(parent,video,src,resilient=true){
+ const state={parent,video,src,resilient,fallback:src.includes('-web.mp4')?src.replace('-web.mp4','.mp4'):null,loaded:false,inView:false,userPaused:false,manual:false,retries:0,retryTimer:null,failed:false,lastTime:0,lastProgress:performance.now()};
  mediaStates.set(parent,state);
+ if(resilient){
+  video.addEventListener('error',()=>{parent.classList.remove('has-video');recoverMedia(state);});
+  video.addEventListener('canplay',()=>syncMedia(state));
+  video.addEventListener('timeupdate',()=>{if(video.currentTime!==state.lastTime){state.lastTime=video.currentTime;state.lastProgress=performance.now();}});
+ }
  if(mediaVisibility){mediaLoader.observe(parent);mediaVisibility.observe(parent);}
  else{const rect=parent.getBoundingClientRect();state.inView=rect.top<innerHeight&&rect.bottom>0;syncMedia(state);}
  return state;
 }
 document.addEventListener('visibilitychange',()=>mediaStates.forEach(syncMedia));
 reduce.addEventListener('change',()=>mediaStates.forEach(syncMedia));
-function backgroundFilm(parent,src,poster,className){
+window.addEventListener('online',()=>mediaStates.forEach(state=>{if(state.video.error)recoverMedia(state);else syncMedia(state);}));
+window.addEventListener('pageshow',()=>mediaStates.forEach(syncMedia));
+setInterval(()=>{
+ for(const state of mediaStates.values())if(state.resilient&&state.loaded&&state.inView&&!document.hidden&&!state.video.paused&&performance.now()-state.lastProgress>10000)recoverMedia(state);
+},4000);
+function backgroundFilm(parent,src,poster,className,resilient=true){
  if(!parent||!safeMedia(src))return;
  const v=document.createElement('video');v.className=className;
  v.muted=true;v.defaultMuted=true;v.loop=true;v.playsInline=true;
@@ -144,9 +173,9 @@ function backgroundFilm(parent,src,poster,className){
  v.setAttribute('muted','');v.setAttribute('playsinline','');v.setAttribute('aria-hidden','true');v.tabIndex=-1;
  if(safeMedia(poster))v.poster=poster;
  v.addEventListener('playing',()=>parent.classList.add('has-video'));
- v.addEventListener('error',()=>{v.hidden=true;parent.classList.remove('has-video');});
+ if(!resilient)v.addEventListener('error',()=>{v.hidden=true;parent.classList.remove('has-video');});
  parent.insertBefore(v,parent.querySelector('[class$="shade"]'));
- registerMedia(parent,v,src);
+ registerMedia(parent,v,src,resilient);
 }
 // Social clips retain independent pause and sound controls.
 function attachLoop(parent,item){
@@ -162,14 +191,18 @@ function attachLoop(parent,item){
  const glyph=(name)=>{const paths={pause:'M8 5v14M16 5v14',play:'m8 5 11 7-11 7z',muted:'m11 5-6 4H2v6h3l6 4zM16 9l6 6M22 9l-6 6',sound:'m11 5-6 4H2v6h3l6 4zM16 8a6 6 0 0 1 0 8M19 5a10 10 0 0 1 0 14'};return `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${paths[name]}"/></svg>`;};
  const state=registerMedia(parent,v,item.src);
  function syncButtons(){
-  const label=v.paused?'Reproducir':'Pausar';
+  const label=state.failed?'Reintentar':v.paused?'Reproducir':'Pausar';
   pause.innerHTML=glyph(v.paused?'play':'pause')+`<span>${label}</span>`;
   pause.setAttribute('aria-label',`${label}: ${item.title}`);
   sound.innerHTML=glyph(v.muted?'muted':'sound')+`<span>${v.muted?'Activar sonido':'Silenciar'}</span>`;
   sound.setAttribute('aria-label',`${v.muted?'Activar sonido':'Silenciar'}: ${item.title}`);
   sound.setAttribute('aria-pressed',String(!v.muted));
  }
- pause.addEventListener('click',()=>{state.userPaused=!v.paused;if(state.userPaused)v.pause();else{state.manual=true;syncMedia(state);}syncButtons();});
+ pause.addEventListener('click',()=>{
+  if(state.failed||v.error){clearTimeout(state.retryTimer);state.retryTimer=null;state.failed=false;state.retries=0;state.loaded=false;state.userPaused=false;state.manual=true;loadMedia(state);syncMedia(state);}
+  else{state.userPaused=!v.paused;if(state.userPaused)v.pause();else{state.manual=true;syncMedia(state);}}
+  syncButtons();
+ });
  sound.addEventListener('click',()=>{
   const enable=v.muted;
   if(enable)$$('[data-video] video').forEach(other=>{if(other!==v)other.muted=true;});
@@ -177,7 +210,7 @@ function attachLoop(parent,item){
  });
  ['play','pause','volumechange','ended'].forEach(name=>v.addEventListener(name,syncButtons));
  v.addEventListener('playing',()=>parent.classList.add('has-video'));
- v.addEventListener('error',()=>{v.remove();controls.remove();parent.classList.remove('has-video');const status=document.createElement('p');status.className='video-error';status.textContent='Video no disponible en este momento.';parent.append(status);});
+ v.addEventListener('error',syncButtons);
  controls.append(pause,sound);parent.prepend(v);parent.append(controls);syncButtons();
 
 }
@@ -207,7 +240,7 @@ const embroidery=$('[data-embroidery]');
 backgroundFilm(embroidery,config.videos?.bordado?.src,config.videos?.bordado?.poster,'embroidery-background');
 const hero=$('.hero');
 const heroSource=matchMedia('(max-width:720px)').matches?config.hero?.mobileVideo:config.hero?.desktopVideo;
-backgroundFilm(hero,heroSource,config.hero?.poster,'hero-image');
+backgroundFilm(hero,heroSource,config.hero?.poster,'hero-image',false);
 const contactForm=$('#contact-form');
 if(contactForm){const params=new URLSearchParams(location.search),p=products.find(p=>p.code===params.get('producto'));
  if(p){const qty=Number(params.get('cantidad'));const lines=[`Me gustaría cotizar: ${p.name} (${p.code}).`];if(Number.isSafeInteger(qty)&&qty>0&&qty<=100000)lines.push(`Cantidad: ${qty}`);for(const [key,values,label] of [['talla',p.sizes,'Talla'],['color',p.colors,'Color']])if(values.includes(params.get(key)))lines.push(`${label}: ${params.get(key)}`);contactForm.mensaje.value=lines.join('\n');}
@@ -224,7 +257,7 @@ if(aboutBanner){
  topBars.forEach(el=>topBarObserver.observe(el));sizeAboutBanner();
 }
 
-backgroundFilm($('.about-video-hero'),'assets/videos/pre-quienes-bordado-web.mp4',
+backgroundFilm($('.about-video-hero'),'assets/videos/pre-quienes-bordado-web.mp4?v=20261109-smooth',
  'assets/videos/pre-quienes-bordado-poster.webp','about-background-video');
 // Pause continuous decorative UI animations outside the viewport, too.
 const reviewTrack=$('.review-track');
