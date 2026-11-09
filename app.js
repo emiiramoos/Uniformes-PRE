@@ -34,7 +34,7 @@ if(document.body.dataset.view==='inicio'&&legacy[location.hash.slice(1)])locatio
 $('.menu-toggle')?.addEventListener('click',()=>{const b=$('.menu-toggle'),on=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',String(on));b.setAttribute('aria-label',on?'Cerrar menú':'Abrir menú');$('#site-nav').classList.toggle('is-open',on);});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){$('#site-nav').classList.remove('is-open');$('.menu-toggle')?.setAttribute('aria-expanded','false');}});
 // Un solo mensaje de cabecera a la vez.
-const messages=['Envíos a todo México','Uniformes para tu equipo','Envío gratis en pedidos arriba de $1,000 MXN'];let messageIndex=0;
+const messages=['Envíos a todo México','Uniformes para tu equipo','Envío gratis desde $1,000 MXN'];let messageIndex=0;
 if(!reduce.matches)setInterval(()=>{if(document.hidden)return;const el=$('[data-announcement]');el.classList.add('is-fading');setTimeout(()=>{messageIndex=(messageIndex+1)%messages.length;el.textContent=messages[messageIndex];$('.announcement .icon').toggleAttribute('hidden',messageIndex!==0);el.classList.remove('is-fading');},350);},3800);
 // Catálogo: información breve en tarjetas; ficha completa al abrir.
 const grid=$('#catalog-grid');let activeFilter='todos';
@@ -82,10 +82,10 @@ if(grid){
  $$('[data-filter]').forEach(b=>b.addEventListener('click',()=>setFilter(b.dataset.filter)));$('[data-clear-search]').addEventListener('click',()=>{$('#catalog-search').value='';$('#color-filter').value='todos';$('#size-filter').value='todos';$('#catalog-sort').value='relevancia';setFilter('todos');});
  const params=new URLSearchParams(location.search),cat=params.get('categoria');setFilter($$('[data-filter]').some(b=>b.dataset.filter===cat)?cat:'todos');if(params.has('producto'))openProduct(params.get('producto'),params.get('color'));
 }
-// Ciclo infinito de cinco etapas, una nueva cada dos segundos.
+// Ciclo de cinco etapas, una nueva cada 1.2 segundos.
 const steps=$$('[data-step]');
 if(steps.length){let step=0,timer,inView=false;function activate(n){step=n;steps.forEach((b,i)=>{b.setAttribute('aria-pressed',String(i===n));b.closest('li').classList.toggle('is-active',i===n);});if(matchMedia('(max-width:720px)').matches){const track=$('.process'),el=steps[n].closest('li');track.scrollTo({left:Math.max(0,el.offsetLeft-track.clientWidth/2+el.offsetWidth/2),behavior:reduce.matches?'auto':'smooth'});}}
- function sync(){clearInterval(timer);if(inView&&!reduce.matches&&!document.hidden)timer=setInterval(()=>activate((step+1)%steps.length),2000);}
+ function sync(){clearInterval(timer);if(inView&&!reduce.matches&&!document.hidden)timer=setInterval(()=>activate((step+1)%steps.length),1200);}
  steps.forEach((b,i)=>b.addEventListener('click',()=>{activate(i);sync();}));new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;sync();},{threshold:.2}).observe($('#proceso'));reduce.addEventListener('change',sync);document.addEventListener('visibilitychange',sync);
 }
 // Social clips: muted autoplay, with independent pause and sound controls.
@@ -171,11 +171,6 @@ if(contactForm){const params=new URLSearchParams(location.search),p=products.fin
  contactForm.addEventListener('submit',ev=>{ev.preventDefault();const f=new FormData(ev.currentTarget);const message=`Hola Uniformes PRE.\nNombre: ${String(f.get('nombre')).trim()}\nCorreo: ${String(f.get('correo')).trim()||'No indicado'}\nTeléfono: ${String(f.get('telefono')).trim()||'No indicado'}\n\n${String(f.get('mensaje')).trim()}`;const a=$('#contact-whatsapp');a.href=whatsapp(message);a.hidden=false;$('#contact-status').textContent='Tu mensaje está preparado. Revísalo y envíalo desde WhatsApp.';a.click();});
 }
 $$('[data-legal]').forEach(b=>b.addEventListener('click',()=>{const host=$('[data-legal-content]');host.replaceChildren();const h=document.createElement('h2');h.textContent=b.textContent;const p=document.createElement('p');p.textContent=config.legal?.[b.dataset.legal]||'El texto definitivo de esta sección está pendiente de revisión. Para consultar condiciones de tu pedido, comunícate con Uniformes PRE.';host.append(h,p);openDialog($('#legal-dialog'));}));
-// Ayuda discreta después de la portada; se puede ocultar durante la sesión.
-const help=$('.help-widget');let dismissed=false;try{dismissed=sessionStorage.getItem('pre_help_dismissed')==='yes';}catch{}
-function helpScroll(){if(!help||dismissed)return;const boundary=hero?hero.offsetTop+hero.offsetHeight:420;help.hidden=scrollY<boundary;}
-window.addEventListener('scroll',helpScroll,{passive:true});$('.help-dismiss')?.addEventListener('click',()=>{dismissed=true;help.hidden=true;try{sessionStorage.setItem('pre_help_dismissed','yes');}catch{}});
-
 // The about film has no audio track or playback controls.
 $$('.about-background-video').forEach(catalogFilm=>{
  catalogFilm.muted=true;catalogFilm.defaultMuted=true;catalogFilm.controls=false;

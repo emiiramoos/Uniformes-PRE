@@ -21,3 +21,13 @@ for(let n=0;n<=52;n++){
 assert.equal(Q.calculate([row('FI003-AF',7)],P).lines[0].unit,58000);
 assert.equal(Q.calculate([row('FI003-AF',6),row('FI003-AF',7)],P).lines[1].unit,55000);
 console.log('PASS: 33 productos × cantidades 1–52, bordados 0–52 y reproducción 6 en carrito + 7 nuevas.');
+// Shipping threshold, unknown prices and structured customer/message data.
+const priced=[{code:'TEST',name:'Prenda de prueba',kind:'shirt',sizes:['M'],colors:['Azul'],priceTiers:{'1-12':1000,'13-50':1000,'51+':1000}}];
+const testRow={code:'TEST',quantity:1,size:'M',color:'Azul',chest:0,back:0};
+assert.equal(Q.calculate([testRow],priced).shipping,0);
+priced[0].priceTiers['1-12']=999.99;assert.equal(Q.calculate([testRow],priced).shipping,15000);
+assert.equal(Q.calculate([row('MANTELERIA')],P).shipping,null);
+assert.equal(Q.calculate([],P).shipping,0);
+const structured=Q.message(Q.calculate(rows,P),{name:'Ana',company:'Restaurante PRE',city:'Cancún',postal:'77500',notes:'Entrega para evento'});
+for(const expected of ['*DATOS DE CONTACTO*','Nombre: Ana','Empresa: Restaurante PRE','Ciudad: Cancún','Código postal: 77500','*DETALLE DEL PEDIDO*','*RESUMEN*','*COMENTARIOS*','Envío: Gratis','Ponchado: $350'])assert(structured.includes(expected));
+console.log('PASS: envío gratis exactamente en $1,000, tarifa de $150 por debajo, precios pendientes y mensaje estructurado.');

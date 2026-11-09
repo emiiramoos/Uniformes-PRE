@@ -93,3 +93,6 @@ La última indicación sustituye el video del catálogo por catalogo-prendas-pre
 
 ## Ajuste de portada de Quiénes somos a pantalla
 El último ajuste sustituye contain por cover para llenar todo el ancho sin franjas laterales. Se permite recorte superior/inferior. El alto de la portada usa el viewport pequeño (svh) menos la cabecera y los anuncios, medidos con ResizeObserver para adaptarse a celular y computadora. Se conserva título, bucle, silencio y ausencia de controles.
+
+## Carrito en cabecera y asistente de preguntas frecuentes
+El carrito acumula varias prendas y bordados y abre WhatsApp con una solicitud estructurada al terminar. Contador en la cabecera; se retira el flotante de cotización. Envío $150, gratis desde $1,000; el total es estimado y el ponchado se confirma aparte si se requiere. Asistente local con preguntas frecuentes confirmadas, texto libre por palabras clave, avisos discretos y derivación a WhatsApp. Condiciones y validación en SUPPORT.md. El proceso avanza cada 1.2 segundos.

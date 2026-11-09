@@ -13,7 +13,7 @@ Actualizadas el 8 de noviembre de 2026. Esta especificación preserva las correc
 2. Categorías: Gastronomía, Hotelería, Salud, Industrial, Corporativo y Servicios. Íconos según referencia: gorro de chef, hotel, cruz, fábrica, corbata y personas. Preservar hover.
 3. Destacados: únicamente Filipina repelente, Cazadora y Polo Dry-Fit. Tres imágenes grandes, luz lateral naranja neón y cinta Best seller en cada tarjeta.
 4. Bordado: franja amplia con video real PRE de fondo, capa oscura translúcida y texto alineado a la izquierda y video visible a la derecha, unidos mediante un degradado. Tipografía Poppins blanca y naranja, consistente con la página; bajada: Lleva tu identidad bordada a todas partes. Sin botones ni etiquetas. Video Full HD vertical, bucle automático sin controles ni pista de audio; cierre recortado antes de desaparecer.
-5. Proceso: Así trabajamos contigo. Cinco etapas horizontales: Recibimos tu solicitud; Diseñamos tu propuesta; Validamos contigo; Confeccionamos tu pedido; Preparamos y enviamos. Sin numeración ni Pausar animación. Ciclo infinito cada 2 segundos. La imagen de seis pasos sirve para el estilo de símbolos, no para añadir una etapa de muestra.
+5. Proceso: Así trabajamos contigo. Cinco etapas horizontales: Recibimos tu solicitud; Diseñamos tu propuesta; Validamos contigo; Confeccionamos tu pedido; Preparamos y enviamos. Sin numeración ni Pausar animación. Ciclo infinito cada 1.2 segundos. La imagen de seis pasos sirve para el estilo de símbolos, no para añadir una etapa de muestra.
 6. Conoce más de Uniformes PRE: videos reales en bucle, esquinas redondeadas, silencio inicial, controles de pausa y sonido. Instagram @UniformesPre y Facebook Uniformes Pre dentro de cada tarjeta, iconos en cuadros redondeados. Sin enlaces sueltos encima o debajo de la cuadrícula. Título según el contenido sobre un sombreado inferior gradual, sin blur ni límite horizontal. Una sola fila: cocina, corporativo, calzado, salud; corporativo y calzado al centro. Flechas en escritorio y deslizamiento táctil en celular. Mantener las dimensiones Full HD de los videos. Pausa manual persistente al salir/entrar en pantalla.
 7. Conservar CTA El próximo uniforme de tu empresa empieza aquí.
 
@@ -28,7 +28,7 @@ Actualizadas el 8 de noviembre de 2026. Esta especificación preserva las correc
 - Excluir camisola de mantenimiento. Gorra/gorro solos, sin dummy. Mandil corto: solo frente.
 - Playera cuello redondo corta/larga separadas, una frontal por color, no tres vistas. Azul primero. Sin logos, bolsillos ni botones. Colores y demás reglas anteriores en catalog-reference.json.
 - Mantelería y tapicería con fotografías reales.
-- No carrito. Cotizar conduce a Contacto y la ficha prepara la consulta de la prenda.
+- Carrito en la cabecera: acumular prendas, tallas, colores y bordados, con mayoreo automático. Solicitar cotización abre WhatsApp con datos del cliente y detalle completo. Sin botón flotante de cotización; asistente de preguntas frecuentes en su lugar.
 
 ## Quiénes somos y Contacto
 - Quiénes somos: portada alta con video real de prendas, título Quiénes somos y sin bajada. Video de borde a borde mediante object-fit:cover, sin franjas laterales, permitiendo recorte vertical. La portada se ajusta al alto visible menos cabecera y anuncios, con sombra suave; bucle automático sin audio ni controles. Usa la versión reescalada a 1080×1920. Catálogo usa la nueva fotografía provisional de prendas. Historia definitiva por recibir; no inventar cifras o trayectoria.
@@ -54,3 +54,6 @@ Se recuperaron las instrucciones y recursos del respaldo, contrastados con este 
 
 ### Fotografía de Quiénes somos
 Debajo del video queda únicamente la foto real de la gorra azul bordándose enviada por el usuario, en sustitución de la foto de bordado anterior. Se retira la imagen de costura del bloque de historia; conservar sus textos. No agregar más fotografías a esta página.
+
+### Carrito y asistente
+Las condiciones comerciales y el comportamiento confirmados por el propietario se documentan en SUPPORT.md. Mantener iconos SVG, marino/blanco/naranja y respuestas breves. Emojis solo dentro de mensajes de chat o WhatsApp. No añadir subtítulos ni precios/plazos no confirmados.
