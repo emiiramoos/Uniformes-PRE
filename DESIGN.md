@@ -1,5 +1,5 @@
 # Uniformes PRE — indicaciones vigentes de Emilio
-Actualizadas el 8 de noviembre de 2026. Esta especificación preserva las correcciones expresas del usuario, no convierte antecedentes o imágenes recuperadas en aprobaciones nuevas.
+Actualizadas el 9 de noviembre de 2026. Esta especificación preserva las correcciones expresas del usuario, no convierte antecedentes o imágenes recuperadas en aprobaciones nuevas.
 
 ## Identidad y estilo
 - Marino, blanco y naranja, secciones separadas con tonos sutiles gris azulado y marfil; evitar una página enteramente blanca.
@@ -9,12 +9,12 @@ Actualizadas el 8 de noviembre de 2026. Esta especificación preserva las correc
 - Quitar todas las pequeñas sobrelíneas encima de encabezados. Ejemplos rechazados: Diseñados para tu día a día, Encuentra tu uniforme, La identidad de tu equipo, De tu idea al uniforme.
 
 ## Inicio
-1. Portada: video real de prendas antes usado en Quiénes somos, en bucle, sin audio ni controles, con sombra y altura ajustada a pantalla. Frase: Profesionales en cada detalle, en Barlow Condensed cursiva sin serifas, blanco arriba y naranja abajo. Sin botón Ver catálogo. Versión reescalada 2160×3840 en escritorio y 1080×1920 en celular. No afirmar detalle 4K nativo. La imagen de filipina pasa al catálogo.
+1. Portada: conservar el video real de prendas en bucle silencioso, sin controles. Sustituir el título tipográfico por la imagen bordada cursiva adjunta por Emilio el 9 de noviembre, con transparencia real, blanco y naranja. Escalar sin recorte: hasta 72% del ancho en escritorio y 92% en móvil, dejando visible el fondo. H1 accesible mediante el texto alternativo de la imagen; sin botón. Versiones H.264 de 1080×1920 en escritorio y 720×1280 en móvil; no descargar los reescalados 4K anteriores.
 2. Categorías: Gastronomía, Hotelería, Salud, Industrial, Corporativo y Servicios. Íconos según referencia: gorro de chef, hotel, cruz, fábrica, corbata y personas. Preservar hover.
 3. Destacados: únicamente Filipina repelente, Cazadora y Polo Dry-Fit. Tres imágenes grandes, luz lateral naranja neón y cinta Best seller en cada tarjeta.
 4. Bordado: franja amplia con video real PRE de fondo, capa oscura translúcida y texto alineado a la izquierda y video visible a la derecha, unidos mediante un degradado. Tipografía Poppins blanca y naranja, consistente con la página; bajada: Lleva tu identidad bordada a todas partes. Sin botones ni etiquetas. Video Full HD vertical, bucle automático sin controles ni pista de audio; cierre recortado antes de desaparecer.
 5. Proceso: Así trabajamos contigo. Cinco etapas horizontales: Recibimos tu solicitud; Diseñamos tu propuesta; Validamos contigo; Confeccionamos tu pedido; Preparamos y enviamos. Sin numeración ni Pausar animación. Ciclo infinito cada 1.2 segundos. La imagen de seis pasos sirve para el estilo de símbolos, no para añadir una etapa de muestra.
-6. Conoce más de Uniformes PRE: videos reales en bucle, esquinas redondeadas, silencio inicial, controles de pausa y sonido. Instagram @UniformesPre y Facebook Uniformes Pre dentro de cada tarjeta, iconos en cuadros redondeados. Sin enlaces sueltos encima o debajo de la cuadrícula. Título según el contenido sobre un sombreado inferior gradual, sin blur ni límite horizontal. Una sola fila: cocina, corporativo, calzado, salud; corporativo y calzado al centro. Flechas en escritorio y deslizamiento táctil en celular. Mantener las dimensiones Full HD de los videos. Pausa manual persistente al salir/entrar en pantalla.
+6. Conoce más de Uniformes PRE: videos reales en bucle, esquinas redondeadas, silencio inicial, controles de pausa y sonido. Instagram @UniformesPre y Facebook Uniformes Pre dentro de cada tarjeta, iconos en cuadros redondeados. Sin enlaces sueltos encima o debajo de la cuadrícula. Título según el contenido sobre un sombreado inferior gradual, sin blur ni límite horizontal. Una sola fila: cocina, corporativo, calzado, salud; corporativo y calzado al centro. Flechas en escritorio y deslizamiento táctil en celular. Entregar copias web a 720×1280 con audio y conservar los originales Full HD. Cargar al acercarse y reproducir únicamente dentro de pantalla; pausar fuera y al ocultarse la pestaña. Pausa manual persistente al salir/entrar en pantalla.
 7. Conservar CTA El próximo uniforme de tu empresa empieza aquí.
 
 ## Catálogo
@@ -63,3 +63,9 @@ El video de prendas se mueve de Quiénes somos a Inicio. Quiénes somos usa el n
 
 ### Apariciones al desplazarse
 En las cuatro páginas, bloques y tarjetas aparecen con un cambio breve de opacidad al entrar en pantalla, sin desplazamiento ni cambio de posición. Incluye tarjetas nuevas del filtro de catálogo y el pie. Con JavaScript desactivado o preferencia de movimiento reducido, el contenido permanece visible. El catálogo conserva un difuminado mínimo en escritorio para mostrar la textura de la filipina.
+
+## Rendimiento y aparición — 9 de noviembre
+- Aparición única de 550 ms: opacidad y elevación de 12 px, sin escalas ni blur. IntersectionObserver, sin seguimiento continuo del scroll. No esconder contenido sin JavaScript o con movimiento reducido.
+- Fondos y carrusel comparten carga diferida y pausa por visibilidad. Ahorro de datos y movimiento reducido usan poster; reproducción manual disponible en las tarjetas.
+- Versiones MP4 con metadatos al inicio (faststart); originales preservados para futuras ediciones.
+- Miniaturas y tamaños de catálogo según el espacio real; originales grandes en la ficha. Versionar los recursos CSS/JS en las cuatro páginas y conservar build.py como fuente de HTML.

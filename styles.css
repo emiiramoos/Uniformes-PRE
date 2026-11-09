@@ -144,12 +144,18 @@
 
 .home-video-hero h1 br{display:block}
 
-/* Expressive italic sans lettering, with no secondary line or call to action. */
-.home-video-hero h1{font-family:'Barlow Condensed',Poppins,Arial,sans-serif;font-size:clamp(72px,8.5vw,122px);font-style:italic;font-weight:600;letter-spacing:-.015em;line-height:1;margin:0;padding:0 12px 8px}
-.home-video-hero h1 span{font-weight:700}
-@media(max-width:720px){.home-video-hero h1{font-size:clamp(48px,14.2vw,76px)}.catalog-hero>.catalog-hero-photo{filter:blur(1px)}}
-/* A soft, single fade as each block enters the viewport. */
+/* Approved embroidered cursive artwork, floating over the film. */
+.home-video-hero .hero-copy{width:100%;max-width:none;padding:24px 0}
+.home-video-hero h1{width:min(72vw,1040px);max-width:100%;margin:0 auto;padding:0;line-height:0;text-shadow:none}
+.home-video-hero .hero-lettering{display:block;width:100%;height:auto;max-height:38svh;object-fit:contain}
+.home-video-hero .hero-shade{background:linear-gradient(180deg,#08132220,#08132245 55%,#08132230)}
+@media(max-width:720px){.home-video-hero .hero-inner{width:92%}.home-video-hero h1{width:100%}.home-video-hero .hero-lettering{max-height:32svh}}
+/* A short fade and gentle lift, once per block; no perpetual layer promotion. */
 .catalog-card{animation:none}
-.reveal-ready{opacity:0;transition:opacity .65s cubic-bezier(.22,1,.36,1),box-shadow .25s,transform .25s}
-.reveal-ready.is-revealed{opacity:1}
-@media(prefers-reduced-motion:reduce){.reveal-ready{opacity:1;transition:none}}
+.reveal-ready{opacity:0}
+.reveal-ready.is-revealed{opacity:1;animation:pre-reveal .55s cubic-bezier(.22,1,.36,1) both}
+@keyframes pre-reveal{from{opacity:0;translate:0 12px}to{opacity:1;translate:0 0}}
+.review-track.is-offscreen{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.reveal-ready{opacity:1}.reveal-ready.is-revealed{animation:none}}
+
+.hero.has-video>img.hero-image,.about-video-hero.has-video>.about-video-poster{visibility:hidden}

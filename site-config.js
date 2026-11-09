@@ -3,38 +3,38 @@ window.PRE_CONFIG = {
   "instagram": "https://www.instagram.com/uniformespre/",
   "facebook": "https://www.facebook.com/uniformespree",
   "hero": {
-    "desktopVideo": "assets/videos/pre-inicio-nitido-4k.mp4",
-    "mobileVideo": "assets/videos/pre-catalogo.mp4",
+    "desktopVideo": "assets/videos/pre-inicio-desktop.mp4",
+    "mobileVideo": "assets/videos/pre-inicio-mobile.mp4",
     "poster": "assets/videos/pre-catalogo-poster.webp"
   },
   "videos": {
     "bordado": {
       "title": "Así bordamos tus uniformes",
-      "src": "assets/videos/pre-bordado.mp4",
+      "src": "assets/videos/pre-bordado-web.mp4",
       "poster": "assets/videos/pre-bordado-poster.webp",
       "orientation": "vertical"
     },
     "corporativo": {
       "title": "Uniformes que hablan de tu empresa",
-      "src": "assets/videos/pre-corporativo.mp4",
+      "src": "assets/videos/pre-corporativo-web.mp4",
       "poster": "assets/videos/pre-corporativo-poster.webp",
       "orientation": "vertical"
     },
     "calzado": {
       "title": "Comodidad en cada paso",
-      "src": "assets/videos/pre-calzado.mp4",
+      "src": "assets/videos/pre-calzado-web.mp4",
       "poster": "assets/videos/pre-calzado-poster.webp",
       "orientation": "vertical"
     },
     "cocina": {
       "title": "Tu equipo de cocina, de pies a cabeza",
-      "src": "assets/videos/pre-cocina.mp4",
+      "src": "assets/videos/pre-cocina-web.mp4",
       "poster": "assets/videos/pre-cocina-poster.webp",
       "orientation": "vertical"
     },
     "salud": {
       "title": "Uniformes para quienes cuidan de todos",
-      "src": "assets/videos/pre-salud.mp4",
+      "src": "assets/videos/pre-salud-web.mp4",
       "poster": "assets/videos/pre-salud-poster.webp",
       "orientation": "vertical"
     }

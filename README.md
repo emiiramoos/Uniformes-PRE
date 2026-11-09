@@ -102,3 +102,14 @@ Inicio muestra el video de prendas en bucle sin audio ni controles, con la frase
 
 ## Últimos acabados
 Inicio: Profesionales en cada detalle, cursiva sans serif blanca/naranja, sin CTA. Cambio de opacidad al desplazarse por las cuatro páginas, sin deslizamiento y con contenido visible sin JavaScript o con movimiento reducido. Catálogo con menor difuminado. Nueva compresión del video de inicio en escritorio; el detalle sigue limitado por el original. Quiénes somos recibe el nuevo clip horizontal de bordado en bucle silencioso, sin controles. Contacto: Estamos para ayudarte. Encabezado del asistente corregido a Uniformes PRE, conservando el robot 3D.
+
+
+## Portada bordada y rendimiento — 9 noviembre 2026
+
+La portada usa la frase cursiva bordada entregada por Emilio, exportada a WebP transparente con variantes de 2048 y 960 px. Sustituye al texto anterior y mantiene el encabezado accesible mediante alt.
+
+Los originales de video se conservan; la web utiliza copias H.264 con faststart. Inicio: 2,357,392 bytes en escritorio (antes 28,795,862) y 875,360 en celular (antes 4,159,716). Bordado y reels usan copias a 720 px de ancho; Conoce PRE, 1280 px. Las pistas de audio de los reels se conservan.
+
+Un par de IntersectionObserver compartidos carga medios al acercarse (200 px), reproduce solamente los visibles y los pausa al salir o al ocultarse la pestaña. La pausa elegida por el visitante persiste. Movimiento reducido y ahorro de datos mantienen las imágenes de portada, con reproducción manual disponible en los reels. Las apariciones duran 550 ms con opacidad y desplazamiento de 12 px y se ejecutan una vez. Sin JavaScript el contenido sigue visible. Catálogo con tamaños de imagen acordes a las tarjetas y búsqueda con espera de 120 ms.
+
+Validación local con Chromium: pantallas 1440×1000 y 390×844 (DPR 2), cuatro páginas, carga inicial de un solo video, bucles, pausa fuera de pantalla, pausa manual persistente, sonido, filtros y vistas del catálogo; sin errores JS ni recursos locales HTTP fallidos. WebP verificados y frase con canal alfa; scripts y motor de cotización verificados. Revisiones visuales de ambas portadas realizadas. No se afirma una puntuación Lighthouse ni una mejora medida de Core Web Vitals.

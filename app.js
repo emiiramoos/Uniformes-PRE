@@ -4,13 +4,13 @@ const config=window.PRE_CONFIG||{},products=window.PRE_PRODUCTS||[];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 const reduce=matchMedia('(prefers-reduced-motion:reduce)');
-// Scroll appearances never move elements; content stays visible without JS.
+// Reveal each block once; no scroll handlers or animation framework.
 const revealTargets='.section-heading,.categories h2,.category-grid a,.featured-card,.embroidery-inner>div,.process-heading,.process-head,.process-step,.video-slot,.review-window,.reviews-section h2,.cta-band .container,.catalog-tools,.catalog-categories,.catalog-meta,.catalog-card,.about-history-copy,.about-grid,.pre-service-grid article,.pre-preparation,.contact-form,.express-card,.location-card,.benefit-row';
-const revealObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('is-revealed');revealObserver.unobserve(entry.target);}},{threshold:.06,rootMargin:'0px 0px -24px 0px'}):null;
+const revealObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('is-revealed');revealObserver.unobserve(entry.target);}},{threshold:0,rootMargin:'0px 0px -16px 0px'}):null;
 function observeReveals(nodes=document.querySelectorAll('main '+revealTargets.split(',').join(',main ')+',.site-footer .footer-grid,.site-footer .footer-bottom')){
  if(reduce.matches||!revealObserver)return;
  for(const el of nodes){if(el.dataset.revealObserved)continue;el.dataset.revealObserved='true';
-  if(el.getBoundingClientRect().top<innerHeight)continue;
+  if(el.getBoundingClientRect().top<innerHeight-16)continue;
   el.classList.add('reveal-ready');revealObserver.observe(el);
  }
 }
@@ -23,11 +23,11 @@ function placeholder(p){return `<div class="product-placeholder">${icon(p.kind)}
 function defaultView(p){return Object.keys(config.productImages?.[p.code]||{})[0]||'Frente';}
 function defaultColor(p){return p.colors.find(c=>norm(c)===norm(config.productImageColors?.[p.code]||''))||p.colors[0];}
 function validColor(p,color){return p.colors.find(c=>norm(c)===norm(color))||defaultColor(p);}
-function productVisual(p,view=defaultView(p),color,thumbnail=false){
+function productVisual(p,view=defaultView(p),color,thumbnail=false,card=false){
  const variants=config.productColorImages?.[p.code];
  const chosen=color||defaultColor(p);
  const src=config.productGalleries?.[p.code]?.[chosen]?.[view]||(variants&&view==='Frente'?(variants[chosen]||config.productImages?.[p.code]?.[view]):config.productImages?.[p.code]?.[view]);
- return safeMedia(src)?`<img src="${esc(src)}" srcset="${esc(src.includes('/catalog-20261108/')?src.replace(/\.webp$/,'-thumb.webp'):src)} 480w, ${esc(src)} 1200w" sizes="${thumbnail?'76px':'(max-width:720px) 90vw, 540px'}" data-catalog-image data-kind="${esc(p.kind)}" alt="${esc(p.name)}${variants?', color '+esc(chosen):''}, ${esc(view.toLowerCase())}" loading="lazy" decoding="async">`:placeholder(p);
+ return safeMedia(src)?`<img src="${esc(src)}" srcset="${esc(src.includes('/catalog-20261108/')?src.replace(/\.webp$/,'-thumb.webp'):src)} 480w, ${esc(src)} 1200w" sizes="${thumbnail?'76px':card?'(max-width:720px) 44vw, (max-width:1000px) 30vw, 280px':'(max-width:720px) 90vw, 540px'}" data-catalog-image data-kind="${esc(p.kind)}" alt="${esc(p.name)}${variants?', color '+esc(chosen):''}, ${esc(view.toLowerCase())}" loading="lazy" decoding="async">`:placeholder(p);
 }
 // A failed file gets a deliberate fallback, never a broken-image icon.
 document.addEventListener('error',event=>{const img=event.target;if(img instanceof HTMLImageElement&&img.hasAttribute('data-catalog-image'))img.outerHTML=placeholder({kind:img.dataset.kind});},true);
@@ -54,7 +54,8 @@ function sourceClass(p){return config.sourceModelCodes?.includes(p.code)?'source
 function renderCatalog(){if(!grid)return;const q=norm($('#catalog-search').value.trim()),color=$('#color-filter').value,size=$('#size-filter').value;
  let visible=products.filter(p=>matchesCategory(p,activeFilter)&&norm([p.name,p.code,p.material,p.description].join(' ')).includes(q)&&(color==='todos'||p.colors.some(c=>norm(c)===norm(color)))&&(size==='todos'||p.sizes.includes(size)));
  if($('#catalog-sort').value==='nombre')visible.sort((a,b)=>a.name.localeCompare(b.name,'es'));
- grid.innerHTML=visible.map((p,i)=>`<article class="catalog-card" style="--delay:${Math.min(i,8)*30}ms"><button class="catalog-visual ${sourceClass(p)}" data-product="${esc(p.code)}" aria-label="Ver detalles de ${esc(p.name)}">${productVisual(p,defaultView(p),color==='todos'?undefined:validColor(p,color))}</button><div class="catalog-info"><h2>${esc(p.name)}</h2><button class="inline-link" data-product="${esc(p.code)}">Ver detalles</button></div></article>`).join('');
+ for(const card of $$('.reveal-ready',grid))revealObserver?.unobserve(card);
+ grid.innerHTML=visible.map(p=>`<article class="catalog-card"><button class="catalog-visual ${sourceClass(p)}" data-product="${esc(p.code)}" aria-label="Ver detalles de ${esc(p.name)}">${productVisual(p,defaultView(p),color==='todos'?undefined:validColor(p,color),false,true)}</button><div class="catalog-info"><h2>${esc(p.name)}</h2><button class="inline-link" data-product="${esc(p.code)}">Ver detalles</button></div></article>`).join('');
  observeReveals($$('.catalog-card',grid));
  $('#catalog-count').textContent=`${visible.length} ${visible.length===1?'producto':'productos'}`;$('.empty-state').hidden=!!visible.length;
  $$('[data-product]',grid).forEach(b=>b.addEventListener('click',()=>openProduct(b.dataset.product,color==='todos'?undefined:color)));
@@ -90,7 +91,7 @@ function openProduct(code,requestedColor){
 if(grid){
  const colors=[...new Map(products.flatMap(p=>p.colors).filter(c=>!['No especificados','Según proyecto'].includes(c)).map(c=>[norm(c),c])).values()].sort((a,b)=>a.localeCompare(b,'es'));const sizes=[...new Set(products.flatMap(p=>p.sizes))];
  for(const [selector,values] of [['#color-filter',colors],['#size-filter',sizes]])for(const v of values){const option=document.createElement('option');option.value=v;option.textContent=v;$(selector).append(option);}
- $('#catalog-search').addEventListener('input',renderCatalog);$('#category-filter').addEventListener('change',e=>setFilter(e.target.value));['#color-filter','#size-filter','#catalog-sort'].forEach(s=>$(s).addEventListener('change',renderCatalog));
+ let searchTimer;$('#catalog-search').addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(renderCatalog,120);});$('#category-filter').addEventListener('change',e=>setFilter(e.target.value));['#color-filter','#size-filter','#catalog-sort'].forEach(s=>$(s).addEventListener('change',renderCatalog));
  $$('[data-filter]').forEach(b=>b.addEventListener('click',()=>setFilter(b.dataset.filter)));$('[data-clear-search]').addEventListener('click',()=>{$('#catalog-search').value='';$('#color-filter').value='todos';$('#size-filter').value='todos';$('#catalog-sort').value='relevancia';setFilter('todos');});
  const params=new URLSearchParams(location.search),cat=params.get('categoria');setFilter($$('[data-filter]').some(b=>b.dataset.filter===cat)?cat:'todos');if(params.has('producto'))openProduct(params.get('producto'),params.get('color'));
 }
@@ -100,19 +101,66 @@ if(steps.length){let step=0,timer,inView=false;function activate(n){step=n;steps
  function sync(){clearInterval(timer);if(inView&&!reduce.matches&&!document.hidden)timer=setInterval(()=>activate((step+1)%steps.length),1200);}
  steps.forEach((b,i)=>b.addEventListener('click',()=>{activate(i);sync();}));new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;sync();},{threshold:.2}).observe($('#proceso'));reduce.addEventListener('change',sync);document.addEventListener('visibilitychange',sync);
 }
-// Social clips: muted autoplay, with independent pause and sound controls.
+// One lifecycle for every film: defer downloads, play in view, pause offscreen.
+const mediaStates=new Map();
+const saveData=!!navigator.connection?.saveData;
+function syncMedia(state){
+ const shouldPlay=state.inView&&!document.hidden&&!state.userPaused&&
+  (state.manual||(!reduce.matches&&!saveData));
+ if(!shouldPlay){state.video.pause();return;}
+ loadMedia(state);
+ state.video.play().then(()=>{
+  if(!state.inView||document.hidden||state.userPaused)state.video.pause();
+ }).catch(()=>{}); // The poster and play button survive autoplay restrictions.
+}
+function loadMedia(state){
+ if(state.loaded)return;
+ state.loaded=true;state.video.preload='metadata';state.video.src=state.src;state.video.load();
+}
+const mediaLoader='IntersectionObserver' in window?new IntersectionObserver(entries=>{
+ for(const entry of entries){const state=mediaStates.get(entry.target);
+  if(entry.isIntersecting&&state&&!reduce.matches&&!saveData){loadMedia(state);mediaLoader.unobserve(entry.target);}
+ }
+},{rootMargin:'200px 0px',threshold:0}):null;
+const mediaVisibility='IntersectionObserver' in window?new IntersectionObserver(entries=>{
+ for(const entry of entries){const state=mediaStates.get(entry.target);if(!state)continue;
+  state.inView=entry.isIntersecting&&entry.intersectionRatio>=.1;syncMedia(state);
+ }
+},{threshold:[0,.1]}):null;
+function registerMedia(parent,video,src){
+ const state={video,src,loaded:false,inView:false,userPaused:false,manual:false};
+ mediaStates.set(parent,state);
+ if(mediaVisibility){mediaLoader.observe(parent);mediaVisibility.observe(parent);}
+ else{const rect=parent.getBoundingClientRect();state.inView=rect.top<innerHeight&&rect.bottom>0;syncMedia(state);}
+ return state;
+}
+document.addEventListener('visibilitychange',()=>mediaStates.forEach(syncMedia));
+reduce.addEventListener('change',()=>mediaStates.forEach(syncMedia));
+function backgroundFilm(parent,src,poster,className){
+ if(!parent||!safeMedia(src))return;
+ const v=document.createElement('video');v.className=className;
+ v.muted=true;v.defaultMuted=true;v.loop=true;v.playsInline=true;
+ v.preload='none';v.controls=false;v.disablePictureInPicture=true;v.disableRemotePlayback=true;
+ v.setAttribute('muted','');v.setAttribute('playsinline','');v.setAttribute('aria-hidden','true');v.tabIndex=-1;
+ if(safeMedia(poster))v.poster=poster;
+ v.addEventListener('playing',()=>parent.classList.add('has-video'));
+ v.addEventListener('error',()=>{v.hidden=true;parent.classList.remove('has-video');});
+ parent.insertBefore(v,parent.querySelector('[class$="shade"]'));
+ registerMedia(parent,v,src);
+}
+// Social clips retain independent pause and sound controls.
 function attachLoop(parent,item){
  if(!safeMedia(item?.src))return;
  const v=document.createElement('video');
- v.src=item.src;v.muted=true;v.defaultMuted=true;v.autoplay=true;v.loop=true;
- v.playsInline=true;v.preload='metadata';v.setAttribute('muted','');v.setAttribute('playsinline','');
+ v.muted=true;v.defaultMuted=true;v.loop=true;
+ v.playsInline=true;v.preload='none';v.setAttribute('muted','');v.setAttribute('playsinline','');
  v.setAttribute('aria-label',item.title||'Video de Uniformes PRE');
  if(safeMedia(item.poster))v.poster=item.poster;
  const controls=document.createElement('div');controls.className='video-controls';
  const pause=document.createElement('button');pause.type='button';pause.className='video-pause';
  const sound=document.createElement('button');sound.type='button';sound.className='video-sound';
  const glyph=(name)=>{const paths={pause:'M8 5v14M16 5v14',play:'m8 5 11 7-11 7z',muted:'m11 5-6 4H2v6h3l6 4zM16 9l6 6M22 9l-6 6',sound:'m11 5-6 4H2v6h3l6 4zM16 8a6 6 0 0 1 0 8M19 5a10 10 0 0 1 0 14'};return `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${paths[name]}"/></svg>`;};
- let userPaused=false,inView=false;
+ const state=registerMedia(parent,v,item.src);
  function syncButtons(){
   const label=v.paused?'Reproducir':'Pausar';
   pause.innerHTML=glyph(v.paused?'play':'pause')+`<span>${label}</span>`;
@@ -121,8 +169,7 @@ function attachLoop(parent,item){
   sound.setAttribute('aria-label',`${v.muted?'Activar sonido':'Silenciar'}: ${item.title}`);
   sound.setAttribute('aria-pressed',String(!v.muted));
  }
- function play(){v.play().catch(syncButtons);}
- pause.addEventListener('click',()=>{userPaused=!v.paused;if(userPaused)v.pause();else play();syncButtons();});
+ pause.addEventListener('click',()=>{state.userPaused=!v.paused;if(state.userPaused)v.pause();else{state.manual=true;syncMedia(state);}syncButtons();});
  sound.addEventListener('click',()=>{
   const enable=v.muted;
   if(enable)$$('[data-video] video').forEach(other=>{if(other!==v)other.muted=true;});
@@ -132,11 +179,7 @@ function attachLoop(parent,item){
  v.addEventListener('playing',()=>parent.classList.add('has-video'));
  v.addEventListener('error',()=>{v.remove();controls.remove();parent.classList.remove('has-video');const status=document.createElement('p');status.className='video-error';status.textContent='Video no disponible en este momento.';parent.append(status);});
  controls.append(pause,sound);parent.prepend(v);parent.append(controls);syncButtons();
- new IntersectionObserver(entries=>{
-  inView=entries[0].isIntersecting;
-  if(inView&&!userPaused&&!document.hidden)play();else v.pause();
- },{threshold:.15}).observe(parent);
- document.addEventListener('visibilitychange',()=>{if(!document.hidden&&inView&&!userPaused)play();else v.pause();});
+
 }
 $$('[data-video]').forEach(el=>attachLoop(el,config.videos?.[el.dataset.video]));
 // Center the uniform and footwear clips; native horizontal swipe on mobile.
@@ -159,42 +202,12 @@ if(videoTrack){
  new ResizeObserver(()=>{if(videoTrack.clientWidth!==lastWidth){lastWidth=videoTrack.clientWidth;center();}}).observe(videoTrack);
  center();
 }
-// Decorative background: the delivered clip has no audio track or closing fade.
+// Backgrounds use the same visibility and download policy as the social row.
 const embroidery=$('[data-embroidery]');
-if(embroidery&&safeMedia(config.videos?.bordado?.src)){
- const v=document.createElement('video');
- v.className='embroidery-background';v.src=config.videos.bordado.src;
- v.autoplay=true;v.loop=true;v.muted=true;v.defaultMuted=true;v.playsInline=true;
- v.preload='auto';v.controls=false;v.disablePictureInPicture=true;v.disableRemotePlayback=true;
- v.setAttribute('muted','');v.setAttribute('playsinline','');v.setAttribute('aria-hidden','true');v.tabIndex=-1;
- v.poster=config.videos.bordado.poster;
- embroidery.prepend(v);
- v.addEventListener('playing',()=>embroidery.classList.add('has-video'));
- v.addEventListener('error',()=>{v.remove();embroidery.classList.remove('has-video');});
- // Retry autoplay when returning to the tab; browser power-saving may suspend it.
- document.addEventListener('visibilitychange',()=>{if(!document.hidden)v.play().catch(()=>{});});
- v.play().catch(()=>{});
-}
+backgroundFilm(embroidery,config.videos?.bordado?.src,config.videos?.bordado?.poster,'embroidery-background');
 const hero=$('.hero');
-if(hero){
- const mobile=matchMedia('(max-width:720px)');let v;
- function syncHero(){
-  const src=mobile.matches?config.hero?.mobileVideo:config.hero?.desktopVideo;
-  if(!safeMedia(src)){v?.remove();v=null;return;}
-  if(!v){
-   v=document.createElement('video');v.className='hero-image';v.muted=true;v.defaultMuted=true;
-   v.autoplay=true;v.loop=true;v.playsInline=true;v.controls=false;v.preload='auto';
-   v.disablePictureInPicture=true;v.disableRemotePlayback=true;v.poster=config.hero.poster;
-   v.setAttribute('muted','');v.setAttribute('playsinline','');v.setAttribute('aria-hidden','true');v.tabIndex=-1;
-   hero.insertBefore(v,$('.hero-shade'));
-   v.addEventListener('error',()=>{v.remove();v=null;});
-  }
-  if(v.getAttribute('src')!==src)v.src=src;
-  v.play().catch(()=>{});
- }
- syncHero();mobile.addEventListener('change',syncHero);
- document.addEventListener('visibilitychange',()=>{if(!document.hidden)v?.play().catch(()=>{});});
-}
+const heroSource=matchMedia('(max-width:720px)').matches?config.hero?.mobileVideo:config.hero?.desktopVideo;
+backgroundFilm(hero,heroSource,config.hero?.poster,'hero-image');
 const contactForm=$('#contact-form');
 if(contactForm){const params=new URLSearchParams(location.search),p=products.find(p=>p.code===params.get('producto'));
  if(p){const qty=Number(params.get('cantidad'));const lines=[`Me gustaría cotizar: ${p.name} (${p.code}).`];if(Number.isSafeInteger(qty)&&qty>0&&qty<=100000)lines.push(`Cantidad: ${qty}`);for(const [key,values,label] of [['talla',p.sizes,'Talla'],['color',p.colors,'Color']])if(values.includes(params.get(key)))lines.push(`${label}: ${params.get(key)}`);contactForm.mensaje.value=lines.join('\n');}
@@ -211,13 +224,11 @@ if(aboutBanner){
  topBars.forEach(el=>topBarObserver.observe(el));sizeAboutBanner();
 }
 
-// The about film is a silent decorative loop with the same still as fallback.
-const aboutFilm=$('.about-background-video');
-if(aboutFilm){
- aboutFilm.muted=true;aboutFilm.defaultMuted=true;aboutFilm.controls=false;
- aboutFilm.disablePictureInPicture=true;aboutFilm.disableRemotePlayback=true;
- aboutFilm.addEventListener('error',()=>{aboutFilm.hidden=true;});
- document.addEventListener('visibilitychange',()=>{if(!document.hidden)aboutFilm.play().catch(()=>{});});
- aboutFilm.play().catch(()=>{});
-}
+backgroundFilm($('.about-video-hero'),'assets/videos/pre-quienes-bordado-web.mp4',
+ 'assets/videos/pre-quienes-bordado-poster.webp','about-background-video');
+// Pause continuous decorative UI animations outside the viewport, too.
+const reviewTrack=$('.review-track');
+if(reviewTrack&&'IntersectionObserver' in window)new IntersectionObserver(entries=>{
+ reviewTrack.classList.toggle('is-offscreen',!entries[0].isIntersecting);
+}).observe(reviewTrack.closest('.reviews-section'));
 observeReveals();
