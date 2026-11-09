@@ -18,7 +18,7 @@ Actualizadas el 8 de noviembre de 2026. Esta especificación preserva las correc
 7. Conservar CTA El próximo uniforme de tu empresa empieza aquí.
 
 ## Catálogo
-- Banner con imagen grande y Nuestro catálogo centrado; Emilio elegirá la fotografía definitiva.
+- Banner con el video real de prendas enviado por Emilio, Nuestro catálogo centrado y sombreado suave. Altura moderada (400–460 px en escritorio, 340 px en celular). Autoplay, bucle, sin controles ni pista de audio. Poster del propio clip como respaldo.
 - Filtros con diseño y movimiento sutil, categorías con íconos.
 - Tarjeta: únicamente nombre de producto y Ver detalles, sin flechas, códigos ni materiales en listado.
 - Materiales, tallas, colores y características dentro de la ficha.

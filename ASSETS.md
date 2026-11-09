@@ -59,3 +59,6 @@ Material adjuntado por el usuario, sin generación de imágenes o video:
 - PRE.31.Ago.R.mov → pre-salud.mp4: uniformes para personal de salud y personalización. Título: Uniformes para quienes cuidan de todos.
 Se revisaron fotogramas a lo largo de cada clip para asignar los títulos. Se mantienen duración, encuadre Full HD vertical y audio; conversión a H.264/AAC con faststart para web. Posters extraídos a los 0.5 s, sin crear material sintético. Archivos en assets/videos/.
 Pendientes de transferencia: PRE.30sep.R.mp4 y PRE.6Oct.R.mp4 superaron el límite de descarga de 32 MiB del ejecutor. No se publicaron tarjetas vacías ni sustitutos para estos dos clips. Solicitar copias menores de 32 MiB o enlaces directos de descarga para completar los seis.
+
+## Video de portada del catálogo — 8 noviembre 2026
+WhatsApp Video 2026-11-08 at 10.21.21 PM.mp4, adjuntado por el usuario: camisas, prendas y detalles textiles. Original vertical 576×1024, duración aproximada 9.23 s. Se conserva el clip completo y se reescala con Lanczos a 1080×1920, reducción de ruido leve y nitidez moderada. El reescalado no recupera detalle nativo Full HD. H.264 a 30 fps, faststart y sin pista de audio. Poster extraído del clip. Archivos pre-catalogo.mp4 y pre-catalogo-poster.webp en assets/videos/. Sin generación de contenido sintético.

@@ -80,3 +80,7 @@ Las cazadoras marino corta/larga y el cargo gris tienen Frente/Lateral/Espalda i
 
 ## Videos en Conoce más de Uniformes PRE
 Cuatro clips reales integrados con Full HD vertical, bucle y silencio inicial. Cada tarjeta contiene Instagram y Facebook; ya no hay enlaces sueltos dentro de esa sección. El pie usa un sombreado gradual sin blur ni bloque separado, para mantener visible el video detrás del título y los controles. Las cuatro tarjetas forman una fila horizontal, con corporativo y calzado al centro, flechas en escritorio y deslizamiento en celular. Pausa manual persistente al desplazarse; audio activado por el visitante y exclusivo entre tarjetas para evitar superposiciones. Dos clips adicionales quedaron pendientes por el límite de transferencia de 32 MiB, documentados en ASSETS.md.
+
+## Portada del catálogo con video
+Integra el clip real de prendas enviado por Emilio, con sombra suave y título centrado. Altura de 400–460 px en escritorio y 340 px en celular. Bucle automático, sin controles ni pista de audio. Reescalado a 1080×1920 desde 576×1024, con limpieza y nitidez moderadas; no es detalle Full HD nativo. Poster del propio clip como respaldo si no puede reproducirse.
+Validación: reproducción y reinicio real del bucle en Chromium, silencio y ausencia de controles, escritorio/celular sin desbordamiento, búsqueda de polo y respaldo visual al fallar el video.
