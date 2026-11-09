@@ -29,7 +29,7 @@ function productVisual(p,view=defaultView(p),color,thumbnail=false,card=false){
  const variants=config.productColorImages?.[p.code];
  const chosen=color||defaultColor(p);
  const src=config.productGalleries?.[p.code]?.[chosen]?.[view]||(variants&&view==='Frente'?(variants[chosen]||config.productImages?.[p.code]?.[view]):config.productImages?.[p.code]?.[view]);
- return safeMedia(src)?`<img src="${esc(src)}" srcset="${esc(src.includes('/catalog-20261108/')?src.replace(/\.webp$/,'-thumb.webp'):src)} 480w, ${esc(src)} 1200w" sizes="${thumbnail?'76px':card?'(max-width:720px) 44vw, (max-width:1000px) 30vw, 280px':'(max-width:720px) 90vw, 540px'}" data-catalog-image data-kind="${esc(p.kind)}" alt="${esc(p.name)}${variants?', color '+esc(chosen):''}, ${esc(view.toLowerCase())}" loading="lazy" decoding="async">`:placeholder(p);
+ return safeMedia(src)?`<img src="${esc(src)}" srcset="${esc(/\/catalog-\d{8}\//.test(src)?src.replace(/\.webp$/,'-thumb.webp'):src)} 480w, ${esc(src)} 1200w" sizes="${thumbnail?'76px':card?'(max-width:720px) 44vw, (max-width:1000px) 30vw, 280px':'(max-width:720px) 90vw, 540px'}" data-catalog-image data-kind="${esc(p.kind)}" alt="${esc(p.name)}${variants?', color '+esc(chosen):''}, ${esc(view.toLowerCase())}" loading="lazy" decoding="async">`:placeholder(p);
 }
 // A failed file gets a deliberate fallback, never a broken-image icon.
 document.addEventListener('error',event=>{const img=event.target;if(img instanceof HTMLImageElement&&img.hasAttribute('data-catalog-image'))img.outerHTML=placeholder({kind:img.dataset.kind});},true);

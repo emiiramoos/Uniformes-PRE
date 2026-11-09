@@ -82,3 +82,16 @@ Imagen 1-Foto-1.jpg adjuntada por el usuario, 1280×776. Copiada sin edición ni
 - Inicio: pre-inicio-nitido-4k.mp4, nueva derivación directa del original vertical 576×1024 recibido. Nitidez moderada antes del reescalado a 2160×3840, sin reducción de ruido temporal y CRF 16 para limitar la suavidad y pérdidas de compresión en escritorio. No se añade detalle 4K nativo; en celular se mantiene la versión 1080×1920 aprobada.
 - Quiénes somos: WhatsApp Video 2026-11-08 at 11.28.46 PM.mp4 adjuntado por el usuario, original horizontal 720×480 a 60 fps, aprox. 10.48 s, máquinas bordando gorras. Derivado pre-quienes-bordado.mp4 a 1920×1280, conservando 60 fps, con Lanczos y nitidez suave, H.264, faststart y sin pista de audio. Poster del propio clip. Reescalado, no resolución nativa. Se conserva la fotografía de la gorra debajo.
 - Catálogo: misma imagen aprobada de filipina; difuminado CSS reducido a 0.25 px en escritorio y 1 px en celular. No se reemplaza la imagen del perchero de Contacto.
+
+
+## Integración de propuestas A1–E4 aprobadas — 9 noviembre 2026
+
+Emilio aprobó expresamente las propuestas generadas y solicitó su integración. Quince PNG de la galería local outputs/catalogo-propuestas se convierten a WebP, con miniaturas de 480 px, en assets/products/catalog-20261109/. No se genera ni altera creativamente ninguna imagen durante esta integración. Se conservan las propuestas PNG y los prompts en la entrega original. Las quince imágenes y sus miniaturas ocupan en conjunto 1,479,370 bytes.
+
+- MC001: se conserva la foto negra actual; se agregan kaki y blanco y se retira marino de selectores/configuración.
+- C006C/C007C: cuatro imágenes aprobadas, blanco/azul cielo en corta/larga, bolsillo en chaflán.
+- GC001: dos gorros recreados desde las fotos del usuario, negro/blanco; sin cuadritos.
+- PPU001: frente/lateral/espalda recoloreados a negro, único color disponible.
+- FI002MC-DG/FI001ML-G: únicamente cuatro espaldas aprobadas (corta y 3/4, blanco/negro) con panel superior Dry-Fit transpirable sin listón. Frentes y laterales mantienen sus rutas originales. Repelentes FI003-AF/FI001MC-G intactas.
+
+Los recursos anteriores se conservan en el repositorio como antecedentes, aunque las variantes retiradas ya no se ofrecen. Configuración de imágenes, galerías, colores y textos de ficha sincronizados con la aprobación.

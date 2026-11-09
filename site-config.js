@@ -53,12 +53,12 @@ window.PRE_CONFIG = {
     "FI001ML-G": {
       "Frente": "assets/products/catalog-20261108/filipina-gabardina-lisa-tres-cuartos-blanco-frente.webp",
       "Lateral": "assets/products/catalog-20261108/filipina-gabardina-lisa-tres-cuartos-blanco-perfil-izquierdo.webp",
-      "Espalda": "assets/products/catalog-20261108/filipina-gabardina-lisa-tres-cuartos-blanco-espalda.webp"
+      "Espalda": "assets/products/catalog-20261109/filipina-dryfit-tres-cuartos-blanco-espalda.webp"
     },
     "FI002MC-DG": {
       "Frente": "assets/products/catalog-20261108/filipina-gabardina-lisa-corta-blanco-frente.webp",
       "Lateral": "assets/products/catalog-20261108/filipina-gabardina-lisa-corta-blanco-perfil-izquierdo.webp",
-      "Espalda": "assets/products/catalog-20261108/filipina-gabardina-lisa-corta-blanco-espalda.webp"
+      "Espalda": "assets/products/catalog-20261109/filipina-dryfit-corta-blanco-espalda.webp"
     },
     "CZ001MC": {
       "Frente": "assets/products/catalog-20261108/cazadora-corta-azul-marino-frente.webp",
@@ -89,10 +89,10 @@ window.PRE_CONFIG = {
       "Frente": "assets/products/catalog-20261108/oxford-larga-azul-cielo.webp"
     },
     "C006C": {
-      "Frente": "assets/products/catalog-20261108/camisa-corta-blanco.webp"
+      "Frente": "assets/products/catalog-20261109/camisa-corta-blanco-chaflan.webp"
     },
     "C007C": {
-      "Frente": "assets/products/catalog-20261108/camisa-larga-blanco.webp"
+      "Frente": "assets/products/catalog-20261109/camisa-larga-blanco-chaflan.webp"
     },
     "PB001": {
       "Frente": "assets/products/catalog-20261108/pantalon-PB001-negro-frente.webp",
@@ -123,9 +123,9 @@ window.PRE_CONFIG = {
       "Frente": "assets/products/catalog-20261108/bata-medica-blanca.webp"
     },
     "PPU001": {
-      "Frente": "assets/products/catalog-20261108/pantalon-PPU001-azul-marino-frente.webp",
-      "Lateral": "assets/products/catalog-20261108/pantalon-PPU001-azul-marino-perfil-izquierdo.webp",
-      "Espalda": "assets/products/catalog-20261108/pantalon-PPU001-azul-marino-espalda.webp"
+      "Frente": "assets/products/catalog-20261109/pantalon-pijama-negro-frente.webp",
+      "Lateral": "assets/products/catalog-20261109/pantalon-pijama-negro-lateral.webp",
+      "Espalda": "assets/products/catalog-20261109/pantalon-pijama-negro-espalda.webp"
     },
     "MOD-363": {
       "Frente": "assets/products/MOD-363.webp"
@@ -146,7 +146,7 @@ window.PRE_CONFIG = {
       "Frente": "assets/products/catalog-20261108/mandil-corto-negro.webp"
     },
     "GC001": {
-      "Frente": "assets/products/catalog-20261108/gorro-cocina-negro.webp"
+      "Frente": "assets/products/catalog-20261109/gorro-cocina-negro.webp"
     },
     "RS001L": {
       "Frente": "assets/products/catalog-20261108/rash-guardavidas-frente.webp",
@@ -237,11 +237,12 @@ window.PRE_CONFIG = {
       "Gris Oxford": "assets/products/catalog-20261108/pantalon-PC001G-gris-Oxford-frente.webp"
     },
     "PPU001": {
-      "Azul Marino": "assets/products/catalog-20261108/pantalon-PPU001-azul-marino-frente.webp"
+      "Negro": "assets/products/catalog-20261109/pantalon-pijama-negro-frente.webp"
     },
     "MC001": {
       "Negro": "assets/products/catalog-20261108/mandil-corto-negro.webp",
-      "Azul Marino": "assets/products/catalog-20261108/mandil-corto-azul-marino.webp"
+      "Kaki": "assets/products/catalog-20261109/mandil-corto-kaki.webp",
+      "Blanco": "assets/products/catalog-20261109/mandil-corto-blanco.webp"
     },
     "MP001": {
       "Negro": "assets/products/catalog-20261108/mandil-peto-negro.webp",
@@ -249,17 +250,16 @@ window.PRE_CONFIG = {
       "Blanco": "assets/products/catalog-20261108/mandil-peto-blanco.webp"
     },
     "GC001": {
-      "Negro": "assets/products/catalog-20261108/gorro-cocina-negro.webp",
-      "Blanco": "assets/products/catalog-20261108/gorro-cocina-blanco.webp",
-      "Cuadritos": "assets/products/catalog-20261108/gorro-cocina-cuadritos-diminutos-blanco-y-negro-tipo-chef.webp"
+      "Negro": "assets/products/catalog-20261109/gorro-cocina-negro.webp",
+      "Blanco": "assets/products/catalog-20261109/gorro-cocina-blanco.webp"
     },
     "C006C": {
-      "Blanco": "assets/products/catalog-20261108/camisa-corta-blanco.webp",
-      "Azul Cielo": "assets/products/catalog-20261108/camisa-corta-azul-cielo.webp"
+      "Blanco": "assets/products/catalog-20261109/camisa-corta-blanco-chaflan.webp",
+      "Azul Cielo": "assets/products/catalog-20261109/camisa-corta-azul-cielo-chaflan.webp"
     },
     "C007C": {
-      "Blanco": "assets/products/catalog-20261108/camisa-larga-blanco.webp",
-      "Azul Cielo": "assets/products/catalog-20261108/camisa-larga-azul-cielo.webp"
+      "Blanco": "assets/products/catalog-20261109/camisa-larga-blanco-chaflan.webp",
+      "Azul Cielo": "assets/products/catalog-20261109/camisa-larga-azul-cielo-chaflan.webp"
     },
     "BM001-ML": {
       "Blanco Médico": "assets/products/catalog-20261108/bata-medica-blanca.webp"
@@ -316,7 +316,7 @@ window.PRE_CONFIG = {
     "PING-BA": "Blanco",
     "PM001-S": "Blanco",
     "BM001-ML": "Blanco Médico",
-    "PPU001": "Azul Marino",
+    "PPU001": "Negro",
     "RS001L": "Blanco",
     "SG001": "Rojo",
     "GG001": "Marfil",
@@ -376,24 +376,24 @@ window.PRE_CONFIG = {
       "Blanco": {
         "Frente": "assets/products/catalog-20261108/filipina-gabardina-lisa-tres-cuartos-blanco-frente.webp",
         "Lateral": "assets/products/catalog-20261108/filipina-gabardina-lisa-tres-cuartos-blanco-perfil-izquierdo.webp",
-        "Espalda": "assets/products/catalog-20261108/filipina-gabardina-lisa-tres-cuartos-blanco-espalda.webp"
+        "Espalda": "assets/products/catalog-20261109/filipina-dryfit-tres-cuartos-blanco-espalda.webp"
       },
       "Negro": {
         "Frente": "assets/products/catalog-20261108/filipina-gabardina-lisa-tres-cuartos-negro-frente.webp",
         "Lateral": "assets/products/catalog-20261108/filipina-gabardina-lisa-tres-cuartos-negro-perfil-izquierdo.webp",
-        "Espalda": "assets/products/catalog-20261108/filipina-gabardina-lisa-tres-cuartos-negro-espalda.webp"
+        "Espalda": "assets/products/catalog-20261109/filipina-dryfit-tres-cuartos-negro-espalda.webp"
       }
     },
     "FI002MC-DG": {
       "Blanco": {
         "Frente": "assets/products/catalog-20261108/filipina-gabardina-lisa-corta-blanco-frente.webp",
         "Lateral": "assets/products/catalog-20261108/filipina-gabardina-lisa-corta-blanco-perfil-izquierdo.webp",
-        "Espalda": "assets/products/catalog-20261108/filipina-gabardina-lisa-corta-blanco-espalda.webp"
+        "Espalda": "assets/products/catalog-20261109/filipina-dryfit-corta-blanco-espalda.webp"
       },
       "Negro": {
         "Frente": "assets/products/catalog-20261108/filipina-gabardina-lisa-corta-negro-frente.webp",
         "Lateral": "assets/products/catalog-20261108/filipina-gabardina-lisa-corta-negro-perfil-izquierdo.webp",
-        "Espalda": "assets/products/catalog-20261108/filipina-gabardina-lisa-corta-negro-espalda.webp"
+        "Espalda": "assets/products/catalog-20261109/filipina-dryfit-corta-negro-espalda.webp"
       }
     },
     "PL001": {
@@ -486,18 +486,21 @@ window.PRE_CONFIG = {
       }
     },
     "PPU001": {
-      "Azul Marino": {
-        "Frente": "assets/products/catalog-20261108/pantalon-PPU001-azul-marino-frente.webp",
-        "Lateral": "assets/products/catalog-20261108/pantalon-PPU001-azul-marino-perfil-izquierdo.webp",
-        "Espalda": "assets/products/catalog-20261108/pantalon-PPU001-azul-marino-espalda.webp"
+      "Negro": {
+        "Frente": "assets/products/catalog-20261109/pantalon-pijama-negro-frente.webp",
+        "Lateral": "assets/products/catalog-20261109/pantalon-pijama-negro-lateral.webp",
+        "Espalda": "assets/products/catalog-20261109/pantalon-pijama-negro-espalda.webp"
       }
     },
     "MC001": {
       "Negro": {
         "Frente": "assets/products/catalog-20261108/mandil-corto-negro.webp"
       },
-      "Azul Marino": {
-        "Frente": "assets/products/catalog-20261108/mandil-corto-azul-marino.webp"
+      "Kaki": {
+        "Frente": "assets/products/catalog-20261109/mandil-corto-kaki.webp"
+      },
+      "Blanco": {
+        "Frente": "assets/products/catalog-20261109/mandil-corto-blanco.webp"
       }
     },
     "MP001": {
@@ -513,29 +516,26 @@ window.PRE_CONFIG = {
     },
     "GC001": {
       "Negro": {
-        "Frente": "assets/products/catalog-20261108/gorro-cocina-negro.webp"
+        "Frente": "assets/products/catalog-20261109/gorro-cocina-negro.webp"
       },
       "Blanco": {
-        "Frente": "assets/products/catalog-20261108/gorro-cocina-blanco.webp"
-      },
-      "Cuadritos": {
-        "Frente": "assets/products/catalog-20261108/gorro-cocina-cuadritos-diminutos-blanco-y-negro-tipo-chef.webp"
+        "Frente": "assets/products/catalog-20261109/gorro-cocina-blanco.webp"
       }
     },
     "C006C": {
       "Blanco": {
-        "Frente": "assets/products/catalog-20261108/camisa-corta-blanco.webp"
+        "Frente": "assets/products/catalog-20261109/camisa-corta-blanco-chaflan.webp"
       },
       "Azul Cielo": {
-        "Frente": "assets/products/catalog-20261108/camisa-corta-azul-cielo.webp"
+        "Frente": "assets/products/catalog-20261109/camisa-corta-azul-cielo-chaflan.webp"
       }
     },
     "C007C": {
       "Blanco": {
-        "Frente": "assets/products/catalog-20261108/camisa-larga-blanco.webp"
+        "Frente": "assets/products/catalog-20261109/camisa-larga-blanco-chaflan.webp"
       },
       "Azul Cielo": {
-        "Frente": "assets/products/catalog-20261108/camisa-larga-azul-cielo.webp"
+        "Frente": "assets/products/catalog-20261109/camisa-larga-azul-cielo-chaflan.webp"
       }
     },
     "BM001-ML": {

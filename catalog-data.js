@@ -80,7 +80,7 @@ window.PRE_PRODUCTS = [
     "name": "Filipina Dry-Fit Y Gabardina Manga 3/4",
     "category": "restaurante",
     "material": "65% Poliéster y 35% Algodón. Dry-Fit 100% poliéster, transpirable.",
-    "description": "Filipina lisa de gabardina, manga 3/4, con cuello mao y doble abotonadura, sin bolsillos ni respiradero posterior.",
+    "description": "Filipina lisa de gabardina, manga 3/4, con cuello mao y doble abotonadura, sin bolsillos y con panel transpirable de tejido Dry-Fit en la parte superior de la espalda, sin listón.",
     "sizes": [
       "XS",
       "S",
@@ -104,7 +104,8 @@ window.PRE_PRODUCTS = [
       "Corte clásico",
       "Cuello mao",
       "Doble abotonadura",
-      "Diseño liso sin bolsillos ni respiradero"
+      "Diseño sin bolsillos",
+      "Panel superior de espalda en tejido Dry-Fit transpirable, sin listón"
     ],
     "priceTiers": {
       "1-12": 410,
@@ -118,7 +119,7 @@ window.PRE_PRODUCTS = [
     "name": "Filipina Dry-Fit Y Gabardina Manga Corta",
     "category": "restaurante",
     "material": "65% Poliéster y 35% Algodón.",
-    "description": "Filipina lisa de gabardina, manga corta, con cuello mao y doble abotonadura, sin bolsillos ni respiradero posterior.",
+    "description": "Filipina lisa de gabardina, manga corta, con cuello mao y doble abotonadura, sin bolsillos y con panel transpirable de tejido Dry-Fit en la parte superior de la espalda, sin listón.",
     "sizes": [
       "XS",
       "S",
@@ -142,7 +143,8 @@ window.PRE_PRODUCTS = [
       "Corte clásico",
       "Cuello mao",
       "Doble abotonadura",
-      "Diseño liso sin bolsillos ni respiradero"
+      "Diseño sin bolsillos",
+      "Panel superior de espalda en tejido Dry-Fit transpirable, sin listón"
     ],
     "priceTiers": {
       "1-12": 390,
@@ -462,7 +464,7 @@ window.PRE_PRODUCTS = [
     "name": "Camisa Manga Corta",
     "category": "ejecutivo",
     "material": "65% Poliéster y 35% Algodón.",
-    "description": "Camisa cuello camisero, manga corta, con pinzas en espalda, fresca y casual.",
+    "description": "Camisa cuello camisero, manga corta, con bolsillo de pecho en chaflán y pinzas en espalda, fresca y casual.",
     "sizes": [
       "34",
       "36",
@@ -483,7 +485,8 @@ window.PRE_PRODUCTS = [
     "features": [
       "Cuello camisero",
       "Canesú y pinzas en la espalda",
-      "Manga corta"
+      "Manga corta",
+      "Bolsillo de pecho en chaflán"
     ],
     "priceTiers": {
       "1-12": 350,
@@ -497,7 +500,7 @@ window.PRE_PRODUCTS = [
     "name": "Camisa Manga Larga",
     "category": "ejecutivo",
     "material": "65% Poliéster y 35% Algodón.",
-    "description": "Camisa cuello camisero, manga larga, con pinzas en espalda, fresca y casual.",
+    "description": "Camisa cuello camisero, manga larga, con bolsillo de pecho en chaflán y pinzas en espalda, fresca y casual.",
     "sizes": [
       "34",
       "36",
@@ -519,7 +522,8 @@ window.PRE_PRODUCTS = [
       "Cuello camisero",
       "Pinzas en busto",
       "Pinzas al frente y en espalda",
-      "Manga larga"
+      "Manga larga",
+      "Bolsillo de pecho en chaflán"
     ],
     "priceTiers": {
       "1-12": 390,
@@ -651,7 +655,8 @@ window.PRE_PRODUCTS = [
     ],
     "colors": [
       "Negro",
-      "Azul Marino"
+      "Kaki",
+      "Blanco"
     ],
     "kind": "apron",
     "views": [
@@ -675,14 +680,13 @@ window.PRE_PRODUCTS = [
     "name": "Gorros De Cocina",
     "category": "restaurante",
     "material": "65% Poliéster y 35% Viscosa.",
-    "description": "Gorro de cocina clásico. Cómodo y resistente, únicamente en color negro.",
+    "description": "Gorro de cocina cómodo y resistente, con banda frontal lisa y copa baja. Disponible en blanco y negro.",
     "sizes": [
       "Unitalla"
     ],
     "colors": [
       "Negro",
-      "Blanco",
-      "Cuadritos"
+      "Blanco"
     ],
     "kind": "cap",
     "views": [
@@ -691,7 +695,7 @@ window.PRE_PRODUCTS = [
     "imageStatus": "ready",
     "features": [
       "Gorro de cocina tradicional",
-      "Únicamente en color negro",
+      "Disponible en blanco y negro",
       "Ajuste cómodo y resistente"
     ],
     "priceTiers": {
@@ -894,7 +898,7 @@ window.PRE_PRODUCTS = [
     "name": "Pantalón Pijama Unisex",
     "category": "restaurante",
     "material": "65% Poliéster y 35% Viscosa.",
-    "description": "Corte recto, bolsas a los costados, resorte en la cintura.",
+    "description": "Corte recto, bolsas a los costados, resorte en la cintura. Disponible únicamente en negro.",
     "sizes": [
       "XS",
       "S",
@@ -904,7 +908,7 @@ window.PRE_PRODUCTS = [
       "XXL"
     ],
     "colors": [
-      "Azul Marino"
+      "Negro"
     ],
     "kind": "pants",
     "views": [
