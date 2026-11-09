@@ -148,8 +148,8 @@
 .home-video-hero h1{font-family:'Barlow Condensed',Poppins,Arial,sans-serif;font-size:clamp(72px,8.5vw,122px);font-style:italic;font-weight:600;letter-spacing:-.015em;line-height:1;margin:0;padding:0 12px 8px}
 .home-video-hero h1 span{font-weight:700}
 @media(max-width:720px){.home-video-hero h1{font-size:clamp(48px,14.2vw,76px)}.catalog-hero>.catalog-hero-photo{filter:blur(1px)}}
-/* Scroll entrances change opacity only: no slide or layout movement. */
+/* A soft, single fade as each block enters the viewport. */
 .catalog-card{animation:none}
-.reveal-ready{opacity:0;transition:opacity .18s ease-out,box-shadow .25s,transform .25s}
+.reveal-ready{opacity:0;transition:opacity .65s cubic-bezier(.22,1,.36,1),box-shadow .25s,transform .25s}
 .reveal-ready.is-revealed{opacity:1}
 @media(prefers-reduced-motion:reduce){.reveal-ready{opacity:1;transition:none}}
