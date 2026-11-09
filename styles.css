@@ -95,3 +95,7 @@
 .about-video-hero>.container{position:relative;text-align:center}
 .about-video-hero h1{color:#fff;font-size:clamp(44px,5.5vw,78px);line-height:1.15;text-shadow:0 3px 26px #0009;letter-spacing:-.04em}
 @media(max-width:720px){.about-video-hero{height:clamp(580px,80svh,760px)}.about-video-shade{background:linear-gradient(180deg,#08132214,#08132250 48%,#08132233)}.about-video-hero h1{font-size:clamp(38px,9.5vw,58px)}}
+
+/* One real workshop photograph below the about video, with its full framing. */
+.about-history-copy{max-width:900px}.about-history-copy p{font-size:14px}
+.about-grid>.about-embroidery-photo{height:auto;object-fit:contain}

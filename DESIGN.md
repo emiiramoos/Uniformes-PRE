@@ -51,3 +51,6 @@ Las fotos que envió son prendas reales, referencia de cuello, tela, corte y con
 
 ### Continuación de catálogo del 8 de noviembre
 Se recuperaron las instrucciones y recursos del respaldo, contrastados con este documento y el repositorio actual. Las 33 fichas tienen imagen principal. Mantener los frontales nuevos en `assets/products/studio/` y la variante negra reparada de cuello redondo; no reactivar los recortes CSS de fotos de cuerpo completo. Las fotos originales de textiles tienen galerías independientes. No cambiar la disponibilidad comercial a partir del color de una foto: cuando difiere de la selección, mostrar una nota de referencia en la ficha. Las recreaciones siguen sujetas a revisión de Emilio.
+
+### Fotografía de Quiénes somos
+Debajo del video queda únicamente la foto real de la gorra azul bordándose enviada por el usuario, en sustitución de la foto de bordado anterior. Se retira la imagen de costura del bloque de historia; conservar sus textos. No agregar más fotografías a esta página.
