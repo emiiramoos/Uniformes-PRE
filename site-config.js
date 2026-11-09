@@ -3,7 +3,7 @@ window.PRE_CONFIG = {
   "instagram": "https://www.instagram.com/uniformespre/",
   "facebook": "https://www.facebook.com/uniformespree",
   "hero": {
-    "desktopVideo": "assets/videos/pre-inicio-4k.mp4",
+    "desktopVideo": "assets/videos/pre-inicio-nitido-4k.mp4",
     "mobileVideo": "assets/videos/pre-catalogo.mp4",
     "poster": "assets/videos/pre-catalogo-poster.webp"
   },

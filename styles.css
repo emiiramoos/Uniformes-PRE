@@ -83,7 +83,7 @@
 
 /* Provisional catalog photograph: original banner height, soft blur and shade. */
 .catalog-hero{height:340px;background:#081322}
-.catalog-hero>.catalog-hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;filter:blur(2px);transform:scale(1.02);pointer-events:none}
+.catalog-hero>.catalog-hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;filter:blur(.25px);transform:scale(1.02);pointer-events:none}
 .catalog-hero>.catalog-hero-shade{backdrop-filter:none;background:linear-gradient(180deg,rgba(5,14,30,.4),rgba(5,14,30,.55) 55%,rgba(5,14,30,.44));pointer-events:none}
 .catalog-hero h1{padding:0 5%;text-shadow:0 2px 24px #0005}
 @media(max-width:720px){.catalog-hero{height:260px}.catalog-hero>.catalog-hero-photo{object-position:center}}
@@ -143,3 +143,13 @@
 @media(max-width:720px){.home-video-hero{height:min(760px,calc(100svh - var(--about-top-space,104px)))}.home-video-hero h1{font-size:clamp(42px,11vw,68px)}.contact-banner{min-height:300px}.contact-banner h1{font-size:clamp(26px,6.4vw,34px);padding:36px 0}.assistant-header{padding:14px 16px;gap:10px}.assistant-header .assistant-mark,.assistant-mark img{width:46px;height:46px}.assistant-header h2{font-size:15px}}
 
 .home-video-hero h1 br{display:block}
+
+/* Expressive italic sans lettering, with no secondary line or call to action. */
+.home-video-hero h1{font-family:'Barlow Condensed',Poppins,Arial,sans-serif;font-size:clamp(72px,8.5vw,122px);font-style:italic;font-weight:600;letter-spacing:-.015em;line-height:1;margin:0;padding:0 12px 8px}
+.home-video-hero h1 span{font-weight:700}
+@media(max-width:720px){.home-video-hero h1{font-size:clamp(48px,14.2vw,76px)}.catalog-hero>.catalog-hero-photo{filter:blur(1px)}}
+/* Scroll entrances change opacity only: no slide or layout movement. */
+.catalog-card{animation:none}
+.reveal-ready{opacity:0;transition:opacity .18s ease-out,box-shadow .25s,transform .25s}
+.reveal-ready.is-revealed{opacity:1}
+@media(prefers-reduced-motion:reduce){.reveal-ready{opacity:1;transition:none}}

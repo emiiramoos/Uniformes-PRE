@@ -4,6 +4,17 @@ const config=window.PRE_CONFIG||{},products=window.PRE_PRODUCTS||[];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 const reduce=matchMedia('(prefers-reduced-motion:reduce)');
+// Scroll appearances never move elements; content stays visible without JS.
+const revealTargets='.section-heading,.categories h2,.category-grid a,.featured-card,.embroidery-inner>div,.process-heading,.process-head,.process-step,.video-slot,.review-window,.reviews-section h2,.cta-band .container,.catalog-tools,.catalog-categories,.catalog-meta,.catalog-card,.about-history-copy,.about-grid,.pre-service-grid article,.pre-preparation,.contact-form,.express-card,.location-card,.benefit-row';
+const revealObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('is-revealed');revealObserver.unobserve(entry.target);}},{threshold:.06,rootMargin:'0px 0px -24px 0px'}):null;
+function observeReveals(nodes=document.querySelectorAll('main '+revealTargets.split(',').join(',main ')+',.site-footer .footer-grid,.site-footer .footer-bottom')){
+ if(reduce.matches||!revealObserver)return;
+ for(const el of nodes){if(el.dataset.revealObserved)continue;el.dataset.revealObserved='true';
+  if(el.getBoundingClientRect().top<innerHeight)continue;
+  el.classList.add('reveal-ready');revealObserver.observe(el);
+ }
+}
+reduce.addEventListener('change',()=>{if(reduce.matches){revealObserver?.disconnect();$$('.reveal-ready').forEach(el=>el.classList.add('is-revealed'));}});
 const safeMedia=s=>typeof s==='string'&&s&&!s.startsWith('//')&&(/^https:\/\//.test(s)||/^(assets\/|\.\/assets\/)/.test(s));
 const whatsapp=message=>`https://wa.me/${config.whatsapp}?text=${encodeURIComponent(message)}`;
 const iconPath={shirt:'M8 3 3 6l3 5 2-1v11h8V10l2 1 3-5-5-3M8 3a4 4 0 0 0 8 0M8 18h8',cap:'M3 14a9 9 0 0 1 18 0M3 14h18l2 4H9l-6-4',shoe:'M3 12V5h5l2 7 7 2 4 2v4H3z',pants:'M7 3h10l2 18h-6l-1-12-1 12H5zM7 6h10',apron:'M8 3h8v6l5 12H3L8 9zM9 13h6v4H9z',layers:'m12 2 10 5-10 5L2 7zm-10 10 10 5 10-5M2 17l10 5 10-5'};
@@ -44,6 +55,7 @@ function renderCatalog(){if(!grid)return;const q=norm($('#catalog-search').value
  let visible=products.filter(p=>matchesCategory(p,activeFilter)&&norm([p.name,p.code,p.material,p.description].join(' ')).includes(q)&&(color==='todos'||p.colors.some(c=>norm(c)===norm(color)))&&(size==='todos'||p.sizes.includes(size)));
  if($('#catalog-sort').value==='nombre')visible.sort((a,b)=>a.name.localeCompare(b.name,'es'));
  grid.innerHTML=visible.map((p,i)=>`<article class="catalog-card" style="--delay:${Math.min(i,8)*30}ms"><button class="catalog-visual ${sourceClass(p)}" data-product="${esc(p.code)}" aria-label="Ver detalles de ${esc(p.name)}">${productVisual(p,defaultView(p),color==='todos'?undefined:validColor(p,color))}</button><div class="catalog-info"><h2>${esc(p.name)}</h2><button class="inline-link" data-product="${esc(p.code)}">Ver detalles</button></div></article>`).join('');
+ observeReveals($$('.catalog-card',grid));
  $('#catalog-count').textContent=`${visible.length} ${visible.length===1?'producto':'productos'}`;$('.empty-state').hidden=!!visible.length;
  $$('[data-product]',grid).forEach(b=>b.addEventListener('click',()=>openProduct(b.dataset.product,color==='todos'?undefined:color)));
 }
@@ -198,3 +210,14 @@ if(aboutBanner){
  const topBarObserver=new ResizeObserver(sizeAboutBanner);
  topBars.forEach(el=>topBarObserver.observe(el));sizeAboutBanner();
 }
+
+// The about film is a silent decorative loop with the same still as fallback.
+const aboutFilm=$('.about-background-video');
+if(aboutFilm){
+ aboutFilm.muted=true;aboutFilm.defaultMuted=true;aboutFilm.controls=false;
+ aboutFilm.disablePictureInPicture=true;aboutFilm.disableRemotePlayback=true;
+ aboutFilm.addEventListener('error',()=>{aboutFilm.hidden=true;});
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden)aboutFilm.play().catch(()=>{});});
+ aboutFilm.play().catch(()=>{});
+}
+observeReveals();

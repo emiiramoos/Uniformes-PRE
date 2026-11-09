@@ -77,3 +77,8 @@ Imagen 1-Foto-1.jpg adjuntada por el usuario, 1280×776. Copiada sin edición ni
 - La foto real assets/images/catalogo-prendas-pre.jpg pasa a Contacto con difuminado y sombreado CSS.
 - Quiénes somos conserva temporalmente el poster estático del clip; su fondo definitivo queda pendiente del usuario.
 - Robot 3D genérico generado con image_gen, pedido expresamente por el usuario: materiales blanco cálido, pantalla marino, ojos azul claro y detalles naranja, fondo transparente, sin texto. Original conservado en /workspace/generated_images/exec-9d8ad381-b120-4577-9e4a-93c461564731.png. Derivado web optimizado de 512×512 en assets/brand/asistente-robot-3d.webp, para el encabezado del chat. No se cambiaron logotipos de la empresa.
+
+## Acabados de portada y nuevo video de bordado — 8 noviembre 2026
+- Inicio: pre-inicio-nitido-4k.mp4, nueva derivación directa del original vertical 576×1024 recibido. Nitidez moderada antes del reescalado a 2160×3840, sin reducción de ruido temporal y CRF 16 para limitar la suavidad y pérdidas de compresión en escritorio. No se añade detalle 4K nativo; en celular se mantiene la versión 1080×1920 aprobada.
+- Quiénes somos: WhatsApp Video 2026-11-08 at 11.28.46 PM.mp4 adjuntado por el usuario, original horizontal 720×480 a 60 fps, aprox. 10.48 s, máquinas bordando gorras. Derivado pre-quienes-bordado.mp4 a 1920×1280, conservando 60 fps, con Lanczos y nitidez suave, H.264, faststart y sin pista de audio. Poster del propio clip. Reescalado, no resolución nativa. Se conserva la fotografía de la gorra debajo.
+- Catálogo: misma imagen aprobada de filipina; difuminado CSS reducido a 0.25 px en escritorio y 1 px en celular. No se reemplaza la imagen del perchero de Contacto.

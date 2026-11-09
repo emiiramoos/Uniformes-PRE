@@ -99,3 +99,6 @@ El carrito acumula varias prendas y bordados y abre WhatsApp con una solicitud e
 
 ## Redistribución de Inicio, Catálogo y Contacto
 Inicio muestra el video de prendas en bucle sin audio ni controles, con la frase propuesta Tu equipo. Tu identidad. y tipografía Manrope. Se ofrece reescalado a 4K vertical en escritorio y 1080p en celular; no se recupera detalle inexistente en el original. La filipina pasa al catálogo; el perchero pasa a Contacto con el texto centrado solicitado. Quiénes somos usa provisionalmente un fotograma estático. El asistente tiene un avatar 3D en el encabezado Uniformes Express y una respuesta de ubicación ampliada con envíos nacionales.
+
+## Últimos acabados
+Inicio: Profesionales en cada detalle, cursiva sans serif blanca/naranja, sin CTA. Cambio de opacidad al desplazarse por las cuatro páginas, sin deslizamiento y con contenido visible sin JavaScript o con movimiento reducido. Catálogo con menor difuminado. Nueva compresión del video de inicio en escritorio; el detalle sigue limitado por el original. Quiénes somos recibe el nuevo clip horizontal de bordado en bucle silencioso, sin controles. Contacto: Estamos para ayudarte. Encabezado del asistente corregido a Uniformes PRE, conservando el robot 3D.
