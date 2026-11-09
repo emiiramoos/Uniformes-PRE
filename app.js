@@ -127,6 +127,26 @@ function attachLoop(parent,item){
  document.addEventListener('visibilitychange',()=>{if(!document.hidden&&inView&&!userPaused)play();else v.pause();});
 }
 $$('[data-video]').forEach(el=>attachLoop(el,config.videos?.[el.dataset.video]));
+// Center the uniform and footwear clips; native horizontal swipe on mobile.
+const videoTrack=$('#pre-video-track');
+if(videoTrack){
+ const carousel=videoTrack.closest('.video-carousel'),prev=$('.video-prev',carousel),next=$('.video-next',carousel);
+ const cards=$$('[data-video]',videoTrack);
+ function bounds(){const end=videoTrack.scrollWidth-videoTrack.clientWidth;prev.disabled=videoTrack.scrollLeft<=2;next.disabled=videoTrack.scrollLeft>=end-2;}
+ function center(){
+  if(matchMedia('(max-width:720px)').matches){
+   const card=cards[1];videoTrack.scrollLeft=card.offsetLeft-(videoTrack.clientWidth-card.offsetWidth)/2;
+  }else videoTrack.scrollLeft=(videoTrack.scrollWidth-videoTrack.clientWidth)/2;
+  bounds();
+ }
+ function move(direction){videoTrack.scrollBy({left:direction*(cards[0].offsetWidth+parseFloat(getComputedStyle(videoTrack).gap)),behavior:reduce.matches?'instant':'smooth'});}
+ prev.addEventListener('click',()=>move(-1));next.addEventListener('click',()=>move(1));
+ videoTrack.addEventListener('scroll',bounds,{passive:true});
+ videoTrack.addEventListener('keydown',event=>{if(event.target===videoTrack&&['ArrowLeft','ArrowRight'].includes(event.key)){event.preventDefault();move(event.key==='ArrowLeft'?-1:1);}});
+ let lastWidth=0;
+ new ResizeObserver(()=>{if(videoTrack.clientWidth!==lastWidth){lastWidth=videoTrack.clientWidth;center();}}).observe(videoTrack);
+ center();
+}
 // Decorative background: the delivered clip has no audio track or closing fade.
 const embroidery=$('[data-embroidery]');
 if(embroidery&&safeMedia(config.videos?.bordado?.src)){
