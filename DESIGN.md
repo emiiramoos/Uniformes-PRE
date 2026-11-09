@@ -73,3 +73,6 @@ En las cuatro páginas, bloques y tarjetas aparecen con un cambio breve de opaci
 
 ### Fondo de servicios — 9 de noviembre
 Por petición de Emilio, la fotografía adjunta de telas apiladas es el fondo exclusivo de “Tu proyecto, acompañado de principio a fin”, en Conoce PRE. Copia WebP en assets/images/telas-servicios-pre.webp, con una capa clara suave mediante CSS para conservar la legibilidad; tarjetas blancas y distribución existentes. Sin generación ni retoque del contenido de la foto. Revisado visualmente en 1440 px y 390 px.
+
+### Bordados por prenda — 9 de noviembre
+Pecho y espalda permiten escribir bordados por prenda y usar −/+, sin tope basado en el número de prendas. El total de cada ubicación es la suma de prendas × bordados por prenda de todas las partidas; ese resultado determina el mayoreo de bordado. Rangos existentes 1–12 / 13–50 / 51+, pecho $45 / $38 / $33 y espalda $80 / $72 / $65. Las prendas conservan su propio mayoreo por modelo. Al reducir prendas no se recortan los valores por prenda. Ficha, carrito y WhatsApp muestran multiplicación, total y tarifa. Para personalizar solo algunas prendas, se agregan en partidas separadas. Los carritos anteriores conservan sus totales mediante migración automática.

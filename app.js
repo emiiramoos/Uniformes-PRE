@@ -98,7 +98,7 @@ if(grid){
  const params=new URLSearchParams(location.search),cat=params.get('categoria');setFilter($$('[data-filter]').some(b=>b.dataset.filter===cat)?cat:'todos');if(params.has('producto'))openProduct(params.get('producto'),params.get('color'));
 }
 // Ciclo de cinco etapas, una nueva cada 1.2 segundos.
-const steps=$$('[data-step]');
+const steps=$$('#proceso [data-step]');
 if(steps.length){let step=0,timer,inView=false;function activate(n){step=n;steps.forEach((b,i)=>{b.setAttribute('aria-pressed',String(i===n));b.closest('li').classList.toggle('is-active',i===n);});if(matchMedia('(max-width:720px)').matches){const track=$('.process'),el=steps[n].closest('li');track.scrollTo({left:Math.max(0,el.offsetLeft-track.clientWidth/2+el.offsetWidth/2),behavior:reduce.matches?'auto':'smooth'});}}
  function sync(){clearInterval(timer);if(inView&&!reduce.matches&&!document.hidden)timer=setInterval(()=>activate((step+1)%steps.length),1200);}
  steps.forEach((b,i)=>b.addEventListener('click',()=>{activate(i);sync();}));new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;sync();},{threshold:.2}).observe($('#proceso'));reduce.addEventListener('change',sync);document.addEventListener('visibilitychange',sync);

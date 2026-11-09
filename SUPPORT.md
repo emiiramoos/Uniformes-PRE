@@ -6,7 +6,7 @@ Implementación autorizada por el propietario el 8 de noviembre de 2026.
 
 - Icono y contador de prendas en la cabecera de las cuatro páginas. No hay botón flotante de cotización.
 - Al agregar una selección se conserva en `pre-quote-v1` en localStorage y se vuelve al catálogo; el carrito se abre desde el icono o el aviso de confirmación.
-- Cantidad, talla, color y bordados de pecho/espalda por partida. Conserva las tarifas y la agregación por mayoreo existentes.
+- Cantidad, talla y color por partida. Pecho y espalda indican bordados por prenda, con entrada directa y botones −/+. Cada cantidad se multiplica por las prendas de la partida; no está limitada por ese número. El total resultante de cada ubicación en todo el carrito determina su tarifa de mayoreo, independientemente de la otra ubicación.
 - Envío nacional: $150; gratis desde exactamente $1,000 de prendas y bordados. Con precios pendientes no se promete un total definitivo; el envío queda pendiente si aún no puede determinarse el umbral.
 - Ponchado: $350 por logotipo si hace falta. Se informa expresamente como no incluido en el estimado; se confirma con PRE, porque el carrito no recopila logotipos ni su número.
 - Solicitar cotización requiere nombre, ciudad y código postal; empresa y comentarios son opcionales. Abre WhatsApp 529989370850 con datos, partidas, resumen, envío y comentarios separados. El visitante revisa y envía; la web no manda mensajes por sí sola ni cobra.
@@ -31,7 +31,7 @@ Implementación autorizada por el propietario el 8 de noviembre de 2026.
 
 Proceso de cinco etapas cada 1.2 segundos, solo visible y con respeto a movimiento reducido, como antes.
 
-Pruebas: `node tests/quote-engine.cjs` y `node tests/support-data.cjs`. Revisión en Chromium del flujo catálogo→varios productos→carrito→URL WhatsApp interceptada (sin envío real), edición y persistencia, bordados en ambas posiciones, envío y datos del cliente. Chat: preguntas, texto libre, enlace de consulta desconocida, texto HTML tratado como texto, avisos, descarte, movimiento reducido y pantallas de 320/390 px. No equivale a una prueba en iPhone físico.
+Pruebas: `node tests/quote-engine.cjs`, `node tests/quote-embroidery.cjs` y `node tests/support-data.cjs`. Revisión en Chromium del flujo catálogo→varios productos→carrito→URL WhatsApp interceptada (sin envío real), edición y persistencia, bordados en ambas posiciones, envío y datos del cliente. La prueba de bordados cubre multiplicación por prenda, umbrales 12/13/50/51, cantidades superiores a las prendas, ubicaciones independientes y migración de carritos anteriores sin alterar sus totales. Chat: preguntas, texto libre, enlace de consulta desconocida, texto HTML tratado como texto, avisos, descarte, movimiento reducido y pantallas de 320/390 px. No equivale a una prueba en iPhone físico.
 
 ## Encabezado y ubicación
 El usuario pidió un robot 3D en el encabezado del chat abierto y el título Uniformes PRE, corregido expresamente por el usuario; el icono exterior sigue igual. La pregunta de ubicación aparece en las primeras opciones e incluye Cancún, dirección MEGA Soriana López Portillo Local 7 SM 92, horario local y envíos a todo México por Estafeta y DHL.
