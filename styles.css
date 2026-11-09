@@ -50,3 +50,22 @@
  .embroidery h2{font-size:clamp(35px,8.8vw,56px)}
  .embroidery p{margin-top:20px;font-size:16px}
 }
+
+/* Real PRE reels: clear picture, social links inside every card. */
+.social-section .section-heading{display:block}
+.social-section .section-heading .accent-line{margin-bottom:0}
+.social-section .video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:820px;gap:28px;margin:36px auto 0;overflow:visible;padding:0}
+.social-section .video-slot{aspect-ratio:9/16;border-radius:24px}
+.video-slot .video-overlay{background:linear-gradient(180deg,#08132260 0%,transparent 23%,transparent 65%,#08132244 79%,#081322c9 100%);pointer-events:none}
+.video-socials{position:absolute;top:18px;left:18px;display:grid;gap:7px}
+.video-socials a{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:500;color:#fff;text-shadow:0 1px 8px #000b;width:fit-content}
+.video-socials .icon{width:29px;height:29px;padding:5px;border:1px solid #ffffff70;border-radius:7px;background:#08132255;backdrop-filter:blur(6px)}
+.video-socials a:hover .icon{background:#081322a0}
+.social-section .video-bottom,.social-section .video-slot.has-video .video-bottom{bottom:0;left:0;right:0;padding:20px 20px 70px;background:#08132266;backdrop-filter:blur(8px);pointer-events:none}
+.social-section .video-bottom h3{font-size:19px;line-height:1.35;letter-spacing:-.02em;color:#fff;font-weight:500}
+.video-controls{position:absolute;bottom:16px;left:18px;right:18px;display:flex;justify-content:space-between;gap:8px}
+.video-controls button{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:36px;border:1px solid #ffffff70;border-radius:24px;padding:7px 10px;color:#fff;background:#08132280;font-size:11px;line-height:1.2}
+.video-controls button:hover{background:#081322cf}
+.video-controls .icon{width:17px;height:17px}
+.video-error{position:absolute;left:20px;right:20px;top:45%;color:white;text-align:center}
+@media(max-width:720px){.social-section .video-grid{display:flex;overflow-x:auto;gap:18px;padding:4px 2px 20px;scroll-snap-type:x mandatory}.social-section .video-slot{flex:0 0 88%;aspect-ratio:9/16;scroll-snap-align:center}.video-socials{top:14px;left:14px}.social-section .video-bottom h3{font-size:18px}.video-controls{left:14px;right:14px}.video-controls button{font-size:10px}.social-section .video-bottom{padding-left:16px;padding-right:16px}}

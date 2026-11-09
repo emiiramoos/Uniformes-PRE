@@ -50,3 +50,12 @@ Vistas adicionales de esta continuación: `CZ001MC-Lateral/Espalda.webp`, `CZ001
 
 ## Video real de bordado PRE
 Archivo PRE.mp4 adjuntado por el usuario. Se conserva Full HD vertical 1080×1920, convertido de HEVC a H.264 para compatibilidad web. Fragmento 00:01–00:09 (8 segundos), sin audio y con faststart; elimina el cierre del original. Poster extraído del mismo clip. Archivos en assets/videos/pre-bordado*. No se generó material sintético.
+
+## Videos sociales reales — 8 noviembre 2026
+Material adjuntado por el usuario, sin generación de imágenes o video:
+- PRE.14oct.R.mp4 → pre-corporativo.mp4: presentación de uniformes corporativos, prendas y tejidos. Título: Uniformes que hablan de tu empresa.
+- PRE.30oct.R.mp4 → pre-calzado.mp4: calzado y comodidad en el trabajo. Título: Comodidad en cada paso.
+- PRE.20oct.R.mp4 → pre-cocina.mp4: filipina, mandil, pantalón, calzado y personalización de prendas de cocina. Título: Tu equipo de cocina, de pies a cabeza.
+- PRE.31.Ago.R.mov → pre-salud.mp4: uniformes para personal de salud y personalización. Título: Uniformes para quienes cuidan de todos.
+Se revisaron fotogramas a lo largo de cada clip para asignar los títulos. Se mantienen duración, encuadre Full HD vertical y audio; conversión a H.264/AAC con faststart para web. Posters extraídos a los 0.5 s, sin crear material sintético. Archivos en assets/videos/.
+Pendientes de transferencia: PRE.30sep.R.mp4 y PRE.6Oct.R.mp4 superaron el límite de descarga de 32 MiB del ejecutor. No se publicaron tarjetas vacías ni sustitutos para estos dos clips. Solicitar copias menores de 32 MiB o enlaces directos de descarga para completar los seis.

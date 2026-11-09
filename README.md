@@ -77,3 +77,6 @@ Validación: decodificación de todas las imágenes configuradas, ausencia de ar
 Pendientes generales: revisión visual de las recreaciones y variantes restantes; videos reales de bordado/redes, animación de portada aplazada; fotografía definitiva de banner; historia y legales finales; validación comercial de fichas/precios y diferencias de color. El flujo actual prepara la consulta; no calcula un precio final ni envía mensajes automáticamente.
 
 Las cazadoras marino corta/larga y el cargo gris tienen Frente/Lateral/Espalda individuales; la gorra suma su ángulo trasero recuperado. No se usaron trípticos como imagen de tarjeta ni se agregaron vistas a las playeras.
+
+## Videos en Conoce más de Uniformes PRE
+Cuatro clips reales integrados con Full HD vertical, bucle y silencio inicial. Cada tarjeta contiene Instagram y Facebook; ya no hay enlaces sueltos dentro de esa sección. El pie de cada tarjeta usa un fondo translúcido para título y controles. Pausa manual persistente al desplazarse; audio activado por el visitante y exclusivo entre tarjetas para evitar superposiciones. Dos clips adicionales quedaron pendientes por el límite de transferencia de 32 MiB, documentados en ASSETS.md.

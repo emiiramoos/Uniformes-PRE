@@ -14,22 +14,28 @@ window.PRE_CONFIG = {
       "poster": "assets/videos/pre-bordado-poster.webp",
       "orientation": "vertical"
     },
-    "prendas": {
-      "title": "Los detalles hacen la diferencia",
-      "src": "",
-      "poster": "",
+    "corporativo": {
+      "title": "Uniformes que hablan de tu empresa",
+      "src": "assets/videos/pre-corporativo.mp4",
+      "poster": "assets/videos/pre-corporativo-poster.webp",
       "orientation": "vertical"
     },
-    "taller": {
-      "title": "Del taller a tu equipo",
-      "src": "",
-      "poster": "",
+    "calzado": {
+      "title": "Comodidad en cada paso",
+      "src": "assets/videos/pre-calzado.mp4",
+      "poster": "assets/videos/pre-calzado-poster.webp",
       "orientation": "vertical"
     },
-    "equipo": {
-      "title": "Conoce Uniformes PRE",
-      "src": "",
-      "poster": "",
+    "cocina": {
+      "title": "Tu equipo de cocina, de pies a cabeza",
+      "src": "assets/videos/pre-cocina.mp4",
+      "poster": "assets/videos/pre-cocina-poster.webp",
+      "orientation": "vertical"
+    },
+    "salud": {
+      "title": "Uniformes para quienes cuidan de todos",
+      "src": "assets/videos/pre-salud.mp4",
+      "poster": "assets/videos/pre-salud-poster.webp",
       "orientation": "vertical"
     }
   },

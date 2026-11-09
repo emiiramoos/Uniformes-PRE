@@ -88,11 +88,43 @@ if(steps.length){let step=0,timer,inView=false;function activate(n){step=n;steps
  function sync(){clearInterval(timer);if(inView&&!reduce.matches&&!document.hidden)timer=setInterval(()=>activate((step+1)%steps.length),2000);}
  steps.forEach((b,i)=>b.addEventListener('click',()=>{activate(i);sync();}));new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;sync();},{threshold:.2}).observe($('#proceso'));reduce.addEventListener('change',sync);document.addEventListener('visibilitychange',sync);
 }
-// Videos reales: reproducción inline en bucle, sin sonido inicial y con control de audio.
-function attachLoop(parent,item,cls=''){if(!safeMedia(item?.src))return;const v=document.createElement('video');v.className=cls;v.src=item.src;v.muted=true;v.autoplay=!reduce.matches;v.loop=true;v.playsInline=true;v.preload='metadata';v.setAttribute('aria-label',item.title||'Video de Uniformes PRE');if(safeMedia(item.poster))v.poster=item.poster;
- const sound=document.createElement('button');sound.className='sound-toggle';sound.type='button';sound.textContent='Activar sonido';sound.setAttribute('aria-pressed','false');sound.addEventListener('click',()=>{v.muted=!v.muted;sound.textContent=v.muted?'Activar sonido':'Silenciar';sound.setAttribute('aria-pressed',String(!v.muted));v.play().catch(()=>{});});
- if(reduce.matches)v.controls=true;parent.prepend(v);parent.append(sound);parent.classList.add('has-video');v.addEventListener('error',()=>{v.remove();sound.remove();parent.classList.remove('has-video');});
- if(!reduce.matches)new IntersectionObserver(entries=>{if(entries[0].isIntersecting)v.play().catch(()=>{v.controls=true;});else v.pause();},{threshold:.15}).observe(parent);
+// Social clips: muted autoplay, with independent pause and sound controls.
+function attachLoop(parent,item){
+ if(!safeMedia(item?.src))return;
+ const v=document.createElement('video');
+ v.src=item.src;v.muted=true;v.defaultMuted=true;v.autoplay=true;v.loop=true;
+ v.playsInline=true;v.preload='metadata';v.setAttribute('muted','');v.setAttribute('playsinline','');
+ v.setAttribute('aria-label',item.title||'Video de Uniformes PRE');
+ if(safeMedia(item.poster))v.poster=item.poster;
+ const controls=document.createElement('div');controls.className='video-controls';
+ const pause=document.createElement('button');pause.type='button';pause.className='video-pause';
+ const sound=document.createElement('button');sound.type='button';sound.className='video-sound';
+ const glyph=(name)=>{const paths={pause:'M8 5v14M16 5v14',play:'m8 5 11 7-11 7z',muted:'m11 5-6 4H2v6h3l6 4zM16 9l6 6M22 9l-6 6',sound:'m11 5-6 4H2v6h3l6 4zM16 8a6 6 0 0 1 0 8M19 5a10 10 0 0 1 0 14'};return `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${paths[name]}"/></svg>`;};
+ let userPaused=false,inView=false;
+ function syncButtons(){
+  const label=v.paused?'Reproducir':'Pausar';
+  pause.innerHTML=glyph(v.paused?'play':'pause')+`<span>${label}</span>`;
+  pause.setAttribute('aria-label',`${label}: ${item.title}`);
+  sound.innerHTML=glyph(v.muted?'muted':'sound')+`<span>${v.muted?'Activar sonido':'Silenciar'}</span>`;
+  sound.setAttribute('aria-label',`${v.muted?'Activar sonido':'Silenciar'}: ${item.title}`);
+  sound.setAttribute('aria-pressed',String(!v.muted));
+ }
+ function play(){v.play().catch(syncButtons);}
+ pause.addEventListener('click',()=>{userPaused=!v.paused;if(userPaused)v.pause();else play();syncButtons();});
+ sound.addEventListener('click',()=>{
+  const enable=v.muted;
+  if(enable)$$('[data-video] video').forEach(other=>{if(other!==v)other.muted=true;});
+  v.muted=!enable;syncButtons();
+ });
+ ['play','pause','volumechange','ended'].forEach(name=>v.addEventListener(name,syncButtons));
+ v.addEventListener('playing',()=>parent.classList.add('has-video'));
+ v.addEventListener('error',()=>{v.remove();controls.remove();parent.classList.remove('has-video');const status=document.createElement('p');status.className='video-error';status.textContent='Video no disponible en este momento.';parent.append(status);});
+ controls.append(pause,sound);parent.prepend(v);parent.append(controls);syncButtons();
+ new IntersectionObserver(entries=>{
+  inView=entries[0].isIntersecting;
+  if(inView&&!userPaused&&!document.hidden)play();else v.pause();
+ },{threshold:.15}).observe(parent);
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&inView&&!userPaused)play();else v.pause();});
 }
 $$('[data-video]').forEach(el=>attachLoop(el,config.videos?.[el.dataset.video]));
 // Decorative background: the delivered clip has no audio track or closing fade.

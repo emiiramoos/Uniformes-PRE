@@ -14,7 +14,7 @@ Actualizadas el 8 de noviembre de 2026. Esta especificación preserva las correc
 3. Destacados: únicamente Filipina repelente, Cazadora y Polo Dry-Fit. Tres imágenes grandes, luz lateral naranja neón y cinta Best seller en cada tarjeta.
 4. Bordado: franja amplia con video real PRE de fondo, capa oscura translúcida y texto alineado a la izquierda y video visible a la derecha, unidos mediante un degradado. Tipografía Poppins blanca y naranja, consistente con la página; bajada: Lleva tu identidad bordada a todas partes. Sin botones ni etiquetas. Video Full HD vertical, bucle automático sin controles ni pista de audio; cierre recortado antes de desaparecer.
 5. Proceso: Así trabajamos contigo. Cinco etapas horizontales: Recibimos tu solicitud; Diseñamos tu propuesta; Validamos contigo; Confeccionamos tu pedido; Preparamos y enviamos. Sin numeración ni Pausar animación. Ciclo infinito cada 2 segundos. La imagen de seis pasos sirve para el estilo de símbolos, no para añadir una etapa de muestra.
-6. Conoce más de Uniformes PRE: videos en bucle, esquinas redondeadas, silencio inicial y opción de activar sonido. Instagram @uniformespre; Facebook de la marca. Material real pendiente, mostrar referencias honestas mientras llega.
+6. Conoce más de Uniformes PRE: videos reales en bucle, esquinas redondeadas, silencio inicial, controles de pausa y sonido. Instagram @UniformesPre y Facebook Uniformes Pre dentro de cada tarjeta, iconos en cuadros redondeados. Sin enlaces sueltos encima o debajo de la cuadrícula. Título según el contenido sobre una franja inferior translúcida; imagen clara en el resto. Pausa manual persistente al salir/entrar en pantalla.
 7. Conservar CTA El próximo uniforme de tu empresa empieza aquí.
 
 ## Catálogo
