@@ -62,3 +62,6 @@ Reproducido 7 filipinas solas = $580 c/u; 6 en carrito + 7 nuevas = 13, $550 c/u
 
 ## Símbolos más legibles
 Redibujados headset (diadema curva, orejeras y micrófono separado), shirt (cuello y mangas claros) y sew (silueta de máquina, volante, aguja y base) en el sistema SVG común. Se aplican a todas las páginas generadas; el fallback de playera de app.js también actualizado. Trazos 1.4 y detalles naranja. No se cambian precios: verificados mayoreos de pecho 45/38/33 y espalda 80/72/65, conteos independientes en rangos 1–12,13–50,51+.
+
+## Reseñas Google
+Carrusel infinito tras los destacados y antes de bordado. Tres reseñas originales positivas de cinco estrellas verificadas en Google Maps (tienda MEGA Soriana López Portillo): Daniela Martinez Archundia, Elizabeth Jarillo, Juan Manuel Diaz. Extractos, nombres y estrellas reales; enlace a ficha Google. No se muestra media global de cinco estrellas ni se inventan más clientes. Datos en reference-data/google-reviews/reviews.json. Duplicación técnica del carrusel oculta a lectores de pantalla e inerte; respeta movimiento reducido y se pausa al enfocar/hover para leer. Encabezado único, sin subtítulo.
