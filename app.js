@@ -184,3 +184,12 @@ $$('.about-background-video').forEach(catalogFilm=>{
  document.addEventListener('visibilitychange',()=>{if(!document.hidden)catalogFilm.play().catch(()=>{});});
  catalogFilm.play().catch(()=>{});
 });
+
+// Keep the complete about banner inside the small viewport, below the site chrome.
+const aboutBanner=$('.about-video-hero');
+if(aboutBanner){
+ const topBars=[$('.site-header'),$('.announcement')].filter(Boolean);
+ const sizeAboutBanner=()=>aboutBanner.style.setProperty('--about-top-space',`${Math.ceil(topBars.reduce((sum,el)=>sum+el.getBoundingClientRect().height,0))}px`);
+ const topBarObserver=new ResizeObserver(sizeAboutBanner);
+ topBars.forEach(el=>topBarObserver.observe(el));sizeAboutBanner();
+}

@@ -90,3 +90,6 @@ Reutiliza el video de prendas reescalado a 1080×1920, sin nueva compresión. T�
 
 ## Foto provisional de portada del catálogo
 La última indicación sustituye el video del catálogo por catalogo-prendas-pre.jpg, enviado por el usuario. Altura original de 340 px en escritorio y 260 px en celular, difuminado suave y sombreado. El video permanece exclusivamente en Quiénes somos.
+
+## Ajuste de portada de Quiénes somos a pantalla
+El último ajuste sustituye contain por cover para llenar todo el ancho sin franjas laterales. Se permite recorte superior/inferior. El alto de la portada usa el viewport pequeño (svh) menos la cabecera y los anuncios, medidos con ResizeObserver para adaptarse a celular y computadora. Se conserva título, bucle, silencio y ausencia de controles.
