@@ -180,3 +180,5 @@
 }
 @media(prefers-reduced-motion:reduce){#product-dialog .detail-image>img{transition:none}}
 .assistant-launch.is-open{animation:none}
+
+.service-copy{padding:8px 0}.service-copy p{font-size:14px;line-height:1.8}.service-copy .button{margin-top:28px}.service-caption{font-size:11px;color:var(--muted);margin-top:12px}.service-detail .detail-image{aspect-ratio:1;max-height:none;height:auto}.service-detail .detail-image img{object-fit:contain}

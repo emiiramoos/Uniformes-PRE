@@ -89,10 +89,10 @@ const messages=['Envíos a todo México','Uniformes para tu equipo','Envío grat
 if(!reduce.matches)setInterval(()=>{if(document.hidden)return;const el=$('[data-announcement]');el.classList.add('is-fading');setTimeout(()=>{messageIndex=(messageIndex+1)%messages.length;el.textContent=messages[messageIndex];$('.announcement .icon').toggleAttribute('hidden',messageIndex!==0);el.classList.remove('is-fading');},350);},3800);
 // Catálogo: información breve en tarjetas; ficha completa al abrir.
 const grid=$('#catalog-grid');let activeFilter='todos';
-function matchesCategory(p,c){if(c==='todos')return true;if(c==='corporativo')return p.category==='ejecutivo';if(c==='restaurante'&&p.code==='PL001')return true;if(c==='servicios')return ['GG001','MP001','MC001','PL001','PL002MC','PL001ML'].includes(p.code);return p.category===c;}
+function matchesCategory(p,c){if(p.category==='textiles')return c==='otros-servicios'||c==='textiles';if(c==='todos')return true;if(c==='corporativo')return p.category==='ejecutivo';if(c==='restaurante'&&p.code==='PL001')return true;if(c==='servicios')return ['GG001','MP001','MC001','PL001','PL002MC','PL001ML'].includes(p.code);return p.category===c;}
 function sourceClass(p){return config.sourceModelCodes?.includes(p.code)?'source-model':'';}
 function renderCatalog(){if(!grid)return;const q=norm($('#catalog-search').value.trim()),color=$('#color-filter').value,size=$('#size-filter').value;
- let visible=products.filter(p=>matchesCategory(p,activeFilter)&&norm([p.name,p.code,p.material,p.description].join(' ')).includes(q)&&(color==='todos'||p.colors.some(c=>norm(c)===norm(color)))&&(size==='todos'||p.sizes.includes(size)));
+ let visible=products.filter(p=>matchesCategory(p,activeFilter)&&norm([p.name,p.code,p.material,p.description].join(' ')).includes(q)&&(activeFilter==='otros-servicios'||color==='todos'||p.colors.some(c=>norm(c)===norm(color)))&&(activeFilter==='otros-servicios'||size==='todos'||p.sizes.includes(size)));
  if($('#catalog-sort').value==='nombre')visible.sort((a,b)=>a.name.localeCompare(b.name,'es'));
  for(const card of $$('.reveal-ready',grid))revealObserver?.unobserve(card);
  grid.innerHTML=visible.map(p=>`<article class="catalog-card"><button class="catalog-visual ${sourceClass(p)}" data-product="${esc(p.code)}" aria-label="Ver detalles de ${esc(p.name)}">${productVisual(p,defaultView(p),color==='todos'?undefined:validColor(p,color),false,true)}</button><div class="catalog-info"><h2>${esc(p.name)}</h2><button class="inline-link" data-product="${esc(p.code)}">Ver detalles</button></div></article>`).join('');
@@ -100,9 +100,15 @@ function renderCatalog(){if(!grid)return;const q=norm($('#catalog-search').value
  $('#catalog-count').textContent=`${visible.length} ${visible.length===1?'producto':'productos'}`;$('.empty-state').hidden=!!visible.length;
  $$('[data-product]',grid).forEach(b=>b.addEventListener('click',()=>openProduct(b.dataset.product,color==='todos'?undefined:color)));
 }
-function setFilter(c){activeFilter=c;$('#category-filter').value=c;$$('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===c)));renderCatalog();}
+function setFilter(c){if(c==='textiles')c='otros-servicios';activeFilter=c;const services=c==='otros-servicios';for(const id of ['#color-filter','#size-filter'])$(id).closest('label').hidden=services;$('#category-filter').value=c;$$('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===c)));renderCatalog();}
+function openService(p){
+ const host=$('[data-product-content]'),views=Object.keys(config.productImages[p.code]);
+ host.innerHTML=`<div class="product-detail-grid service-detail"><div class="product-gallery"><div class="detail-image">${productVisual(p,views[0])}</div><p class="service-caption" data-service-caption>Imagen ilustrativa del servicio.</p><div class="view-buttons" aria-label="Galería de ${esc(p.name)}">${views.map(v=>`<button type="button" data-service-view="${esc(v)}" aria-pressed="${v===views[0]}">${productVisual(p,v,undefined,true)}<span>${esc(v)}</span></button>`).join('')}</div></div><div class="service-copy"><h2 id="product-title">${esc(p.name)} para tu negocio</h2><p>${esc(p.description)}</p><ul class="detail-features">${p.features.map(f=>`<li>${esc(f)}</li>`).join('')}</ul><p>Cuéntanos qué necesitas. Por WhatsApp revisamos contigo las telas, medidas, diseño y confección para preparar tu pedido.</p><a class="button" target="_blank" rel="noopener noreferrer" href="${whatsapp('Hola Uniformes PRE. Me gustaría consultar su servicio de '+p.name.toLowerCase()+'. Necesito asesoría sobre telas, medidas, diseño y confección para mi negocio.')}">Consultar por WhatsApp</a></div></div>`;
+ $$('[data-service-view]',host).forEach(b=>b.addEventListener('click',()=>{const view=b.dataset.serviceView;$('.detail-image',host).innerHTML=productVisual(p,view);$('[data-service-caption]',host).textContent=view==='Presentación'?'Imagen ilustrativa del servicio.':'Fotografía de referencia de nuestros trabajos.';$$('[data-service-view]',host).forEach(t=>t.setAttribute('aria-pressed',String(t===b)));}));
+ $('#product-dialog').setAttribute('aria-labelledby','product-title');openDialog($('#product-dialog'));
+}
 function openProduct(code,requestedColor){
- const p=products.find(p=>p.code===code);if(!p)return;
+ const p=products.find(p=>p.code===code);if(!p)return;if(p.category==='textiles'){openService(p);return;}
  const host=$('[data-product-content]');
  let selectedColor=validColor(p,requestedColor),currentView=defaultView(p);
  const views=Object.entries(config.productImages?.[code]||{}).filter(([,src])=>safeMedia(src)).map(([view])=>view);

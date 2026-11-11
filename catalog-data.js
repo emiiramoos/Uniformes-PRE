@@ -375,7 +375,7 @@ window.PRE_PRODUCTS = [
     "features": [
       "Cuello camisero en V",
       "Pinzas en busto",
-      "Pinzas al frente y en espalda",
+      "Pinzas delanteras hasta la altura del segundo botón contando desde abajo; espalda entallada",
       "Manga corta"
     ],
     "priceTiers": {
@@ -412,7 +412,7 @@ window.PRE_PRODUCTS = [
     "features": [
       "Cuello camisero en V",
       "Pinzas en busto",
-      "Pinzas al frente y en espalda",
+      "Pinzas delanteras hasta la altura del segundo botón contando desde abajo; espalda entallada",
       "Manga 3/4"
     ],
     "priceTiers": {
@@ -449,7 +449,7 @@ window.PRE_PRODUCTS = [
     "features": [
       "Cuello camisero en V",
       "Pinzas en busto",
-      "Pinzas al frente y en espalda",
+      "Pinzas delanteras hasta la altura del segundo botón contando desde abajo; espalda entallada",
       "Manga larga"
     ],
     "priceTiers": {
@@ -921,8 +921,10 @@ window.PRE_PRODUCTS = [
       "Corte recto",
       "Bolsas a los costados",
       "Elástico en cintura",
-      "Jareta",
-      "Unisex"
+      "Unisex",
+      "Macramé trenzado con nudos en las puntas; salidas ocultas en la cara interior de la pretina",
+      "Cordón extraíble desde debajo de la pretina; sin ojillos exteriores",
+      "Terminación recta sin dobladillo visible"
     ],
     "priceTiers": {
       "1-12": 360,
@@ -1083,7 +1085,7 @@ window.PRE_PRODUCTS = [
     "name": "Short Guardavidas",
     "category": "hoteleria",
     "material": "97% Poliéster y 3% Elastano. Rápido secado.",
-    "description": "Short de rápido secado, bolsas a los costados, bolsa tipo parche, elástico en cintura.",
+    "description": "Short guardavidas de gabardina roja, con cintura elástica y frente liso.",
     "sizes": [
       "XS",
       "S",
@@ -1101,10 +1103,9 @@ window.PRE_PRODUCTS = [
     ],
     "imageStatus": "ready",
     "features": [
-      "Rápido secado",
-      "Bolsas laterales",
-      "Bolsa trasera",
-      "Elástico en cintura"
+      "Pretina elástica fruncida",
+      "Sin bolsillos, bragueta ni aberturas laterales",
+      "Ajuste interior con cordón"
     ],
     "priceTiers": {
       "1-12": 390,
@@ -1149,7 +1150,7 @@ window.PRE_PRODUCTS = [
     "name": "Mantelería",
     "category": "textiles",
     "material": "Según proyecto",
-    "description": "Revisamos medidas, materiales y acabados de tu proyecto. Conservaremos las fotografías reales de esta sección.",
+    "description": "Confeccionamos mantelería para tu negocio: manteles, caminos y servilletas a la medida de tus mesas y del estilo de tu espacio.",
     "sizes": [
       "A medida"
     ],
@@ -1160,15 +1161,19 @@ window.PRE_PRODUCTS = [
     "views": [
       "Referencia"
     ],
-    "imageStatus": "pending",
-    "features": []
+    "imageStatus": "ready",
+    "features": [
+      "Asesoría en telas y acabados",
+      "Medidas y diseño según tu proyecto",
+      "Atención personalizada por WhatsApp"
+    ]
   },
   {
     "code": "TAPICERIA",
     "name": "Tapicería",
     "category": "textiles",
     "material": "Según proyecto",
-    "description": "Revisamos medidas, materiales y acabados de tu proyecto. Conservaremos las fotografías reales de esta sección.",
+    "description": "Realizamos la tapicería que tu negocio necesita. Te acompañamos para elegir telas, diseño y acabados para renovar tus muebles.",
     "sizes": [
       "A medida"
     ],
@@ -1179,8 +1184,12 @@ window.PRE_PRODUCTS = [
     "views": [
       "Referencia"
     ],
-    "imageStatus": "pending",
-    "features": []
+    "imageStatus": "ready",
+    "features": [
+      "Asesoría en telas y acabados",
+      "Medidas y diseño según tu proyecto",
+      "Atención personalizada por WhatsApp"
+    ]
   },
   {
     "code": "PM-FRANJAS",

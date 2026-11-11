@@ -80,13 +80,13 @@ window.PRE_CONFIG = {
       "Frente": "assets/products/catalog-20261108/cuello-redondo-larga-azul-vivo.webp"
     },
     "B004D": {
-      "Frente": "assets/products/catalog-20261108/oxford-corta-azul-cielo.webp"
+      "Frente": "assets/products/catalog-20261111/oxford-corta-azul-cielo.webp"
     },
     "B001D-13": {
-      "Frente": "assets/products/catalog-20261108/oxford-tres-cuartos-azul-cielo.webp"
+      "Frente": "assets/products/catalog-20261111/oxford-tres-cuartos-azul-cielo.webp"
     },
     "B001D": {
-      "Frente": "assets/products/catalog-20261108/oxford-larga-azul-cielo.webp"
+      "Frente": "assets/products/catalog-20261111/oxford-larga-azul-cielo.webp"
     },
     "C006C": {
       "Frente": "assets/products/catalog-20261109/camisa-corta-blanco-chaflan.webp"
@@ -123,9 +123,9 @@ window.PRE_CONFIG = {
       "Frente": "assets/products/catalog-20261108/bata-medica-blanca.webp"
     },
     "PPU001": {
-      "Frente": "assets/products/catalog-20261109/pantalon-pijama-negro-frente.webp",
-      "Lateral": "assets/products/catalog-20261109/pantalon-pijama-negro-lateral.webp",
-      "Espalda": "assets/products/catalog-20261109/pantalon-pijama-negro-espalda.webp"
+      "Frente": "assets/products/catalog-20261111/pantalon-pijama-negro-frente.webp",
+      "Lateral": "assets/products/catalog-20261111/pantalon-pijama-negro-lateral.webp",
+      "Espalda": "assets/products/catalog-20261111/pantalon-pijama-negro-espalda.webp"
     },
     "MOD-363": {
       "Frente": "assets/products/MOD-363.webp"
@@ -137,7 +137,7 @@ window.PRE_CONFIG = {
       "Frente": "assets/products/MOD-1042-B.webp"
     },
     "SG001": {
-      "Frente": "assets/products/catalog-20261108/short-guardavidas-rojo.webp"
+      "Frente": "assets/products/catalog-20261111/short-guardavidas-rojo.webp"
     },
     "GG001": {
       "Frente": "assets/products/catalog-20261108/gorra-gabardina.webp"
@@ -153,6 +153,7 @@ window.PRE_CONFIG = {
       "Espalda": "assets/products/catalog-20261108/rash-guardavidas-espalda.webp"
     },
     "MANTELERIA": {
+      "Presentación": "assets/products/catalog-20261111/manteleria-presentacion.webp",
       "Referencia": "assets/products/textiles/manteleria-1.webp",
       "Referencia 2": "assets/products/textiles/manteleria-2.webp",
       "Referencia 3": "assets/products/textiles/manteleria-3.webp",
@@ -160,6 +161,7 @@ window.PRE_CONFIG = {
       "Referencia 5": "assets/products/textiles/manteleria-5.webp"
     },
     "TAPICERIA": {
+      "Presentación": "assets/products/catalog-20261111/tapiceria-presentacion.webp",
       "Referencia": "assets/products/textiles/tapiceria-1.webp",
       "Referencia 2": "assets/products/textiles/tapiceria-2.webp",
       "Referencia 3": "assets/products/textiles/tapiceria-3.webp",
@@ -219,16 +221,16 @@ window.PRE_CONFIG = {
       "Rojo vino": "assets/products/catalog-20261108/polo-rojo-vino-frente.webp"
     },
     "B004D": {
-      "Azul Cielo": "assets/products/catalog-20261108/oxford-corta-azul-cielo.webp",
-      "Blanco": "assets/products/catalog-20261108/oxford-corta-blanco.webp"
+      "Azul Cielo": "assets/products/catalog-20261111/oxford-corta-azul-cielo.webp",
+      "Blanco": "assets/products/catalog-20261111/oxford-corta-blanco.webp"
     },
     "B001D-13": {
-      "Azul Cielo": "assets/products/catalog-20261108/oxford-tres-cuartos-azul-cielo.webp",
-      "Blanco": "assets/products/catalog-20261108/oxford-tres-cuartos-blanco.webp"
+      "Azul Cielo": "assets/products/catalog-20261111/oxford-tres-cuartos-azul-cielo.webp",
+      "Blanco": "assets/products/catalog-20261111/oxford-tres-cuartos-blanco.webp"
     },
     "B001D": {
-      "Azul Cielo": "assets/products/catalog-20261108/oxford-larga-azul-cielo.webp",
-      "Blanco": "assets/products/catalog-20261108/oxford-larga-blanco.webp"
+      "Azul Cielo": "assets/products/catalog-20261111/oxford-larga-azul-cielo.webp",
+      "Blanco": "assets/products/catalog-20261111/oxford-larga-blanco.webp"
     },
     "PB001": {
       "Negro": "assets/products/catalog-20261108/pantalon-PB001-negro-frente.webp"
@@ -237,7 +239,7 @@ window.PRE_CONFIG = {
       "Gris Oxford": "assets/products/catalog-20261108/pantalon-PC001G-gris-Oxford-frente.webp"
     },
     "PPU001": {
-      "Negro": "assets/products/catalog-20261109/pantalon-pijama-negro-frente.webp"
+      "Negro": "assets/products/catalog-20261111/pantalon-pijama-negro-frente.webp"
     },
     "MC001": {
       "Negro": "assets/products/catalog-20261108/mandil-corto-negro.webp",
@@ -265,7 +267,7 @@ window.PRE_CONFIG = {
       "Blanco Médico": "assets/products/catalog-20261108/bata-medica-blanca.webp"
     },
     "SG001": {
-      "Rojo": "assets/products/catalog-20261108/short-guardavidas-rojo.webp"
+      "Rojo": "assets/products/catalog-20261111/short-guardavidas-rojo.webp"
     },
     "GG001": {
       "Marfil": "assets/products/catalog-20261108/gorra-gabardina.webp"
@@ -415,26 +417,26 @@ window.PRE_CONFIG = {
     },
     "B004D": {
       "Azul Cielo": {
-        "Frente": "assets/products/catalog-20261108/oxford-corta-azul-cielo.webp"
+        "Frente": "assets/products/catalog-20261111/oxford-corta-azul-cielo.webp"
       },
       "Blanco": {
-        "Frente": "assets/products/catalog-20261108/oxford-corta-blanco.webp"
+        "Frente": "assets/products/catalog-20261111/oxford-corta-blanco.webp"
       }
     },
     "B001D-13": {
       "Azul Cielo": {
-        "Frente": "assets/products/catalog-20261108/oxford-tres-cuartos-azul-cielo.webp"
+        "Frente": "assets/products/catalog-20261111/oxford-tres-cuartos-azul-cielo.webp"
       },
       "Blanco": {
-        "Frente": "assets/products/catalog-20261108/oxford-tres-cuartos-blanco.webp"
+        "Frente": "assets/products/catalog-20261111/oxford-tres-cuartos-blanco.webp"
       }
     },
     "B001D": {
       "Azul Cielo": {
-        "Frente": "assets/products/catalog-20261108/oxford-larga-azul-cielo.webp"
+        "Frente": "assets/products/catalog-20261111/oxford-larga-azul-cielo.webp"
       },
       "Blanco": {
-        "Frente": "assets/products/catalog-20261108/oxford-larga-blanco.webp"
+        "Frente": "assets/products/catalog-20261111/oxford-larga-blanco.webp"
       }
     },
     "PL002MC": {
@@ -487,9 +489,9 @@ window.PRE_CONFIG = {
     },
     "PPU001": {
       "Negro": {
-        "Frente": "assets/products/catalog-20261109/pantalon-pijama-negro-frente.webp",
-        "Lateral": "assets/products/catalog-20261109/pantalon-pijama-negro-lateral.webp",
-        "Espalda": "assets/products/catalog-20261109/pantalon-pijama-negro-espalda.webp"
+        "Frente": "assets/products/catalog-20261111/pantalon-pijama-negro-frente.webp",
+        "Lateral": "assets/products/catalog-20261111/pantalon-pijama-negro-lateral.webp",
+        "Espalda": "assets/products/catalog-20261111/pantalon-pijama-negro-espalda.webp"
       }
     },
     "MC001": {
@@ -545,7 +547,7 @@ window.PRE_CONFIG = {
     },
     "SG001": {
       "Rojo": {
-        "Frente": "assets/products/catalog-20261108/short-guardavidas-rojo.webp"
+        "Frente": "assets/products/catalog-20261111/short-guardavidas-rojo.webp"
       }
     },
     "GG001": {
