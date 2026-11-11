@@ -1,3 +1,11 @@
 dist/
 .openai/
 __pycache__/
+
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials*.json

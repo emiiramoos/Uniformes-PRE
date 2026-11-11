@@ -20,7 +20,7 @@
   if(contact){const link=document.createElement('a');link.className='assistant-wa';link.textContent='Consultar por WhatsApp';link.href=wa(contactText(lastQuestion));link.target='_blank';link.rel='noopener noreferrer';bubble.append(link);}
   log.append(bubble);while(log.children.length>40)log.firstElementChild.remove();scrollEnd();
  }
- function ask(text,id){lastQuestion=text;message(text,'visitor');const answer=id?knowledge.entries.find(e=>e.id===id):knowledge.answer(text);message(answer.answer,'reply',answer.contact);updateContact();}
+ function ask(text,id){text=window.PRE_SECURITY.clean(text,500);if(!text)return;lastQuestion=text;message(text,'visitor');const answer=id?knowledge.entries.find(e=>e.id===id):knowledge.answer(text);message(answer.answer,'reply',answer.contact);updateContact();}
  const primary=['quote','shipping-cost','delivery','custom','embroidery','pickup','payments'];let expanded=false;
  function drawQuestions(){questions.replaceChildren();const ids=expanded?knowledge.entries.filter(e=>!['hello','thanks'].includes(e.id)).map(e=>e.id):primary;
   ids.forEach(id=>{const entry=knowledge.entries.find(e=>e.id===id),button=document.createElement('button');button.type='button';button.textContent=entry.label;button.onclick=()=>ask(entry.label,id);questions.append(button);});

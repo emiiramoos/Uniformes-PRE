@@ -2,6 +2,7 @@
 (function(root){
 'use strict';
 const MAX_LINES=600;
+const canonical=row=>({code:row.code,quantity:row.quantity,size:row.size,color:row.color,chest:row.chest,back:row.back});
 const integer=(v,min=0,max=Number.MAX_SAFE_INTEGER)=>Number.isSafeInteger(v)&&v>=min&&v<=max;
 const tier=q=>q>=51?'51+':q>=13?'13-50':'1-12';
 function validate(row,products){if(!row||typeof row!=='object')return false;const p=products.find(p=>p.code===row.code);return !!p&&integer(row.quantity,1,100000)&&integer(row.chest)&&integer(row.back)&&integer(row.quantity*(row.chest*4500+row.back*8000)+(p.priceTiers?Math.round(Math.max(...Object.values(p.priceTiers))*100)*row.quantity:0))&&p.sizes.includes(row.size)&&p.colors.includes(row.color)&&(!row.chest&&!row.back||!['shoe','pants','cap','layers'].includes(p.kind));}
@@ -17,8 +18,9 @@ function migrateLegacy(rows,products){
 }
 function checked(value){if(!integer(value))throw Error('La cantidad es demasiado grande para calcular el importe con precisión.');return value;}
 function calculate(rows,products){
- if(rows.length>MAX_LINES||rows.some(r=>!validate(r,products)))throw Error('Revisa cantidades, tallas, colores y bordados.');
- const groups={};let chest=0,back=0;for(const r of rows){groups[r.code]=(groups[r.code]||0)+r.quantity;chest=checked(chest+r.quantity*r.chest);back=checked(back+r.quantity*r.back);}
+ if(!Array.isArray(rows)||rows.length>MAX_LINES||rows.some(r=>!validate(r,products)))throw Error('Revisa cantidades, tallas, colores y bordados.');
+ rows=rows.map(canonical);
+ const groups=Object.create(null);let chest=0,back=0;for(const r of rows){groups[r.code]=(groups[r.code]||0)+r.quantity;chest=checked(chest+r.quantity*r.chest);back=checked(back+r.quantity*r.back);}
  const chestRate=({ '1-12':4500,'13-50':3800,'51+':3300})[tier(chest)],backRate=({'1-12':8000,'13-50':7200,'51+':6500})[tier(back)];
  const lines=rows.map(r=>{const p=products.find(p=>p.code===r.code),rate=p.priceTiers?.[tier(groups[r.code])];const unit=rate===undefined?null:Math.round(rate*100),garments=unit===null?null:unit*r.quantity,chestCount=r.quantity*r.chest,backCount=r.quantity*r.back,embroidery=checked(chestCount*chestRate+backCount*backRate);return {...r,name:p.name,unit,garments,chestCount,backCount,chestRate,backRate,embroidery,total:garments===null?null:checked(garments+embroidery),range:tier(groups[r.code])};});
  const garments=checked(lines.reduce((a,l)=>a+(l.garments||0),0)),embroidery=checked(lines.reduce((a,l)=>a+l.embroidery,0)),total=checked(garments+embroidery),pending=lines.some(l=>l.total===null),subtotal=Math.round(total/1.16);return {lines,garments,embroidery,total,subtotal,iva:total-subtotal,pending,chest,back,chestRange:tier(chest),backRange:tier(back),shipping:!lines.length?0:total>=100000?0:pending?null:15000};
@@ -49,5 +51,5 @@ function message(quote,info={}){
  '¿Me ayudan a confirmar disponibilidad, importe final y fecha de entrega? Muchas gracias.'
  ].filter(Boolean).join('\n\n');
 }
-root.PRE_QUOTE={calculate,validate,migrateLegacy,MAX_LINES,tier,money,message};
+root.PRE_QUOTE={calculate,validate,migrateLegacy,MAX_LINES,canonical,tier,money,message};
 })(typeof window==='undefined'?globalThis:window);
