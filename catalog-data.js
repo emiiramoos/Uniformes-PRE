@@ -1049,7 +1049,7 @@ window.PRE_PRODUCTS = [
     "name": "Rash Manga Larga En Licra",
     "category": "hoteleria",
     "material": "87% Poliéster y 13% Elastano.",
-    "description": "Rash manga larga, cuello redondo, sublimado en pecho y espalda. Licra con protección solar.",
+    "description": "Rash guardavidas de manga larga y cuello redondo. El precio ya incluye el logo del pecho y el diseño de la espalda sublimados en la prenda. Se entrega con ambos sublimados incluidos.",
     "sizes": [
       "XS",
       "S",
@@ -1068,9 +1068,10 @@ window.PRE_PRODUCTS = [
     ],
     "imageStatus": "ready",
     "features": [
+      "Logo del pecho sublimado incluido",
+      "Diseño de la espalda sublimado incluido",
       "Manga larga",
       "Cuello redondo",
-      "Logo en pecho y espalda",
       "Licra con protección solar"
     ],
     "priceTiers": {

@@ -182,3 +182,5 @@
 .assistant-launch.is-open{animation:none}
 
 .service-copy{padding:8px 0}.service-copy p{font-size:14px;line-height:1.8}.service-copy .button{margin-top:28px}.service-caption{font-size:11px;color:var(--muted);margin-top:12px}.service-detail .detail-image{aspect-ratio:1;max-height:none;height:auto}.service-detail .detail-image img{object-fit:contain}
+
+.embroidery-wholesale-notice,.embroidery .embroidery-wholesale-notice{color:#c52222;font-size:14px;font-weight:600;line-height:1.6;margin-top:18px}.embroidery .embroidery-wholesale-notice{color:#ff8080;max-width:430px}.live-quote .embroidery-wholesale-notice{grid-column:1/-1;margin:0}
