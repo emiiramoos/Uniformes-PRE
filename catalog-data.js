@@ -1263,5 +1263,316 @@ window.PRE_PRODUCTS = [
       "51+": 750
     },
     "priceSource": "PM001-S"
+  },
+  {
+    "code": "FLEXI-35311",
+    "name": "Flexi 35311 Flat Walking Soft Dama",
+    "category": "flexi",
+    "brand": "Flexi",
+    "material": "Piel flor entera graneada. Suela de poliuretano. Forro textil. Plantilla de piel natural de cerdo. Ancho EE.",
+    "description": "Flat casual Flexi de la línea Jane con sistema Walking Soft. Piel graneada, cuña de 3.3 cm, punta redondeada y elásticos laterales para un mejor ajuste. Plantilla de piel natural de cerdo que aporta frescura y suela con relieves.",
+    "sizes": [
+      "22",
+      "22.5",
+      "23",
+      "23.5",
+      "24",
+      "24.5",
+      "25",
+      "25.5",
+      "26",
+      "26.5",
+      "27"
+    ],
+    "colors": [
+      "Negro",
+      "Oporto"
+    ],
+    "kind": "shoe",
+    "views": [
+      "Lateral",
+      "Frente",
+      "Espalda",
+      "Suela"
+    ],
+    "imageStatus": "ready",
+    "features": [
+      "Sistema Walking Soft para mayor comodidad",
+      "Elásticos laterales, sin agujetas",
+      "Cuña de 3.3 cm",
+      "Construcción de inyección directa"
+    ],
+    "priceTiers": {
+      "1-12": 1149,
+      "13-50": 1149,
+      "51+": 1149
+    },
+    "priceSource": "FLEXI-35311"
+  },
+  {
+    "code": "FLEXI-48301",
+    "name": "Flexi 48301 Flat de Servicio Dama",
+    "category": "flexi",
+    "brand": "Flexi",
+    "material": "Piel de vacuno flor entera. Suela de poliuretano. Forro textil. Plantilla removible de piel natural de cerdo. Ancho EE 1/2.",
+    "description": "Choclo Flexi de la línea Ofelia, apto para uso de servicio y clínico. Corte despejado, punta ligeramente cuadrada, ligera cuña de 3.5 cm y elásticos laterales. Sistema de mejor agarre en la suela.",
+    "sizes": [
+      "22",
+      "22.5",
+      "23",
+      "23.5",
+      "24",
+      "24.5",
+      "25",
+      "25.5",
+      "26",
+      "26.5",
+      "27"
+    ],
+    "colors": [
+      "Negro",
+      "Moka"
+    ],
+    "kind": "shoe",
+    "views": [
+      "Lateral",
+      "Frente",
+      "Espalda",
+      "Suela"
+    ],
+    "imageStatus": "ready",
+    "features": [
+      "Ideal para uso de servicio y clínico",
+      "Sistema de mejor agarre",
+      "Plantilla removible: se adapta a distintos anchos",
+      "Elásticos laterales para mejor ajuste"
+    ],
+    "priceTiers": {
+      "1-12": 1099,
+      "13-50": 1099,
+      "51+": 1099
+    },
+    "priceSource": "FLEXI-48301"
+  },
+  {
+    "code": "FLEXI-48302",
+    "name": "Flexi 48302 Flat Autoajuste Dama",
+    "category": "flexi",
+    "brand": "Flexi",
+    "material": "Piel de vacuno flor entera. Suela de poliuretano. Forro textil. Plantilla removible de piel natural de cerdo. Ancho EE 1/2.",
+    "description": "Choclo Flexi de la línea Ofelia con elástico central de autoajuste. Corte despejado, punta ligeramente cuadrada y ligera cuña de 3.5 cm. Cómodo para jornadas largas de pie.",
+    "sizes": [
+      "22",
+      "22.5",
+      "23",
+      "23.5",
+      "24",
+      "24.5",
+      "25",
+      "25.5",
+      "26",
+      "26.5",
+      "27"
+    ],
+    "colors": [
+      "Negro"
+    ],
+    "kind": "shoe",
+    "views": [
+      "Lateral",
+      "Frente",
+      "Espalda",
+      "Suela"
+    ],
+    "imageStatus": "ready",
+    "features": [
+      "Elástico central de autoajuste",
+      "Plantilla removible: se adapta a distintos anchos",
+      "Amortiguamiento para jornadas largas",
+      "Construcción de inyección directa"
+    ],
+    "priceTiers": {
+      "1-12": 1099,
+      "13-50": 1099,
+      "51+": 1099
+    },
+    "priceSource": "FLEXI-48302"
+  },
+  {
+    "code": "FLEXI-35301",
+    "name": "Flexi 35301 Zapato Jane Dama",
+    "category": "flexi",
+    "brand": "Flexi",
+    "material": "Piel. Plantilla de piel. Forro textil. Suela sintética antiderrapante.",
+    "description": "Zapato casual Flexi de la línea Jane, sin agujetas (slip on) con paneles elásticos laterales, punta redonda y suela con relieves. Cómodo para uso diario y trabajo de pie.",
+    "sizes": [
+      "22",
+      "22.5",
+      "23",
+      "23.5",
+      "24",
+      "24.5",
+      "25",
+      "25.5",
+      "26",
+      "26.5",
+      "27"
+    ],
+    "colors": [
+      "Café"
+    ],
+    "kind": "shoe",
+    "views": [
+      "Lateral",
+      "Frente",
+      "Espalda",
+      "Suela"
+    ],
+    "imageStatus": "ready",
+    "features": [
+      "Slip on con paneles elásticos",
+      "Punta redonda",
+      "Plantilla de piel",
+      "Tallas y precio se confirman al cotizar"
+    ],
+    "priceSource": "FLEXI-35301"
+  },
+  {
+    "code": "FLEXI-91607",
+    "name": "Flexi 91607 Zapato de Servicio Caballero",
+    "category": "flexi",
+    "brand": "Flexi",
+    "material": "Piel napa de vacuno. Suela de poliuretano. Forro de textil y piel natural de cerdo. Plantilla de piel de vacuno y cerdo. Ancho EEE.",
+    "description": "Choclo dress casual Flexi de la línea Marcel, apto para servicio y uso clínico. Piel napa con grano visible, punta ligeramente cuadrada, pespuntes visibles y agujetas.",
+    "sizes": [
+      "25",
+      "25.5",
+      "26",
+      "26.5",
+      "27",
+      "27.5",
+      "28",
+      "28.5",
+      "29",
+      "29.5",
+      "30",
+      "31"
+    ],
+    "colors": [
+      "Negro",
+      "Café"
+    ],
+    "kind": "shoe",
+    "views": [
+      "Lateral",
+      "Frente",
+      "Espalda",
+      "Suela"
+    ],
+    "imageStatus": "ready",
+    "features": [
+      "Ideal para uso de servicio y clínico",
+      "Horma extra amplia EEE",
+      "Forro y plantilla de piel natural",
+      "Construcción de inyección directa"
+    ],
+    "priceTiers": {
+      "1-12": 1199,
+      "13-50": 1199,
+      "51+": 1199
+    },
+    "priceSource": "FLEXI-91607"
+  },
+  {
+    "code": "FLEXI-63202",
+    "name": "Flexi 63202 Zapato de Servicio Caballero",
+    "category": "flexi",
+    "brand": "Flexi",
+    "material": "Piel de vacuno flor entera. Suela de poliuretano. Forro sintético y piel natural de cerdo. Plantilla de piel natural de cerdo. Ancho EE 1/2.",
+    "description": "Choclo casual Flexi de la línea Kaiser, apto para servicio y uso clínico. Corte con pespuntes visibles del tono de la piel y agujetas. Disponible en negro y en blanco para áreas clínicas.",
+    "sizes": [
+      "25",
+      "25.5",
+      "26",
+      "26.5",
+      "27",
+      "27.5",
+      "28",
+      "28.5",
+      "29",
+      "29.5",
+      "30",
+      "31"
+    ],
+    "colors": [
+      "Negro",
+      "Blanco"
+    ],
+    "kind": "shoe",
+    "views": [
+      "Lateral",
+      "Frente",
+      "Espalda",
+      "Suela"
+    ],
+    "imageStatus": "ready",
+    "features": [
+      "Ideal para uso de servicio y clínico",
+      "Versión blanca para áreas de salud",
+      "Plantilla de piel natural de cerdo",
+      "Construcción de inyección directa"
+    ],
+    "priceTiers": {
+      "1-12": 1249,
+      "13-50": 1249,
+      "51+": 1249
+    },
+    "priceSource": "FLEXI-63202"
+  },
+  {
+    "code": "FLEXI-402811",
+    "name": "Flexi 402811 Derby Hill Caballero",
+    "category": "flexi",
+    "brand": "Flexi",
+    "material": "Piel vacuna con acabado floater. Suela de PU con cápsula. Forro textil. Construcción strobel.",
+    "description": "Derby dress casual Flexi de la línea Hill. Diseño moderno para uniformes formales o casuales; su suela de PU con cápsula ofrece ligereza y confort, y la construcción strobel mejora la flexibilidad.",
+    "sizes": [
+      "25",
+      "25.5",
+      "26",
+      "26.5",
+      "27",
+      "27.5",
+      "28",
+      "28.5",
+      "29",
+      "29.5",
+      "30",
+      "31"
+    ],
+    "colors": [
+      "Blanco",
+      "Negro"
+    ],
+    "kind": "shoe",
+    "views": [
+      "Lateral",
+      "Frente",
+      "Espalda",
+      "Suela"
+    ],
+    "imageStatus": "ready",
+    "features": [
+      "Suela de PU con cápsula de aire",
+      "Construcción strobel flexible",
+      "Forro textil transpirable",
+      "Versión blanca para áreas de salud"
+    ],
+    "priceTiers": {
+      "1-12": 1299,
+      "13-50": 1299,
+      "51+": 1299
+    },
+    "priceSource": "FLEXI-402811"
   }
 ];

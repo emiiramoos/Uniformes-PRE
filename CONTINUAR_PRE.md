@@ -65,3 +65,9 @@ Redibujados headset (diadema curva, orejeras y micrófono separado), shirt (cuel
 
 ## Reseñas Google
 Carrusel infinito tras los destacados y antes de bordado. Tres reseñas originales positivas de cinco estrellas verificadas en Google Maps (tienda MEGA Soriana López Portillo): Daniela Martinez Archundia, Elizabeth Jarillo, Juan Manuel Diaz. Extractos, nombres y estrellas reales; enlace a ficha Google. No se muestra media global de cinco estrellas ni se inventan más clientes. Datos en reference-data/google-reviews/reviews.json. Duplicación técnica del carrusel oculta a lectores de pantalla e inerte; respeta movimiento reducido y se pausa al enfocar/hover para leer. Encabezado único, sin subtítulo.
+
+## Calzado Flexi — 17 noviembre
+Apartado propio en Catálogo (`?categoria=flexi`): botón de ancho completo con logo oficial Flexi, banner «Distribuidores autorizados» al filtrar y sello Flexi en la ficha. Categoría `flexi`, marca `Flexi`, sin bordado (tipo calzado).
+Siete modelos: 35311 (Negro, Oporto), 48301 (Negro, Moka), 48302 (Negro), 35301 (Café), 91607 (Negro, Café), 63202 (Negro, Blanco) y 402811 (Blanco; Negro con foto de referencia en blanco). 119702 y 110403 no se encontraron en flexi.com.mx ni en tiendas oficiales accesibles; pendientes de foto y ficha.
+Precio = precio de lista de flexi.com.mx sin descuento de temporada, igual en los tres rangos (fuente en reference-data/flexi-20261117/precios.json). 35301 sin precio publicado en México: «Por confirmar». Tallas según la corrida MEX de cada ficha oficial; las de 35301 (22–27, línea Jane) se confirman al cotizar.
+Vistas por color (Lateral, Frente/Tres cuartos, Espalda, Suela) según existan en la fuente; en Flexi la galería de cada color define sus propias vistas.

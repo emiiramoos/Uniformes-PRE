@@ -9,7 +9,7 @@ assert.equal(Q.calculate([row('ALINA',1)],P).total,84000);assert.equal(Q.calcula
 for(const bad of [null,{},row('PL001',0),row('PL001',1.5),row('PL001',2,3.5),row('ALINA',1,1),{...row(),color:'inventado'},{...row(),quantity:Infinity}])assert(!Q.validate(bad,P));
 assert.throws(()=>Q.calculate([row('PL001',-1)],P));
 const quote=Q.calculate(rows,P),text=Q.message(quote,{name:'Ana & José',notes:'Bordar A&B'});assert(text.includes('Ana & José'));assert(text.includes('Talla:'));assert(text.includes('Bordado pecho: 1 por prenda × 6 prendas = 6 bordados'));assert(text.includes(Q.money(quote.total)));assert.equal(decodeURIComponent(encodeURIComponent(text)),text);
-const reference=require('../reference-data/oficialpre-20261108/materiales-precios.json');for(const p of P.filter(p=>p.priceTiers)){const ref=reference.products.find(r=>r.code===p.priceSource);assert.deepEqual(p.priceTiers,ref.price_tiers_mxn,p.code);}
+const reference=require('../reference-data/oficialpre-20261108/materiales-precios.json');for(const p of P.filter(p=>p.priceTiers)){const ref=reference.products.find(r=>r.code===p.priceSource)||require('../reference-data/flexi-20261117/precios.json').products.find(r=>r.code===p.priceSource);assert.deepEqual(p.priceTiers,ref.price_tiers_mxn,p.code);}
 assert.deepEqual(Q.calculate(JSON.parse(JSON.stringify(rows)),P),quote);console.log('PASS: tarifas, 1/6/12/13/50/51, agregación, reducción, bordados parciales, IVA, validación, persistencia y WhatsApp.');
 // Todas las tarifas: no hay cambios en 6/7 ni en 12; descuentos exactamente en 13 y 51.
 for(const p of P.filter(p=>p.priceTiers))for(let n=1;n<=52;n++){
