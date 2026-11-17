@@ -140,7 +140,7 @@ window.PRE_CONFIG = {
       "Frente": "assets/products/catalog-20261111/short-guardavidas-rojo.webp"
     },
     "GG001": {
-      "Frente": "assets/products/catalog-20261108/gorra-gabardina.webp"
+      "Frente": "assets/products/catalog-20261108/gorra-gabardina-arena.webp"
     },
     "MC001": {
       "Frente": "assets/products/catalog-20261108/mandil-corto-negro.webp"
@@ -584,7 +584,6 @@ window.PRE_CONFIG = {
     "PPU001": "Negro",
     "RS001L": "Blanco",
     "SG001": "Rojo",
-    "GG001": "Marfil",
     "PL002MC": "Azul claro",
     "PL001ML": "Azul vivo",
     "FLEXI-402811": "Blanco"
@@ -813,8 +812,17 @@ window.PRE_CONFIG = {
       }
     },
     "GG001": {
-      "Marfil": {
-        "Frente": "assets/products/catalog-20261108/gorra-gabardina.webp"
+      "Arena": {
+        "Frente": "assets/products/catalog-20261108/gorra-gabardina-arena.webp"
+      },
+      "Negro": {
+        "Frente": "assets/products/catalog-20261108/gorra-gabardina-negro.webp"
+      },
+      "Azul marino": {
+        "Frente": "assets/products/catalog-20261108/gorra-gabardina-azul-marino.webp"
+      },
+      "Blanco": {
+        "Frente": "assets/products/catalog-20261108/gorra-gabardina-blanco.webp"
       }
     },
     "RS001L": {
