@@ -1125,7 +1125,10 @@ window.PRE_PRODUCTS = [
       "Unitalla Ajustable"
     ],
     "colors": [
-      "Marfil"
+      "Arena",
+      "Negro",
+      "Azul marino",
+      "Blanco"
     ],
     "kind": "cap",
     "views": [

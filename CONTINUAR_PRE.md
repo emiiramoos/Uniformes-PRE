@@ -77,3 +77,6 @@ Por indicación de Emilio se retiraron del catálogo la pijama con franjas (PM-F
 
 ## Correo, legales e ícono — 17 noviembre
 Correo de contacto del pie: comercializacion@uniformespre.com (antes ventas@). Textos de Privacidad y de Cambios y devoluciones tomados del documento de Emilio (reference-data/legal-20261117-PAGINAWEB2.docx) y guardados en site-config.js `legal` como bloques; «Términos y condiciones» agregado el 17 nov con el texto enviado por Emilio (vigencia, anticipo, entrega, garantía). La categoría «servicios» se muestra como «Servicio» en el catálogo. Ícono de pestaña con las letras PRE del logo oficial, sin fondo (favicon.ico, assets/brand/favicon-32/192 y apple-touch-icon con fondo blanco).
+
+## LinkedIn y gorra — 17 noviembre
+LinkedIn (https://www.linkedin.com/company/uniformespre/) agregado en el pie y en el bloque de redes. Gorra de gabardina GG001 en Arena, Negro, Azul marino y Blanco: fotos derivadas de la foto original (gorra-gabardina.webp) recoloreando solo la tela y conservando costuras, sombras y forma; Marfil retirado.
