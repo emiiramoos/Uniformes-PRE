@@ -320,7 +320,220 @@ window.PRE_CONFIG = {
     }
   },
   "sourceModelCodes": [],
-  "legal": {},
+  "legal": {
+    "devoluciones": {
+      "title": "Política de devoluciones y cambios",
+      "blocks": [
+        {
+          "p": "En **Uniformes PRE** trabajamos para entregar productos que cumplan con las características, cantidades y especificaciones acordadas en cada pedido. Nuestra prioridad es ofrecer una experiencia de compra clara, profesional y respaldada por un servicio de atención personalizado."
+        },
+        {
+          "h": "1. Productos de línea"
+        },
+        {
+          "p": "Los productos de línea podrán ser sujetos a cambio o devolución cuando presenten un defecto de fabricación, hayan sido enviados de manera incorrecta o no correspondan con las características especificadas en la orden de compra."
+        },
+        {
+          "p": "Para solicitar un cambio o devolución, el cliente deberá comunicarse con nuestro equipo de atención dentro de un plazo de **5 días hábiles posteriores a la recepción del pedido**."
+        },
+        {
+          "p": "El producto deberá conservarse en las condiciones en las que fue recibido, sin haber sido utilizado, lavado, alterado o modificado."
+        },
+        {
+          "h": "2. Productos personalizados o confeccionados sobre pedido"
+        },
+        {
+          "p": "Los uniformes y productos elaborados de acuerdo con especificaciones particulares del cliente —incluyendo medidas, colores, diseños, bordados, sublimados, estampados, logotipos, cortes o cualquier otra personalización— **no son susceptibles de devolución por cambio de opinión, talla, color o diseño una vez iniciada su producción**, debido a que han sido fabricados específicamente para cada proyecto."
+        },
+        {
+          "p": "Antes de iniciar la producción, nuestro equipo asesora al cliente y confirma las especificaciones del pedido para minimizar cualquier error."
+        },
+        {
+          "p": "Lo anterior no limita los derechos que correspondan al consumidor cuando exista un defecto de fabricación, incumplimiento de las especificaciones acordadas o alguna otra causa contemplada por la legislación aplicable."
+        },
+        {
+          "h": "3. Productos con defectos de fabricación"
+        },
+        {
+          "p": "Si un producto presenta un defecto atribuible a su fabricación, el cliente deberá reportarlo dentro del periodo de garantía correspondiente."
+        },
+        {
+          "p": "Una vez recibido el reporte, **Uniformes PRE evaluará el caso** y, cuando corresponda, podrá ofrecer reparación, reposición del producto, cambio o la solución que legalmente proceda."
+        },
+        {
+          "p": "Cuando resulte aplicable una garantía, esta será informada al cliente de manera clara junto con sus condiciones y procedimiento para hacerla efectiva."
+        },
+        {
+          "h": "4. Productos incorrectos o faltantes"
+        },
+        {
+          "p": "Si recibes un producto diferente al solicitado o detectas piezas faltantes, comunícate con nosotros dentro de los **5 días hábiles posteriores a la recepción**."
+        },
+        {
+          "p": "Nuestro equipo revisará la orden de compra y la evidencia proporcionada para determinar la solución correspondiente."
+        },
+        {
+          "h": "5. Requisitos para solicitar un cambio o devolución"
+        },
+        {
+          "p": "Para iniciar una solicitud, será necesario proporcionar:"
+        },
+        {
+          "ul": [
+            "Número de pedido, cotización o factura.",
+            "Nombre del cliente o empresa.",
+            "Descripción del inconveniente.",
+            "Fotografías o evidencia del producto, cuando corresponda.",
+            "Datos de contacto para dar seguimiento al caso."
+          ]
+        },
+        {
+          "p": "El producto podrá ser solicitado para revisión física cuando sea necesario."
+        },
+        {
+          "h": "6. Gastos de envío"
+        },
+        {
+          "p": "Cuando el cambio o reposición sea consecuencia de un error atribuible a **Uniformes PRE** o de un defecto de fabricación cubierto por la garantía, se determinará la forma de cubrir los gastos de envío correspondientes."
+        },
+        {
+          "p": "Cuando la solicitud derive de una causa no atribuible a Uniformes PRE, los gastos de traslado podrán correr por cuenta del cliente, siempre que legalmente corresponda."
+        },
+        {
+          "h": "7. Cancelaciones"
+        },
+        {
+          "p": "Las solicitudes de cancelación deberán realizarse antes de que el pedido entre en producción."
+        },
+        {
+          "p": "Una vez iniciada la fabricación, personalización, bordado, sublimado, estampado o cualquier otro proceso específico para el cliente, la posibilidad de cancelación estará sujeta al avance del pedido y a los costos ya generados."
+        },
+        {
+          "h": "8. Proceso de atención"
+        },
+        {
+          "p": "Una vez recibida la solicitud, nuestro equipo revisará la información y se pondrá en contacto con el cliente para indicar los siguientes pasos."
+        },
+        {
+          "p": "Buscamos resolver cada caso de manera **clara, profesional y justa**, procurando siempre ofrecer una solución acorde con las características del pedido y la legislación aplicable."
+        },
+        {
+          "h": "9. Derechos del consumidor"
+        },
+        {
+          "p": "Esta política se interpreta y aplica de conformidad con la **Ley Federal de Protección al Consumidor y demás disposiciones aplicables en México**. Ninguna disposición de esta política pretende limitar los derechos que legalmente correspondan al consumidor."
+        },
+        {
+          "p": "Para cualquier duda, aclaración o solicitud relacionada con un pedido, puedes contactar a nuestro equipo de atención a través de los medios oficiales publicados en este sitio web."
+        }
+      ]
+    },
+    "privacidad": {
+      "title": "Aviso de privacidad",
+      "blocks": [
+        {
+          "p": "**Confecciones y Uniformes PRE** (en lo sucesivo **Uniformes PRE**) con domicilio en Calle Onyx Lote 19 supermanzana 531 Cancún Quintana Roo, es el responsable del uso y protección de sus datos personales, y al respecto le informamos lo siguiente:"
+        },
+        {
+          "h": "¿Para qué fines utilizaremos sus datos personales?"
+        },
+        {
+          "p": "Los datos personales que recabamos de usted, los utilizaremos para las siguientes finalidades que son necesarias para el servicio que solicita:"
+        },
+        {
+          "ul": [
+            "Respuesta a mensajes del formulario de contacto",
+            "Prestación de cualquier servicio solicitado.",
+            "Compra de algún producto"
+          ]
+        },
+        {
+          "h": "¿Qué datos personales utilizaremos para estos fines?"
+        },
+        {
+          "p": "Para llevar a cabo las finalidades descritas en el presente aviso de privacidad, utilizaremos los siguientes datos personales:"
+        },
+        {
+          "ul": [
+            "Datos de identificación y contacto",
+            "Datos laborales"
+          ]
+        },
+        {
+          "h": "¿Con quién compartimos su información personal y para qué fines?"
+        },
+        {
+          "p": "Le informamos que sus datos personales no son compartidos fuera del país, a excepción de los compartidos con empresas que nos brindan servicios relacionados con tecnología."
+        },
+        {
+          "p": "**Dentro del país:**"
+        },
+        {
+          "p": "**Uniformes PRE** para prospección de clientes."
+        },
+        {
+          "h": "¿Cómo puede acceder, rectificar o cancelar sus datos personales, u oponerse a su uso o ejercer la revocación de consentimiento?"
+        },
+        {
+          "p": "Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección de su información personal en caso de que esté desactualizada, sea inexacta o incompleta (Rectificación); que la eliminemos de nuestros registros o bases de datos cuando considere que la misma no está siendo utilizada adecuadamente (Cancelación); así como oponerse al uso de sus datos personales para fines específicos (Oposición). Estos derechos se conocen como derechos ARCO."
+        },
+        {
+          "p": "Para el ejercicio de cualquiera de los derechos ARCO, debe enviar una petición vía correo electrónico a **direccion@uniformespre.com** y deberá contener:"
+        },
+        {
+          "ul": [
+            "Nombre completo del titular.",
+            "Domicilio.",
+            "Teléfono.",
+            "Correo electrónico usado en este sitio web.",
+            "Copia de una identificación oficial adjunta.",
+            "Asunto «Derechos ARCO»",
+            "Descripción el objeto del escrito, los cuales pueden ser de manera enunciativa más no limitativa los siguientes: Revocación del consentimiento para tratar sus datos personales; y/o Notificación del uso indebido del tratamiento de sus datos personales; y/o Ejercitar sus Derechos ARCO, con una descripción clara y precisa de los datos a Acceder, Rectificar, Cancelar o bien, Oponerse. En caso de Rectificación de datos personales, deberá indicar la modificación exacta y anexar la documentación soporte; es importante en caso de revocación del consentimiento, que tenga en cuenta que no en todos los casos podremos atender su solicitud o concluir el uso de forma inmediata, ya que es posible que por alguna obligación legal requiramos seguir tratando sus datos personales. Asimismo, usted deberá considerar que para ciertos fines, la revocación de su consentimiento implicará que no le podamos seguir prestando el servicio que nos solicitó, o la conclusión de su relación con nosotros."
+          ]
+        },
+        {
+          "h": "¿En cuántos días le daremos respuesta a su solicitud?"
+        },
+        {
+          "p": "10 días hábiles"
+        },
+        {
+          "h": "¿Por qué medio le comunicaremos la respuesta a su solicitud?"
+        },
+        {
+          "p": "Al mismo correo electrónico de donde se envió la petición."
+        },
+        {
+          "h": "El uso de tecnologías de rastreo en nuestro portal de internet"
+        },
+        {
+          "p": "Le informamos que en nuestra página de internet utilizamos cookies, web beacons u otras tecnologías, a través de las cuales es posible monitorear su comportamiento como usuario de internet, así como brindarle un mejor servicio y experiencia al navegar en nuestra página. Los datos personales que obtenemos de estas tecnologías de rastreo son los siguientes:"
+        },
+        {
+          "ul": [
+            "Identificadores, nombre de usuario y contraseñas de sesión",
+            "Idioma preferido por el usuario",
+            "Región en la que se encuentra el usuario",
+            "Tipo de navegador del usuario",
+            "Tipo de sistema operativo del usuario",
+            "Páginas web visitadas por un usuario",
+            "Búsquedas realizadas por un usuario",
+            "Publicidad revisada por un usuario",
+            "Listas y hábitos de consumo en páginas de compras"
+          ]
+        },
+        {
+          "p": "Estas cookies, web beacons y otras tecnologías pueden ser deshabilitadas. Para conocer cómo hacerlo, consulte el menú de ayuda de su navegador. Tenga en cuenta que, en caso de desactivar las cookies, es posible que no pueda acceder a ciertas funciones personalizadas en nuestro Sitio Web."
+        },
+        {
+          "h": "¿Cómo puede conocer los cambios en este Aviso de Privacidad?"
+        },
+        {
+          "p": "El presente aviso de privacidad puede sufrir modificaciones, cambios o actualizaciones derivadas de nuevos requerimientos legales; de nuestras propias necesidades por los productos o servicios que ofrecemos; de nuestras prácticas de privacidad; de cambios en nuestro modelo de negocio, o por otras causas. Nos comprometemos a mantener actualizado este aviso de privacidad sobre los cambios que pueda sufrir y siempre podrá consultar las actualizaciones que existan en el sitio web uniformespre.com"
+        }
+      ]
+    }
+  },
   "productImageColors": {
     "FI003-AF": "Blanco",
     "FI001MC-G": "Blanco",
