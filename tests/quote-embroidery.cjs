@@ -28,8 +28,8 @@ for(const bad of [row(1,-1),row(1,1.5),row(1,0,Infinity),row(1,Number.MAX_SAFE_I
 const huge=row(1,1e12);assert(Q.validate(huge,P));
 assert.throws(()=>Q.calculate(Array(3).fill(huge),P),/precisión/);
 const message=Q.message(Q.calculate([row(10,2,6)],P));
-assert(message.includes('2 por prenda × 10 prendas = 20 bordados × $38.00 = $760.00'));
-assert(message.includes('6 por prenda × 10 prendas = 60 bordados × $65.00 = $3,900.00'));
+assert(message.includes('2 por pieza × 10 piezas = 20 bordados × $38.00 = $760.00'));
+assert(message.includes('6 por pieza × 10 piezas = 60 bordados × $65.00 = $3,900.00'));
 assert(message.includes('Total de bordados: 20 pecho · 60 espalda'));
 console.log('PASS: precisión monetaria, validación y multiplicaciones explícitas en WhatsApp.');
 
