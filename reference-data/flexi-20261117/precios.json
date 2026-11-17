@@ -1,0 +1,66 @@
+{
+  "captured": "2026-11-17",
+  "note": "Precio de lista (sin descuento de temporada) publicado en flexi.com.mx, IVA incluido. Mismo precio en los tres rangos; PRE puede ajustar mayoreo después.",
+  "products": [
+    {
+      "code": "FLEXI-35311",
+      "source": "https://www.flexi.com.mx/es/producto/7500421373163-flat-casual-flexi-con-sistema-walking-soft--para-mujer---estilo-35311-negro",
+      "price_tiers_mxn": {
+        "1-12": 1149,
+        "13-50": 1149,
+        "51+": 1149
+      }
+    },
+    {
+      "code": "FLEXI-48301",
+      "source": "https://www.flexi.com.mx/es/producto/7501153647607-flat-casual-flexi-con-sistema-de-mejor-agarre-para-mujer---estilo-48301-negro",
+      "price_tiers_mxn": {
+        "1-12": 1099,
+        "13-50": 1099,
+        "51+": 1099
+      }
+    },
+    {
+      "code": "FLEXI-48302",
+      "source": "https://www.flexi.com.mx/es/producto/7501153647676-flat-casual-flexi-con-autoajuste-para-mujer---estilo-48302-negro",
+      "price_tiers_mxn": {
+        "1-12": 1099,
+        "13-50": 1099,
+        "51+": 1099
+      }
+    },
+    {
+      "code": "FLEXI-91607",
+      "source": "https://www.flexi.com.mx/es/producto/7500421303863-zapato-casual-de-servicio-clinico-flexi-de-agujetas-para-hombre---estilo-91607-negro",
+      "price_tiers_mxn": {
+        "1-12": 1199,
+        "13-50": 1199,
+        "51+": 1199
+      }
+    },
+    {
+      "code": "FLEXI-63202",
+      "source": "https://www.flexi.com.mx/es/producto/7506193615715-zapato-casual-de-servicio-clinico-flexi-de-agujetas-para-hombre---estilo-63202-negro",
+      "price_tiers_mxn": {
+        "1-12": 1249,
+        "13-50": 1249,
+        "51+": 1249
+      }
+    },
+    {
+      "code": "FLEXI-402811",
+      "source": "https://www.flexi.com.mx/es/producto/7500277148984-derby-dress-casual-flexi-para-hombre-estilo-402811-blanco",
+      "price_tiers_mxn": {
+        "1-12": 1299,
+        "13-50": 1299,
+        "51+": 1299
+      }
+    },
+    {
+      "code": "FLEXI-35301",
+      "source": "https://www.falabella.com/falabella-cl/product/144471902/Zapato-Mujer-Cuero-Jane-35301-Caoba-Flexi/144471908",
+      "price_tiers_mxn": null,
+      "note": "No publicado en flexi.com.mx; precio por confirmar."
+    }
+  ]
+}

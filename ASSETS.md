@@ -95,3 +95,6 @@ Emilio aprobó expresamente las propuestas generadas y solicitó su integración
 - FI002MC-DG/FI001ML-G: únicamente cuatro espaldas aprobadas (corta y 3/4, blanco/negro) con panel superior Dry-Fit transpirable sin listón. Frentes y laterales mantienen sus rutas originales. Repelentes FI003-AF/FI001MC-G intactas.
 
 Los recursos anteriores se conservan en el repositorio como antecedentes, aunque las variantes retiradas ya no se ofrecen. Configuración de imágenes, galerías, colores y textos de ficha sincronizados con la aprobación.
+
+## Calzado Flexi — 17 noviembre 2026
+`assets/products/flexi/`: fotografías oficiales de producto de Flexi (fondo blanco, 515 px, resolución original de la fuente), capturadas de flexi.com.mx; 35301 de la tienda oficial Flexi en Falabella. Sin retoque ni generación. Uniformes PRE es distribuidor autorizado Flexi. `assets/brand/flexi-logo.png`: logo oficial de flexi.com.mx con fondo transparente.

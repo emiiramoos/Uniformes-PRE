@@ -174,6 +174,46 @@ window.PRE_CONFIG = {
     },
     "PM-VIVOS": {
       "Frente": "assets/products/catalog-20261108/pijama-roja-vivos-frente.webp"
+    },
+    "FLEXI-35301": {
+      "Lateral": "assets/products/flexi/flexi-35301-cafe-lateral.webp",
+      "Tres cuartos": "assets/products/flexi/flexi-35301-cafe-tres-cuartos.webp",
+      "Frente": "assets/products/flexi/flexi-35301-cafe-frente.webp",
+      "Suela": "assets/products/flexi/flexi-35301-cafe-suela.webp"
+    },
+    "FLEXI-35311": {
+      "Lateral": "assets/products/flexi/flexi-35311-negro-lateral.webp",
+      "Frente": "assets/products/flexi/flexi-35311-negro-frente.webp",
+      "Espalda": "assets/products/flexi/flexi-35311-negro-espalda.webp",
+      "Suela": "assets/products/flexi/flexi-35311-negro-suela.webp"
+    },
+    "FLEXI-402811": {
+      "Lateral": "assets/products/flexi/flexi-402811-blanco-lateral.webp",
+      "Tres cuartos": "assets/products/flexi/flexi-402811-blanco-tres-cuartos.webp",
+      "Espalda": "assets/products/flexi/flexi-402811-blanco-espalda.webp",
+      "Suela": "assets/products/flexi/flexi-402811-blanco-suela.webp"
+    },
+    "FLEXI-48301": {
+      "Lateral": "assets/products/flexi/flexi-48301-moka-lateral.webp",
+      "Frente": "assets/products/flexi/flexi-48301-moka-frente.webp",
+      "Espalda": "assets/products/flexi/flexi-48301-moka-espalda.webp",
+      "Suela": "assets/products/flexi/flexi-48301-moka-suela.webp"
+    },
+    "FLEXI-48302": {
+      "Lateral": "assets/products/flexi/flexi-48302-negro-lateral.webp",
+      "Frente": "assets/products/flexi/flexi-48302-negro-frente.webp",
+      "Espalda": "assets/products/flexi/flexi-48302-negro-espalda.webp",
+      "Suela": "assets/products/flexi/flexi-48302-negro-suela.webp"
+    },
+    "FLEXI-63202": {
+      "Lateral": "assets/products/flexi/flexi-63202-negro-lateral.webp",
+      "Tres cuartos": "assets/products/flexi/flexi-63202-blanco-tres-cuartos.webp"
+    },
+    "FLEXI-91607": {
+      "Lateral": "assets/products/flexi/flexi-91607-cafe-lateral.webp",
+      "Frente": "assets/products/flexi/flexi-91607-cafe-frente.webp",
+      "Espalda": "assets/products/flexi/flexi-91607-cafe-espalda.webp",
+      "Suela": "assets/products/flexi/flexi-91607-cafe-suela.webp"
     }
   },
   "productColorImages": {
@@ -325,7 +365,8 @@ window.PRE_CONFIG = {
     "PL002MC": "Azul claro",
     "PL001ML": "Azul vivo",
     "PM-FRANJAS": "Azul Rey",
-    "PM-VIVOS": "Rojo"
+    "PM-VIVOS": "Rojo",
+    "FLEXI-402811": "Blanco"
   },
   "productGalleries": {
     "CZ001ML": {
@@ -598,6 +639,81 @@ window.PRE_CONFIG = {
         "Frente": "assets/products/catalog-20261108/filipina-repelente-3-4-negro-frente.webp",
         "Lateral": "assets/products/catalog-20261108/filipina-repelente-3-4-negro-lateral.webp",
         "Espalda": "assets/products/catalog-20261108/filipina-repelente-3-4-negro-espalda.webp"
+      }
+    },
+    "FLEXI-35301": {
+      "Café": {
+        "Lateral": "assets/products/flexi/flexi-35301-cafe-lateral.webp",
+        "Tres cuartos": "assets/products/flexi/flexi-35301-cafe-tres-cuartos.webp",
+        "Frente": "assets/products/flexi/flexi-35301-cafe-frente.webp",
+        "Suela": "assets/products/flexi/flexi-35301-cafe-suela.webp"
+      }
+    },
+    "FLEXI-35311": {
+      "Negro": {
+        "Lateral": "assets/products/flexi/flexi-35311-negro-lateral.webp",
+        "Frente": "assets/products/flexi/flexi-35311-negro-frente.webp",
+        "Espalda": "assets/products/flexi/flexi-35311-negro-espalda.webp",
+        "Suela": "assets/products/flexi/flexi-35311-negro-suela.webp"
+      },
+      "Oporto": {
+        "Lateral": "assets/products/flexi/flexi-35311-oporto-lateral.webp",
+        "Frente": "assets/products/flexi/flexi-35311-oporto-frente.webp",
+        "Espalda": "assets/products/flexi/flexi-35311-oporto-espalda.webp",
+        "Suela": "assets/products/flexi/flexi-35311-oporto-suela.webp"
+      }
+    },
+    "FLEXI-402811": {
+      "Blanco": {
+        "Lateral": "assets/products/flexi/flexi-402811-blanco-lateral.webp",
+        "Tres cuartos": "assets/products/flexi/flexi-402811-blanco-tres-cuartos.webp",
+        "Espalda": "assets/products/flexi/flexi-402811-blanco-espalda.webp",
+        "Suela": "assets/products/flexi/flexi-402811-blanco-suela.webp"
+      }
+    },
+    "FLEXI-48301": {
+      "Moka": {
+        "Lateral": "assets/products/flexi/flexi-48301-moka-lateral.webp",
+        "Frente": "assets/products/flexi/flexi-48301-moka-frente.webp",
+        "Espalda": "assets/products/flexi/flexi-48301-moka-espalda.webp",
+        "Suela": "assets/products/flexi/flexi-48301-moka-suela.webp"
+      },
+      "Negro": {
+        "Lateral": "assets/products/flexi/flexi-48301-negro-lateral.webp",
+        "Frente": "assets/products/flexi/flexi-48301-negro-frente.webp",
+        "Espalda": "assets/products/flexi/flexi-48301-negro-espalda.webp",
+        "Suela": "assets/products/flexi/flexi-48301-negro-suela.webp"
+      }
+    },
+    "FLEXI-48302": {
+      "Negro": {
+        "Lateral": "assets/products/flexi/flexi-48302-negro-lateral.webp",
+        "Frente": "assets/products/flexi/flexi-48302-negro-frente.webp",
+        "Espalda": "assets/products/flexi/flexi-48302-negro-espalda.webp",
+        "Suela": "assets/products/flexi/flexi-48302-negro-suela.webp"
+      }
+    },
+    "FLEXI-63202": {
+      "Blanco": {
+        "Tres cuartos": "assets/products/flexi/flexi-63202-blanco-tres-cuartos.webp"
+      },
+      "Negro": {
+        "Lateral": "assets/products/flexi/flexi-63202-negro-lateral.webp",
+        "Tres cuartos": "assets/products/flexi/flexi-63202-negro-tres-cuartos.webp"
+      }
+    },
+    "FLEXI-91607": {
+      "Café": {
+        "Lateral": "assets/products/flexi/flexi-91607-cafe-lateral.webp",
+        "Frente": "assets/products/flexi/flexi-91607-cafe-frente.webp",
+        "Espalda": "assets/products/flexi/flexi-91607-cafe-espalda.webp",
+        "Suela": "assets/products/flexi/flexi-91607-cafe-suela.webp"
+      },
+      "Negro": {
+        "Lateral": "assets/products/flexi/flexi-91607-negro-lateral.webp",
+        "Frente": "assets/products/flexi/flexi-91607-negro-frente.webp",
+        "Espalda": "assets/products/flexi/flexi-91607-negro-espalda.webp",
+        "Suela": "assets/products/flexi/flexi-91607-negro-suela.webp"
       }
     }
   }

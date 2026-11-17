@@ -184,3 +184,18 @@
 .service-copy{padding:8px 0}.service-copy p{font-size:14px;line-height:1.8}.service-copy .button{margin-top:28px}.service-caption{font-size:11px;color:var(--muted);margin-top:12px}.service-detail .detail-image{aspect-ratio:1;max-height:none;height:auto}.service-detail .detail-image img{object-fit:contain}
 
 .embroidery-wholesale-notice,.embroidery .embroidery-wholesale-notice{color:#c52222;font-size:14px;font-weight:600;line-height:1.6;margin-top:18px}.embroidery .embroidery-wholesale-notice{color:#ff8080;max-width:430px}.live-quote .embroidery-wholesale-notice{grid-column:1/-1;margin:0}
+
+/* Calzado Flexi: apartado de marca con logo oficial */
+.catalog-categories .brand-filter{grid-column:1/-1;justify-content:center;gap:18px;background:#fff;border-color:var(--line)}
+.catalog-categories .brand-filter img{width:auto;height:34px;display:block}
+.catalog-categories .brand-filter span{display:flex;flex-direction:column;font-size:14px;font-weight:600;line-height:1.25}
+.catalog-categories .brand-filter small{font-size:11px;font-weight:400;color:var(--muted)}
+.catalog-categories .brand-filter[aria-pressed=true]{background:#fff;border-color:#cd1527;box-shadow:0 4px 16px #cd152718}
+.brand-banner{display:flex;align-items:center;gap:28px;margin:0 0 28px;padding:24px 30px;border-radius:14px;background:#fff;border:1px solid var(--line);box-shadow:0 6px 22px #08133f0d}
+.brand-banner[hidden]{display:none}
+.brand-banner img{height:64px;width:auto;flex:none}
+.brand-banner h2{margin:0 0 6px;font-size:20px;color:var(--navy)}
+.brand-banner p{margin:0;font-size:14px;color:var(--muted);max-width:620px}
+.brand-badge{display:flex;align-items:center;gap:10px;margin:0 0 10px;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.brand-badge img{height:30px;width:auto}
+@media (max-width:720px){.brand-banner{flex-direction:column;align-items:flex-start;gap:12px;padding:18px}.brand-banner img{height:46px}.brand-banner h2{font-size:17px}.brand-banner p{font-size:13px}.catalog-categories .brand-filter img{height:26px}.catalog-categories .brand-filter span{font-size:12px}}
