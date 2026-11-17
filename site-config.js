@@ -169,12 +169,6 @@ window.PRE_CONFIG = {
       "Referencia 5": "assets/products/textiles/tapiceria-5.webp",
       "Referencia 6": "assets/products/textiles/tapiceria-6.webp"
     },
-    "PM-FRANJAS": {
-      "Frente": "assets/products/catalog-20261108/pijama-azul-franjas-frente.webp"
-    },
-    "PM-VIVOS": {
-      "Frente": "assets/products/catalog-20261108/pijama-roja-vivos-frente.webp"
-    },
     "FLEXI-35301": {
       "Lateral": "assets/products/flexi/flexi-35301-cafe-lateral.webp",
       "Tres cuartos": "assets/products/flexi/flexi-35301-cafe-tres-cuartos.webp",
@@ -320,14 +314,6 @@ window.PRE_CONFIG = {
       "Negro": "assets/products/catalog-20261108/pijama-lisa-negra-frente.webp",
       "Azul Marino": "assets/products/catalog-20261108/pijama-lisa-marino-frente.webp"
     },
-    "PM-FRANJAS": {
-      "Azul Rey": "assets/products/catalog-20261108/pijama-azul-franjas-frente.webp",
-      "Verde Jade": "assets/products/catalog-20261108/pijama-jade-franjas-frente.webp"
-    },
-    "PM-VIVOS": {
-      "Rojo": "assets/products/catalog-20261108/pijama-roja-vivos-frente.webp",
-      "Azul Rey": "assets/products/catalog-20261108/pijama-azul-vivos-frente.webp"
-    },
     "FI003-AF": {
       "Blanco": "assets/products/catalog-20261108/filipina-repelente-3-4-blanco-frente.webp",
       "Negro": "assets/products/catalog-20261108/filipina-repelente-3-4-negro-frente.webp"
@@ -364,8 +350,6 @@ window.PRE_CONFIG = {
     "GG001": "Marfil",
     "PL002MC": "Azul claro",
     "PL001ML": "Azul vivo",
-    "PM-FRANJAS": "Azul Rey",
-    "PM-VIVOS": "Rojo",
     "FLEXI-402811": "Blanco"
   },
   "productGalleries": {
@@ -611,22 +595,6 @@ window.PRE_CONFIG = {
       },
       "Azul Marino": {
         "Frente": "assets/products/catalog-20261108/pijama-lisa-marino-frente.webp"
-      }
-    },
-    "PM-FRANJAS": {
-      "Azul Rey": {
-        "Frente": "assets/products/catalog-20261108/pijama-azul-franjas-frente.webp"
-      },
-      "Verde Jade": {
-        "Frente": "assets/products/catalog-20261108/pijama-jade-franjas-frente.webp"
-      }
-    },
-    "PM-VIVOS": {
-      "Rojo": {
-        "Frente": "assets/products/catalog-20261108/pijama-roja-vivos-frente.webp"
-      },
-      "Azul Rey": {
-        "Frente": "assets/products/catalog-20261108/pijama-azul-vivos-frente.webp"
       }
     },
     "FI003-AF": {
