@@ -36,10 +36,10 @@ function message(quote,info={}){
  'Ciudad: '+(info.city||'No indicada'),
  'Código postal: '+(info.postal||'No indicado')].filter(Boolean).join('\n'),
  '*DETALLE DEL PEDIDO*',
- ...quote.lines.map((l,i)=>`*${i+1}. ${l.name}*\nCódigo: ${l.code}\nCantidad: ${l.quantity}\nTalla: ${l.size} · Color: ${l.color}\nPrenda: ${l.unit===null?'Precio por confirmar':money(l.unit)+' c/u'}\nBordado pecho: ${l.chest} por prenda × ${l.quantity} ${l.quantity===1?'prenda':'prendas'} = ${l.chestCount} bordados${l.chest?' × '+money(l.chestRate)+' = '+money(l.chestCount*l.chestRate):''}\nBordado espalda: ${l.back} por prenda × ${l.quantity} ${l.quantity===1?'prenda':'prendas'} = ${l.backCount} bordados${l.back?' × '+money(l.backRate)+' = '+money(l.backCount*l.backRate):''}\nImporte: ${l.total===null?'Por confirmar':money(l.total)}`),
+ ...quote.lines.map((l,i)=>`*${i+1}. ${l.name}*\nCódigo: ${l.code}\nCantidad: ${l.quantity}\nTalla: ${l.size} · Color: ${l.color}\nPrecio: ${l.unit===null?'Precio por confirmar':money(l.unit)+' c/u'}\nBordado pecho: ${l.chest} por pieza × ${l.quantity} ${l.quantity===1?'pieza':'piezas'} = ${l.chestCount} bordados${l.chest?' × '+money(l.chestRate)+' = '+money(l.chestCount*l.chestRate):''}\nBordado espalda: ${l.back} por pieza × ${l.quantity} ${l.quantity===1?'pieza':'piezas'} = ${l.backCount} bordados${l.back?' × '+money(l.backRate)+' = '+money(l.backCount*l.backRate):''}\nImporte: ${l.total===null?'Por confirmar':money(l.total)}`),
  '*RESUMEN*\n'+[
- 'Total de prendas: '+quote.lines.reduce((n,l)=>n+l.quantity,0),
- 'Prendas: '+money(quote.garments),
+ 'Total de piezas: '+quote.lines.reduce((n,l)=>n+l.quantity,0),
+ 'Piezas: '+money(quote.garments),
  'Bordados: '+money(quote.embroidery),
  'Total de bordados: '+quote.chest+' pecho · '+quote.back+' espalda',
  'Envío: '+(shipping===null?'Por confirmar':shipping===0?'Gratis':money(shipping)),
