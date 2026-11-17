@@ -532,6 +532,30 @@ window.PRE_CONFIG = {
           "p": "El presente aviso de privacidad puede sufrir modificaciones, cambios o actualizaciones derivadas de nuevos requerimientos legales; de nuestras propias necesidades por los productos o servicios que ofrecemos; de nuestras prácticas de privacidad; de cambios en nuestro modelo de negocio, o por otras causas. Nos comprometemos a mantener actualizado este aviso de privacidad sobre los cambios que pueda sufrir y siempre podrá consultar las actualizaciones que existan en el sitio web uniformespre.com"
         }
       ]
+    },
+    "terminos": {
+      "title": "Términos y condiciones",
+      "blocks": [
+        {
+          "ul": [
+            "**Vigencia de la cotización:** 15 días hábiles.",
+            "Se requiere del **50% de anticipo** y saldo contra entrega.",
+            {
+              "t": "El tiempo de entrega comenzará a correr a partir de que se haya recibido:",
+              "ul": [
+                "Orden de compra, cotización con firma de autorización o anticipo.",
+                "Requisición de pedido con la información completa (tallas, cantidades, descripción, tela, bordado, serigrafía, sublimado).",
+                "Boceto revisado y autorizado por el cliente, según sea el caso."
+              ]
+            },
+            "**Tiempo de entrega:** 30 días hábiles.",
+            "El tono de la tela puede llegar a tener una pequeña variación.",
+            "Los pantalones se entregan sin dobladillo.",
+            "El costo de la paquetería va por cuenta del cliente si el envío es fuera de Cancún.",
+            "**Garantía:** aplica por defecto de fabricación. El cliente cuenta con 10 días naturales a partir de la fecha en la que recibe su pedido para notificar vía correo electrónico cualquier detalle detectado en la prenda."
+          ]
+        }
+      ]
     }
   },
   "productImageColors": {
