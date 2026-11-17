@@ -27,7 +27,7 @@ Revisión: 11 de noviembre de 2026. Sitio público estático en GitHub Pages, si
 
 ## Política y límites del alojamiento
 
-CSP se coloca inmediatamente después del charset, antes de recursos. `script-src 'self'` no permite scripts inline ni eval; `connect-src 'none'` bloquea fetch/XHR/WebSocket. Google Fonts y el iframe de Maps son las excepciones explícitas necesarias. Los enlaces de WhatsApp conservan navegación normal y no envían mensajes automáticamente.
+CSP se coloca inmediatamente después del charset, antes de recursos. `script-src 'self'` no permite scripts inline ni eval; `connect-src 'self'` solo permite peticiones al propio sitio (necesario para que buscadores y auditorías lean robots.txt); bloquea fetch/XHR/WebSocket hacia terceros. La tipografía Poppins se sirve desde el propio sitio (assets/fonts, licencia OFL); el iframe de Maps es la única excepción externa. Los enlaces de WhatsApp conservan navegación normal y no envían mensajes automáticamente.
 
 Los estilos inline siguen permitidos porque se utilizan para las muestras de color y los efectos visuales; los scripts inline siguen prohibidos. `form-action 'none'` bloquea el envío HTML nativo: los formularios se procesan con JavaScript y no publican datos en la URL de la página si JS falla.
 

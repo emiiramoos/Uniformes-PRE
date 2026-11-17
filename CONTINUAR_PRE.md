@@ -80,3 +80,6 @@ Correo de contacto del pie: comercializacion@uniformespre.com (antes ventas@). T
 
 ## LinkedIn y gorra — 17 noviembre
 LinkedIn (https://www.linkedin.com/company/uniformespre/) agregado en el pie y en el bloque de redes. Gorra de gabardina GG001 en Arena, Negro, Azul marino y Blanco: fotos derivadas de la foto original (gorra-gabardina.webp) recoloreando solo la tela y conservando costuras, sombras y forma; Marfil retirado.
+
+## Rendimiento y SEO — 17 noviembre
+Lighthouse en las 4 páginas: tipografía Poppins autoalojada (assets/fonts, sin Google Fonts), logo del encabezado/pie en WebP, versiones ligeras de la foto del catálogo, destacados y bordado, robot del chat a 160 px, contraste del texto de ayuda del formulario, robots.txt y sitemap.xml (con la URL de github.io; cambiar al dominio final cuando se conecte), CSP connect-src self. Sin cambios visuales. Pendiente opcional: textos de 10 px en celular.

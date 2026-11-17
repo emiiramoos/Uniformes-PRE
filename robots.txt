@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://emiiramoos.github.io/Uniformes-PRE/sitemap.xml
