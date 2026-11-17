@@ -74,3 +74,6 @@ Vistas por color (Lateral, Frente/Tres cuartos, Espalda, Suela) según existan e
 
 ## Pijamas médicas — 17 noviembre
 Por indicación de Emilio se retiraron del catálogo la pijama con franjas (PM-FRANJAS) y la pijama con vivos (PM-VIVOS). Se conserva la pijama unisex lisa (PM001-S). Sus imágenes siguen en assets/ por trazabilidad, sin uso.
+
+## Correo, legales e ícono — 17 noviembre
+Correo de contacto del pie: comercializacion@uniformespre.com (antes ventas@). Textos de Privacidad y de Cambios y devoluciones tomados del documento de Emilio (reference-data/legal-20261117-PAGINAWEB2.docx) y guardados en site-config.js `legal` como bloques; «Términos» sigue pendiente porque el documento no lo incluye. Ícono de pestaña con las letras PRE del logo oficial, sin fondo (favicon.ico, assets/brand/favicon-32/192 y apple-touch-icon con fondo blanco).
