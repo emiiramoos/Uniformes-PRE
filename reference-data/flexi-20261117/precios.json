@@ -59,8 +59,12 @@
     {
       "code": "FLEXI-35301",
       "source": "https://www.falabella.com/falabella-cl/product/144471902/Zapato-Mujer-Cuero-Jane-35301-Caoba-Flexi/144471908",
-      "price_tiers_mxn": null,
-      "note": "No publicado en flexi.com.mx; precio por confirmar."
+      "price_tiers_mxn": {
+        "1-12": 1099,
+        "13-50": 1099,
+        "51+": 1099
+      },
+      "note": "Precio indicado por Uniformes PRE (Emilio), 17 nov 2026."
     }
   ]
 }

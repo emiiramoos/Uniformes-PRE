@@ -1433,8 +1433,13 @@ window.PRE_PRODUCTS = [
       "Slip on con paneles elásticos",
       "Punta redonda",
       "Plantilla de piel",
-      "Tallas y precio se confirman al cotizar"
+      "Tallas se confirman al cotizar"
     ],
+    "priceTiers": {
+      "1-12": 1099,
+      "13-50": 1099,
+      "51+": 1099
+    },
     "priceSource": "FLEXI-35301"
   },
   {
